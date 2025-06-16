@@ -1,3 +1,4 @@
+console.log("✅ quizzes.js φορτώθηκε");
 const quiz_krouseis = [
   {
     question: "1. Ποια ποσότητα διατηρείται σε κάθε είδος κρούσης;",
