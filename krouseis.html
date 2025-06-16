@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+  <meta charset="UTF-8">
+  <title>Quiz Φυσικής - 1</title>
+</head>
+<body>
+  <h1>Quiz Φυσικής: Κινηματική</h1>
+
+  <form id="quiz-form">
+    <p>1. Ποια είναι η μονάδα της ταχύτητας στο SI;</p>
+    <input type="radio" name="q1" value="a"> Νιούτον<br>
+    <input type="radio" name="q1" value="b"> Μέτρα ανά δευτερόλεπτο ✅<br>
+    <input type="radio" name="q1" value="c"> Τζάουλ<br>
+
+    <p>2. Τι δείχνει η κλίση της γραμμής σε διάγραμμα x-t (θέση-χρόνος);</p>
+    <input type="radio" name="q2" value="a"> Ταχύτητα ✅<br>
+    <input type="radio" name="q2" value="b"> Επιτάχυνση<br>
+    <input type="radio" name="q2" value="c"> Δύναμη<br><br>
+
+    <button type="button" onclick="checkAnswers()">Υποβολή</button>
+  </form>
+
+  <p id="result"></p>
+
+  <script>
+    function checkAnswers() {
+      let score = 0;
+      const form = document.forms["quiz-form"];
+      if (form.q1.value === "b") score++;
+      if (form.q2.value === "a") score++;
+
+      document.getElementById("result").innerText =
+        "Βαθμολογία: " + score + " / 2";
+    }
+  </script>
+</body>
+</html>
