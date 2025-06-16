@@ -2,11 +2,8 @@
 <html lang="el">
 <head>
   <meta charset="UTF-8">
-  <title>Quiz: Κρούσεις</title>
+  <title>Quiz Φυσικής - Νέο Επίκεντρο</title>
   <link rel="stylesheet" href="style.css">
-  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" defer></script>
-  <script src="quizzes.js" defer></script>
   <style>
     body {
       font-family: system-ui, sans-serif;
@@ -22,8 +19,8 @@
       margin-bottom: 2rem;
     }
 
-    .quiz-container {
-      max-width: 800px;
+    .quiz-list {
+      max-width: 600px;
       margin: 0 auto;
       background: white;
       padding: 1.5rem;
@@ -31,97 +28,60 @@
       box-shadow: 0 0 12px rgba(0,0,0,0.1);
     }
 
-    .question {
-      margin-bottom: 1.5rem;
+    .quiz-item {
+      padding: 1rem;
+      border-bottom: 1px solid #ddd;
+      transition: background 0.2s;
     }
 
-    .question p {
+    .quiz-item:last-child {
+      border-bottom: none;
+    }
+
+    .quiz-item:hover {
+      background-color: #f1f3f5;
+    }
+
+    .quiz-item a {
+      text-decoration: none;
       font-weight: bold;
+      color: #0077cc;
     }
 
-    .answers label {
+    .quiz-item small {
       display: block;
-      margin-bottom: 0.5rem;
+      color: #6c757d;
+      margin-top: 0.25rem;
     }
 
-    button {
-      background-color: #0077cc;
-      color: white;
-      padding: 0.6rem 1.2rem;
-      border: none;
-      border-radius: 6px;
-      cursor: pointer;
-      margin-top: 1rem;
-    }
-
-    #result {
-      font-weight: bold;
-      margin-top: 1.5rem;
-      font-size: 1.2rem;
-      color: #2e8b57;
+    footer {
+      text-align: center;
+      margin-top: 3rem;
+      font-size: 0.9rem;
+      color: #888;
     }
   </style>
 </head>
 <body>
-  <h1>✅ Quiz Φυσικής: Κρούσεις</h1>
-  <div class="quiz-container" id="quiz"></div>
-  <div style="text-align: center;">
-    <button onclick="submitQuiz()">Υποβολή</button>
-    <button onclick="resetQuiz()">Ξανακάνε το Quiz</button>
-    <div id="result"></div>
+  <h1>📘 Κουίζ Φυσικής – Νέες Προσθήκες</h1>
+
+  <div class="quiz-list">
+    <div class="quiz-item">
+      <a href="quiz-krouseis.html">✅ Κρούσεις (20 ερωτήσεις)</a>
+      <small>Ημερομηνία: 16/6/2025</small>
+    </div>
+    <!-- Νέα quiz προστίθενται εδώ -->
+    <!--
+    <div class="quiz-item">
+      <a href="quiz-talantoseis.html">🌀 Ταλαντώσεις (15 ερωτήσεις)</a>
+      <small>Ημερομηνία: 20/6/2025</small>
+    </div>
+    -->
   </div>
 
-  <script>
-    const quizData = shuffleArray(quiz_krouseis).slice(0, 20);
-    const quizContainer = document.getElementById("quiz");
-
-    function renderQuiz() {
-      quizContainer.innerHTML = "";
-      quizData.forEach((q, index) => {
-        const div = document.createElement("div");
-        div.className = "question";
-        div.innerHTML = `
-          <p>${index + 1}. ${q.question}</p>
-          <div class="answers">
-            ${q.answers.map((ans, i) => `
-              <label>
-                <input type="radio" name="q${index}" value="${i}">
-                ${ans}
-              </label>
-            `).join("")}
-          </div>
-        `;
-        quizContainer.appendChild(div);
-      });
-
-      if (window.MathJax) MathJax.typeset();
-    }
-
-    function submitQuiz() {
-      let score = 0;
-      quizData.forEach((q, index) => {
-        const selected = document.querySelector(`input[name="q${index}"]:checked`);
-        if (selected && parseInt(selected.value) === q.correct) score++;
-      });
-      document.getElementById("result").innerText = `Σωστές: ${score} / ${quizData.length}`;
-    }
-
-    function resetQuiz() {
-      shuffleArray(quizData);
-      renderQuiz();
-      document.getElementById("result").innerText = "";
-    }
-
-    function shuffleArray(array) {
-      for (let i = array.length - 1; i > 0; i--) {
-        const j = Math.floor(Math.random() * (i + 1));
-        [array[i], array[j]] = [array[j], array[i]];
-      }
-      return array;
-    }
-
-    renderQuiz();
-  </script>
+  <footer>
+    © 2025 Φροντιστήριο "Νέο Επίκεντρο" – Φιλώτα 11, Ηλιούπολη Θεσσαλονίκης
+  </footer>
 </body>
 </html>
 
