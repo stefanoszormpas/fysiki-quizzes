@@ -4,37 +4,20 @@
   <meta charset="UTF-8" />
   <title>Quiz: Κρούσεις</title>
   <link rel="stylesheet" href="style.css" />
-  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
   <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" defer></script>
   <script src="quizzes.js" defer></script>
 </head>
 <body>
   <h1>✅ Quiz Φυσικής: Κρούσεις</h1>
+
   <div class="quiz-container" id="quiz"></div>
+
   <div style="text-align: center; margin-top: 1rem;">
     <button onclick="submitQuiz()">Υποβολή</button>
     <button onclick="resetQuiz()">Ξανακάνε το Quiz</button>
     <div id="result" style="margin-top: 1rem; font-weight: bold;"></div>
   </div>
+</body>
+</html>
 
-  <script>
-    let quizData = [];
-
-    function shuffleArray(array) {
-      return array
-        .map((value) => ({ value, sort: Math.random() }))
-        .sort((a, b) => a.sort - b.sort)
-        .map(({ value }) => value);
-    }
-
-    function renderQuiz() {
-      const quizContainer = document.getElementById("quiz");
-      quizContainer.innerHTML = "";
-
-      quizData = shuffleArray(quiz_krouseis).slice(0, 20);
-
-      quizData.forEach((q, index) => {
-        const div = document.createElement("div");
-        div.className = "question";
-        div.innerHTM
 
