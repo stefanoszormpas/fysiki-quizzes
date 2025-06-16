@@ -2,14 +2,86 @@
 <html lang="el">
 <head>
   <meta charset="UTF-8">
-  <title>Quiz Φυσικής</title>
+  <title>Quiz Φυσικής - Νέο Επίκεντρο</title>
   <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      font-family: system-ui, sans-serif;
+      background-color: #f8f9fa;
+      margin: 0;
+      padding: 2rem;
+      color: #212529;
+    }
+
+    h1 {
+      text-align: center;
+      color: #2c3e50;
+      margin-bottom: 2rem;
+    }
+
+    .quiz-list {
+      max-width: 600px;
+      margin: 0 auto;
+      background: white;
+      padding: 1.5rem;
+      border-radius: 12px;
+      box-shadow: 0 0 12px rgba(0,0,0,0.1);
+    }
+
+    .quiz-item {
+      padding: 1rem;
+      border-bottom: 1px solid #ddd;
+      transition: background 0.2s;
+    }
+
+    .quiz-item:last-child {
+      border-bottom: none;
+    }
+
+    .quiz-item:hover {
+      background-color: #f1f3f5;
+    }
+
+    .quiz-item a {
+      text-decoration: none;
+      font-weight: bold;
+      color: #0077cc;
+    }
+
+    .quiz-item small {
+      display: block;
+      color: #6c757d;
+      margin-top: 0.25rem;
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 3rem;
+      font-size: 0.9rem;
+      color: #888;
+    }
+  </style>
 </head>
 <body>
-  <h1>Κουίζ Φυσικής - Νέες Προσθήκες</h1>
-  <ul>
-    <li><a href="quiz-krouseis.html">✅ Κρούσεις (20 ερωτήσεις)</a></li>
-    <!-- Εδώ θα προσθέτεις νέες σειρές -->
-  </ul>
+  <h1>📘 Κουίζ Φυσικής – Νέες Προσθήκες</h1>
+
+  <div class="quiz-list">
+    <div class="quiz-item">
+      <a href="quiz-krouseis.html">✅ Κρούσεις (20 ερωτήσεις)</a>
+      <small>Ημερομηνία: 16/6/2025</small>
+    </div>
+    <!-- Νέα quiz προστίθενται εδώ -->
+    <!--
+    <div class="quiz-item">
+      <a href="quiz-talantoseis.html">🌀 Ταλαντώσεις (15 ερωτήσεις)</a>
+      <small>Ημερομηνία: 20/6/2025</small>
+    </div>
+    -->
+  </div>
+
+  <footer>
+    © 2025 Φροντιστήριο "Νέο Επίκεντρο" – Φιλώτα 11, Ηλιούπολη Θεσσαλονίκης
+  </footer>
 </body>
 </html>
+
