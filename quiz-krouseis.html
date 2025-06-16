@@ -1,29 +1,126 @@
 <!DOCTYPE html>
 <html lang="el">
 <head>
-  <script>
-  window.MathJax = {
-    tex: {inlineMath: [['$', '$'], ['\\(', '\\)']]},
-    svg: {fontCache: 'global'}
-  };
-</script>
-  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-<script type="text/javascript" id="MathJax-script"
-  async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
-</script>
-
-<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
-
   <meta charset="UTF-8">
-  <title>Quiz Φυσικής: Κρούσεις</title>
+  <title>Quiz: Κρούσεις</title>
   <link rel="stylesheet" href="style.css">
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" defer></script>
+  <script src="quizzes.js" defer></script>
+  <style>
+    body {
+      font-family: system-ui, sans-serif;
+      background-color: #f8f9fa;
+      margin: 0;
+      padding: 2rem;
+      color: #212529;
+    }
+
+    h1 {
+      text-align: center;
+      color: #2c3e50;
+      margin-bottom: 2rem;
+    }
+
+    .quiz-container {
+      max-width: 800px;
+      margin: 0 auto;
+      background: white;
+      padding: 1.5rem;
+      border-radius: 12px;
+      box-shadow: 0 0 12px rgba(0,0,0,0.1);
+    }
+
+    .question {
+      margin-bottom: 1.5rem;
+    }
+
+    .question p {
+      font-weight: bold;
+    }
+
+    .answers label {
+      display: block;
+      margin-bottom: 0.5rem;
+    }
+
+    button {
+      background-color: #0077cc;
+      color: white;
+      padding: 0.6rem 1.2rem;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      margin-top: 1rem;
+    }
+
+    #result {
+      font-weight: bold;
+      margin-top: 1.5rem;
+      font-size: 1.2rem;
+      color: #2e8b57;
+    }
+  </style>
 </head>
 <body>
-  <h1>Quiz Φυσικής - Κρούσεις</h1>
-  <div id="quiz"></div>
-  <button onclick="submitQuiz()">Υποβολή</button>
-  <button onclick="resetQuiz()">Ξαναπροσπάθησε</button>
-  <p class="result" id="result"></p>
-  <script src="quizzes.js"></script>
+  <h1>✅ Quiz Φυσικής: Κρούσεις</h1>
+  <div class="quiz-container" id="quiz"></div>
+  <div style="text-align: center;">
+    <button onclick="submitQuiz()">Υποβολή</button>
+    <button onclick="resetQuiz()">Ξανακάνε το Quiz</button>
+    <div id="result"></div>
+  </div>
+
+  <script>
+    const quizData = shuffleArray(quiz_krouseis).slice(0, 20);
+    const quizContainer = document.getElementById("quiz");
+
+    function renderQuiz() {
+      quizContainer.innerHTML = "";
+      quizData.forEach((q, index) => {
+        const div = document.createElement("div");
+        div.className = "question";
+        div.innerHTML = `
+          <p>${index + 1}. ${q.question}</p>
+          <div class="answers">
+            ${q.answers.map((ans, i) => `
+              <label>
+                <input type="radio" name="q${index}" value="${i}">
+                ${ans}
+              </label>
+            `).join("")}
+          </div>
+        `;
+        quizContainer.appendChild(div);
+      });
+
+      if (window.MathJax) MathJax.typeset();
+    }
+
+    function submitQuiz() {
+      let score = 0;
+      quizData.forEach((q, index) => {
+        const selected = document.querySelector(`input[name="q${index}"]:checked`);
+        if (selected && parseInt(selected.value) === q.correct) score++;
+      });
+      document.getElementById("result").innerText = `Σωστές: ${score} / ${quizData.length}`;
+    }
+
+    function resetQuiz() {
+      shuffleArray(quizData);
+      renderQuiz();
+      document.getElementById("result").innerText = "";
+    }
+
+    function shuffleArray(array) {
+      for (let i = array.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [array[i], array[j]] = [array[j], array[i]];
+      }
+      return array;
+    }
+
+    renderQuiz();
+  </script>
 </body>
 </html>
