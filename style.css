@@ -1,3 +1,4 @@
+/* === Βασικό Στυλ === */
 body {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   background-color: #f4f6f8;
@@ -6,6 +7,7 @@ body {
   margin: 3rem auto;
   padding: 2rem;
   line-height: 1.6;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 h1 {
@@ -24,7 +26,7 @@ h1 {
   padding: 1.5rem;
   margin-bottom: 2rem;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-  transition: transform 0.2s ease;
+  transition: transform 0.2s ease, background-color 0.3s ease, border-color 0.3s ease;
 }
 
 .quiz-container .question:hover {
@@ -43,7 +45,7 @@ h1 {
   cursor: pointer;
   padding: 0.4rem 0.6rem;
   border-radius: 5px;
-  transition: background-color 0.2s ease;
+  transition: background-color 0.2s ease, color 0.2s ease;
 }
 
 .answers label:hover {
@@ -80,3 +82,58 @@ button:hover {
   margin-top: 2rem;
 }
 
+/* === Responsive για κινητά === */
+@media (max-width: 600px) {
+  body {
+    padding: 1rem;
+    margin: 1rem;
+  }
+
+  h1 {
+    font-size: 1.6rem;
+  }
+
+  .quiz-container .question {
+    padding: 1rem;
+  }
+
+  button {
+    width: 100%;
+    padding: 0.8rem;
+  }
+}
+
+/* === Dark Mode (με βάση το system preference) === */
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: #1e1e1e;
+    color: #f0f0f0;
+  }
+
+  h1 {
+    color: #66aaff;
+  }
+
+  .quiz-container .question {
+    background: #2c2c2c;
+    border-color: #444;
+    border-left-color: #66aaff;
+    box-shadow: 0 4px 12px rgba(255, 255, 255, 0.05);
+  }
+
+  .answers label:hover {
+    background-color: #333c4a;
+  }
+
+  button {
+    background-color: #4477cc;
+  }
+
+  button:hover {
+    background-color: #5a8de0;
+  }
+
+  #result {
+    color: #7bed9f;
+  }
+}
