@@ -1,88 +1,109 @@
 <!DOCTYPE html>
 <html lang="el">
 <head>
-  <meta charset="UTF-8">
-  <title>Quiz Φυσικής - Νέο Επίκεντρο</title>
-  <link rel="stylesheet" href="style.css">
-  <style>
-    body {
-      font-family: system-ui, sans-serif;
-      background-color: #f8f9fa;
-      margin: 0;
-      padding: 2rem;
-      color: #212529;
-    }
-
-    h1 {
-      text-align: center;
-      color: #2c3e50;
-      margin-bottom: 2rem;
-    }
-
-    .quiz-list {
-      max-width: 600px;
-      margin: 0 auto;
-      background: white;
-      padding: 1.5rem;
-      border-radius: 12px;
-      box-shadow: 0 0 12px rgba(0,0,0,0.1);
-    }
-
-    .quiz-item {
-      padding: 1rem;
-      border-bottom: 1px solid #ddd;
-      transition: background 0.2s;
-    }
-
-    .quiz-item:last-child {
-      border-bottom: none;
-    }
-
-    .quiz-item:hover {
-      background-color: #f1f3f5;
-    }
-
-    .quiz-item a {
-      text-decoration: none;
-      font-weight: bold;
-      color: #0077cc;
-    }
-
-    .quiz-item small {
-      display: block;
-      color: #6c757d;
-      margin-top: 0.25rem;
-    }
-
-    footer {
-      text-align: center;
-      margin-top: 3rem;
-      font-size: 0.9rem;
-      color: #888;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Μαθηματικό Quiz</title>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        #quiz-container {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        #question-container {
+            margin-bottom: 20px;
+            min-height: 100px;
+        }
+        #options-container {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+        .option {
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        .option:hover {
+            background-color: #f0f0f0;
+        }
+        .correct {
+            background-color: #d4edda;
+            border-color: #c3e6cb;
+            color: #155724;
+        }
+        .incorrect {
+            background-color: #f8d7da;
+            border-color: #f5c6cb;
+            color: #721c24;
+        }
+        #timer {
+            font-size: 1.2em;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        #controls {
+            display: flex;
+            justify-content: space-between;
+        }
+        button {
+            padding: 10px 15px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0069d9;
+        }
+        button:disabled {
+            background-color: #cccccc;
+            cursor: not-allowed;
+        }
+        #results {
+            margin-top: 20px;
+            padding: 15px;
+            border-radius: 5px;
+            display: none;
+        }
+        .math-display {
+            margin: 10px 0;
+            padding: 10px;
+            background-color: #f8f9fa;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+    </style>
 </head>
 <body>
-  <h1>📘 Κουίζ Φυσικής – Νέες Προσθήκες</h1>
-
-  <div class="quiz-list">
-    <div class="quiz-item">
-      <a href="quiz-krouseis.html">✅ Κρούσεις (20 ερωτήσεις)</a>
-      <small>Ημερομηνία: 16/6/2025</small>
+    <div id="quiz-container">
+        <h1>Μαθηματικό Quiz</h1>
+        <div id="timer">Χρόνος: <span id="time">60</span> δευτερόλεπτα</div>
+        <div id="question-container"></div>
+        <div id="options-container"></div>
+        <div id="controls">
+            <button id="prev-btn" disabled>Προηγούμενη</button>
+            <button id="next-btn">Επόμενη</button>
+            <button id="submit-btn" style="display: none;">Υποβολή</button>
+        </div>
+        <div id="results"></div>
     </div>
-    <!-- Νέα quiz προστίθενται εδώ -->
-    <!--
-    <div class="quiz-item">
-      <a href="quiz-talantoseis.html">🌀 Ταλαντώσεις (15 ερωτήσεις)</a>
-      <small>Ημερομηνία: 20/6/2025</small>
-    </div>
-    -->
-  </div>
 
-  <footer>
-    © 2025 Φροντιστήριο "Νέο Επίκεντρο" – Φιλώτα 11, Ηλιούπολη Θεσσαλονίκης
-  </footer>
+    <script src="quiz.js"></script>
 </body>
 </html>
-
 
