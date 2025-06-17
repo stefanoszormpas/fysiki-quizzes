@@ -6,10 +6,14 @@
     <title>Quiz Κρούσεις - Μαθηματικά</title>
     <link rel="stylesheet" href="style.css">
     <!-- MathJax για μαθηματικές εκφράσεις -->
-    <script>
+   <script>
         window.MathJax = {
             tex: {
-                inlineMath: [['
+                inlineMath: [['$', '$'], ['\\(', '\\)']],
+                displayMath: [['$$', '$$'], ['\\[', '\\]']]
+            }
+        };
+    </script>
 </head>
 <body>
     <div class="quiz-container">
