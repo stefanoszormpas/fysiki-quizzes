@@ -3,107 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Μαθηματικό Quiz</title>
-    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 20px;
-            background-color: #f5f5f5;
-        }
-        #quiz-container {
-            background-color: white;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
-        }
-        #question-container {
-            margin-bottom: 20px;
-            min-height: 100px;
-        }
-        #options-container {
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: 10px;
-            margin-bottom: 20px;
-        }
-        .option {
-            padding: 10px;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-            cursor: pointer;
-            transition: all 0.3s;
-        }
-        .option:hover {
-            background-color: #f0f0f0;
-        }
-        .correct {
-            background-color: #d4edda;
-            border-color: #c3e6cb;
-            color: #155724;
-        }
-        .incorrect {
-            background-color: #f8d7da;
-            border-color: #f5c6cb;
-            color: #721c24;
-        }
-        #timer {
-            font-size: 1.2em;
-            margin-bottom: 20px;
-            text-align: center;
-        }
-        #controls {
-            display: flex;
-            justify-content: space-between;
-        }
-        button {
-            padding: 10px 15px;
-            background-color: #007bff;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-        button:hover {
-            background-color: #0069d9;
-        }
-        button:disabled {
-            background-color: #cccccc;
-            cursor: not-allowed;
-        }
-        #results {
-            margin-top: 20px;
-            padding: 15px;
-            border-radius: 5px;
-            display: none;
-        }
-        .math-display {
-            margin: 10px 0;
-            padding: 10px;
-            background-color: #f8f9fa;
-            border-radius: 5px;
-            overflow-x: auto;
-        }
-    </style>
+    <title>Εισαγωγή Μαθηματικών Quiz</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div id="quiz-container">
-        <h1>Μαθηματικό Quiz</h1>
-        <div id="timer">Χρόνος: <span id="time">60</span> δευτερόλεπτα</div>
-        <div id="question-container"></div>
-        <div id="options-container"></div>
-        <div id="controls">
-            <button id="prev-btn" disabled>Προηγούμενη</button>
-            <button id="next-btn">Επόμενη</button>
-            <button id="submit-btn" style="display: none;">Υποβολή</button>
+    <div class="welcome-container">
+        <h1>Καλώς ήρθατε στα Μαθηματικά Quiz!</h1>
+        <p>Επιλέξτε ένα από τα διαθέσιμα quiz:</p>
+        
+        <div class="quiz-list">
+            <a href="quiz1.html" class="quiz-card">
+                <h2>Βασική Άλγεβρα</h2>
+                <p>10 ερωτήσεις για εξισώσεις και ανισώσεις</p>
+            </a>
+            
+            <a href="quiz2.html" class="quiz-card">
+                <h2>Γεωμετρία</h2>
+                <p>8 ερωτήσεις για σχήματα και εμβαδά</p>
+            </a>
+            
+            <a href="quiz3.html" class="quiz-card">
+                <h2>Τριγωνομετρία</h2>
+                <p>12 ερωτήσεις για τριγωνομετρικές συναρτήσεις</p>
+            </a>
         </div>
-        <div id="results"></div>
+        
+        <div class="instructions">
+            <h3>Οδηγίες:</h3>
+            <ul>
+                <li>Κάθε quiz έχει χρονικό όριο</li>
+                <li>Οι σωστές απαντήσεις θα εμφανίζονται με πράσινο χρώμα</li>
+                <li>Οι λανθασμένες απαντήσεις θα εμφανίζονται με κόκκινο χρώμα</li>
+                <li>Στο τέλος θα λάβετε αναλυτική αναφορά</li>
+            </ul>
+        </div>
     </div>
-
-    <script src="quiz.js"></script>
 </body>
 </html>
-
