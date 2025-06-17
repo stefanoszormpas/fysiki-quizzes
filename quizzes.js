@@ -238,10 +238,21 @@ function showQuestion() {
     nextQuestionBtn.style.display = 'none';
     
     // Render math expressions
-    if (window.MathJax) {
-        MathJax.typesetPromise([questionText, answersContainer]).catch((err) => {
+    if (window.MathJax && MathJax.typesetPromise) {
+        MathJax.typesetPromise([questionText, answersContainer]).then(() => {
+            console.log('Math rendered successfully');
+        }).catch((err) => {
             console.log('MathJax error:', err);
         });
+    } else {
+        // Fallback - try to render after a short delay
+        setTimeout(() => {
+            if (window.MathJax && MathJax.typesetPromise) {
+                MathJax.typesetPromise([questionText, answersContainer]).catch((err) => {
+                    console.log('MathJax delayed error:', err);
+                });
+            }
+        }, 100);
     }
 }
 
@@ -422,10 +433,21 @@ function showReview() {
     });
     
     // Render math expressions in review
-    if (window.MathJax) {
-        MathJax.typesetPromise([reviewContainer]).catch((err) => {
-            console.log('MathJax error:', err);
+    if (window.MathJax && MathJax.typesetPromise) {
+        MathJax.typesetPromise([reviewContainer]).then(() => {
+            console.log('Review math rendered successfully');
+        }).catch((err) => {
+            console.log('MathJax review error:', err);
         });
+    } else {
+        // Fallback
+        setTimeout(() => {
+            if (window.MathJax && MathJax.typesetPromise) {
+                MathJax.typesetPromise([reviewContainer]).catch((err) => {
+                    console.log('MathJax review delayed error:', err);
+                });
+            }
+        }, 100);
     }
 }
 
