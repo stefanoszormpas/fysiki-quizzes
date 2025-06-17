@@ -59,27 +59,25 @@ function renderQuestion() {
   timerDisplay.textContent = timeLeft;
   timer = setInterval(countdown, 1000);
 
-  quizContainer.innerHTML = "";
   const q = quizData[currentQuestion];
-  const div = document.createElement("div");
-  div.className = "question";
-  div.id = "questionBox";
-  div.innerHTML = `
-    <p>${currentQuestion + 1}. ${q.question}</p>
-    <div class="answers">
-      ${q.answers
-        .map(
-          (ans, i) => `
-        <label>
-          <input type="radio" name="q" value="${i}" />
-          ${ans}
-        </label>
-      `
-        )
-        .join("")}
+  quizContainer.innerHTML = `
+    <div class="question" id="questionBox">
+      <p>${currentQuestion + 1}. ${q.question}</p>
+      <div class="answers">
+        ${q.answers
+          .map(
+            (ans, i) => `
+            <label>
+              <input type="radio" name="q" value="${i}" />
+              ${ans}
+            </label>`
+          )
+          .join("")}
+      </div>
     </div>
   `;
-  quizContainer.appendChild(div);
+
+  // Κάλεσε τη MathJax αφού προστέθηκε η νέα ερώτηση
   if (window.MathJax) MathJax.typesetPromise();
 }
 
@@ -137,5 +135,8 @@ function shuffleArray(array) {
     .sort((a, b) => a.sort - b.sort)
     .map(({ value }) => value);
 }
+
+renderQuestion();
+
 
 renderQuestion();
