@@ -139,41 +139,25 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     // Εμφάνιση αποτελεσμάτων
-    function showResults() {
-        let resultsHTML = `<h2>Αποτελέσματα</h2>`;
-        resultsHTML += `<p>Σκορ: ${score} / ${questions.length}</p>`;
-        resultsHTML += `<p>Ποσοστό: ${Math.round((score / questions.length) * 100)}%</p>`;
-        
-        resultsHTML += `<h3>Αναλυτική Αξιολόγηση:</h3>`;
-        questions.forEach((question, index) => {
-            resultsHTML += `<div class="question-review ${userAnswers[index] === question.correctAnswer ? 'correct' : 'incorrect'}">`;
-            resultsHTML += `<p><strong>Ερώτηση ${index + 1}:</strong> ${question.question}</p>`;
-            
-            if (userAnswers[index] !== null) {
-                const userAnswer = question.options[userAnswers[index]];
-                const correctAnswer = question.options[question.correctAnswer];
-                
-                resultsHTML += `<p>Η απάντησή σας: <span class="${userAnswers[index] === question.correctAnswer ? 'correct' : 'incorrect'}">${userAnswer}</span></p>`;
-                
-                if (userAnswers[index] !== question.correctAnswer) {
-                    resultsHTML += `<p>Σωστή απάντηση: <span class="correct">${correctAnswer}</span></p>`;
-                }
-            } else {
-                resultsHTML += `<p>Δεν απαντήσατε</p>`;
-                resultsHTML += `<p>Σωστή απάντηση: <span class="correct">${question.options[question.correctAnswer]}</span></p>`;
-            }
-            
-            resultsHTML += `<p class="explanation">${question.explanation}</p>`;
-            resultsHTML += `</div>`;
-        });
-        
-        resultsHTML += `<button id="restart-btn">Ξανά ξεκίνα το Quiz</button>`;
-        resultsDiv.innerHTML = resultsHTML;
-        resultsDiv.style.display = 'block';
-        
-        document.getElementById('restart-btn').addEventListener('click', restartQuiz);
-        renderMath();
-    }
+   function showResults() {
+    const resultsData = {
+        score: score,
+        totalQuestions: questions.length,
+        userAnswers: userAnswers,
+        questions: questions.map(q => ({
+            question: q.question,
+            options: q.options,
+            correctAnswer: q.correctAnswer,
+            explanation: q.explanation
+        }))
+    };
+
+    // Αποθήκευση στο sessionStorage
+    sessionStorage.setItem('quizResults', JSON.stringify(resultsData));
+    
+    // Ανακατεύθυνση στη σελίδα αποτελεσμάτων
+    window.location.href = 'results.html';
+}
 
     // Επανεκκίνηση quiz
     function restartQuiz() {
