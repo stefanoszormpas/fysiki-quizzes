@@ -222,8 +222,10 @@ function showQuestion() {
     startTimer();
     nextQuestionBtn.style.display = 'none';
 
-    if (window.MathJax && MathJax.typesetPromise) {
-        MathJax.typesetPromise([questionText, answersContainer]);
+   if (window.MathJax && MathJax.typesetPromise) {
+    MathJax.typesetPromise([questionText]);
+}
+
     }
 }
 
