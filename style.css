@@ -490,7 +490,32 @@ body {
 }
 
 /* Math expressions styling */
-.MathJax {
+.MathJax, .MathJax_Display {
+    font-size: 1.2em !important;
+    color: inherit !important;
+}
+
+.question-text .MathJax {
+    font-size: 1.3em !important;
+}
+
+.answer-option .MathJax {
+    font-size: 1.1em !important;
+}
+
+/* Ensure MathJax renders properly in colored backgrounds */
+.answer-option.selected .MathJax,
+.answer-option.correct .MathJax,
+.answer-option.incorrect .MathJax {
+    color: white !important;
+}
+
+/* Review screen math styling */
+.review-question .MathJax {
+    font-size: 1.2em !important;
+}
+
+.review-answer .MathJax {
     font-size: 1.1em !important;
 }
 
