@@ -1,8 +1,8 @@
 document.addEventListener('DOMContentLoaded', function() {
-    // Οι ερωτήσεις του quiz (μπορείτε να δημιουργήσετε διαφορετικά αρχεία js για κάθε quiz)
+    // Οι ερωτήσεις του quiz
     const questions = [
         {
-            question: "Ποια είναι η τιμή του \( x \) στην εξίσωση \( 2x + 3 = 7 \);",
+            question: "Ποια είναι η τιμή του \\( x \\) στην εξίσωση \\( 2x + 3 = 7 \\);",
             options: [
                 "1",
                 "2",
@@ -10,29 +10,18 @@ document.addEventListener('DOMContentLoaded', function() {
                 "4"
             ],
             correctAnswer: 1,
-            explanation: "Λύση: \( 2x + 3 = 7 \) ⇒ \( 2x = 7 - 3 \) ⇒ \( 2x = 4 \) ⇒ \( x = 2 \)"
+            explanation: "Λύση: \\( 2x + 3 = 7 \\) ⇒ \\( 2x = 7 - 3 \\) ⇒ \\( 2x = 4 \\) ⇒ \\( x = 2 \\)"
         },
         {
-            question: "Ποιο είναι το εμβαδόν ενός κύκλου με ακτίνα \( r = 5 \);",
+            question: "Ποιο είναι το εμβαδόν ενός κύκλου με ακτίνα \\( r = 5 \\);",
             options: [
-                "\( 10\pi \)",
-                "\( 25\pi \)",
-                "\( 50\pi \)",
-                "\( 100\pi \)"
+                "\\( 10\\pi \\)",
+                "\\( 25\\pi \\)",
+                "\\( 50\\pi \\)",
+                "\\( 100\\pi \\)"
             ],
             correctAnswer: 1,
-            explanation: "Ο τύπος για το εμβαδόν είναι \( E = \pi r^2 \). Για \( r = 5 \), \( E = \pi \times 5^2 = 25\pi \)"
-        },
-        {
-            question: "Ποια είναι η παράγωγος της συνάρτησης \( f(x) = 3x^2 + 2x - 5 \);",
-            options: [
-                "\( 6x + 2 \)",
-                "\( 3x + 2 \)",
-                "\( 6x - 5 \)",
-                "\( 3x^2 + 2 \)"
-            ],
-            correctAnswer: 0,
-            explanation: "Η παράγωγος του \( 3x^2 \) είναι \( 6x \), του \( 2x \) είναι \( 2 \), και της σταθεράς -5 είναι 0. Άρα \( f'(x) = 6x + 2 \)"
+            explanation: "Ο τύπος για το εμβαδόν είναι \\( E = \\pi r^2 \\). Για \\( r = 5 \\), \\( E = \\pi \\times 5^2 = 25\\pi \\)"
         }
     ];
 
@@ -40,7 +29,7 @@ document.addEventListener('DOMContentLoaded', function() {
     let currentQuestionIndex = 0;
     let userAnswers = new Array(questions.length).fill(null);
     let score = 0;
-    let timeLeft = 60; // 60 δευτερόλεπτα
+    let timeLeft = 60;
     let timer;
     let quizCompleted = false;
 
@@ -79,7 +68,6 @@ document.addEventListener('DOMContentLoaded', function() {
             optionElement.classList.add('option');
             optionElement.innerHTML = `<div class="math-display">${option}</div>`;
             
-            // Ελέγχουμε αν έχει απαντηθεί η ερώτηση
             if (userAnswers[currentQuestionIndex] !== null) {
                 if (index === question.correctAnswer) {
                     optionElement.classList.add('correct');
@@ -92,13 +80,8 @@ document.addEventListener('DOMContentLoaded', function() {
             optionsContainer.appendChild(optionElement);
         });
         
-        // Ενημέρωση κουμπιών navigation
         updateNavigationButtons();
-        
-        // Ενημέρωση MathJax
-        if (window.MathJax) {
-            MathJax.typesetPromise();
-        }
+        renderMath();
     }
 
     // Επιλογή απάντησης
@@ -107,13 +90,11 @@ document.addEventListener('DOMContentLoaded', function() {
         
         userAnswers[currentQuestionIndex] = optionIndex;
         
-        // Έλεγχος αν η απάντηση είναι σωστή
         const question = questions[currentQuestionIndex];
         if (optionIndex === question.correctAnswer) {
             score++;
         }
         
-        // Εμφάνιση σωστής/λάθος απάντησης
         showQuestion();
     }
 
@@ -149,13 +130,11 @@ document.addEventListener('DOMContentLoaded', function() {
         quizCompleted = true;
         clearInterval(timer);
         
-        // Απενεργοποίηση όλων των επιλογών
         const options = document.querySelectorAll('.option');
         options.forEach(option => {
             option.style.cursor = 'not-allowed';
         });
         
-        // Εμφάνιση αποτελεσμάτων
         showResults();
     }
 
@@ -193,11 +172,7 @@ document.addEventListener('DOMContentLoaded', function() {
         resultsDiv.style.display = 'block';
         
         document.getElementById('restart-btn').addEventListener('click', restartQuiz);
-        
-        // Ενημέρωση MathJax
-        if (window.MathJax) {
-            MathJax.typesetPromise();
-        }
+        renderMath();
     }
 
     // Επανεκκίνηση quiz
@@ -215,7 +190,18 @@ document.addEventListener('DOMContentLoaded', function() {
         startTimer();
     }
 
-    // Event listeners για τα κουμπιά
+    // Εκ νέου απόδοση μαθηματικών τύπων
+    function renderMath() {
+        if (window.MathJax) {
+            MathJax.typesetPromise().catch(err => {
+                console.error('MathJax typesetting error:', err);
+                // Επανάληψη αν αποτύχει η πρώτη προσπάθεια
+                setTimeout(renderMath, 500);
+            });
+        }
+    }
+
+    // Event listeners
     prevBtn.addEventListener('click', () => {
         if (currentQuestionIndex > 0) {
             currentQuestionIndex--;
