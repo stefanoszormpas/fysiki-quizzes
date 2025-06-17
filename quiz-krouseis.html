@@ -2,35 +2,27 @@
 <html lang="el">
 <head>
   <meta charset="UTF-8" />
-  <title>Quiz: Κρούσεις</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Quiz Κρούσεις</title>
   <link rel="stylesheet" href="style.css" />
-  <script>
-  window.MathJax = {
-    tex: {
-      inlineMath: [['$', '$'], ['\\(', '\\)']],
-      displayMath: [['\\[', '\\]']],
-    },
-    svg: {
-      fontCache: 'global'
-    }
-  };
-</script>
-<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" defer></script>
-
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" defer></script>
-  <script src="quizzes.js" defer></script>
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async
+    src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 </head>
 <body>
-  <h1>✅ Quiz Φυσικής: Κρούσεις</h1>
-
-  <div class="quiz-container" id="quiz"></div>
-
-  <div style="text-align: center; margin-top: 1rem;">
-    <button onclick="submitQuiz()">Υποβολή</button>
-    <button onclick="resetQuiz()">Ξανακάνε το Quiz</button>
-    <div id="result" style="margin-top: 1rem; font-weight: bold;"></div>
+  <div class="container">
+    <h1>Quiz Κρούσεις</h1>
+    <div id="quiz"></div>
+    <div id="controls">
+      <button id="submitBtn">Υποβολή</button>
+      <button id="nextBtn" disabled>Επόμενη</button>
+    </div>
+    <div id="result"></div>
+    <div id="timer">Χρόνος: <span id="time">30</span> sec</div>
   </div>
+  <script src="script.js"></script>
 </body>
 </html>
+
 
 
