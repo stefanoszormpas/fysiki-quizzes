@@ -20,7 +20,7 @@ const quiz_krouseis = [
     correct: 1
   },
   {
-    question: "Η εξίσωση διατήρησης της ορμής είναι: $m_1 u_1 + m_2 u_2 = m_1 v_1 + m_2 v_2$. Τι εκφράζει;",
+    question: "Η εξίσωση διατήρησης της ορμής είναι: $$m_1 u_1 + m_2 u_2 = m_1 v_1 + m_2 v_2$$. Τι εκφράζει;",
     answers: [
       "Τη διατήρηση ενέργειας",
       "Τη μεταβολή της δύναμης",
@@ -38,115 +38,97 @@ const quiz_krouseis = [
       "m/s²"
     ],
     correct: 2
-  },
-  {
-    question: "Στην πλαστική κρούση δύο σωμάτων, η τελική ταχύτητα είναι:",
-    answers: [
-      "Μηδέν",
-      "Ίδια για τα δύο σώματα",
-      "Μεγαλύτερη του ενός σώματος",
-      "Αρνητική πάντα"
-    ],
-    correct: 1
-  },
-  {
-    question: "Πότε δύο σώματα μένουν ενωμένα μετά την κρούση;",
-    answers: [
-      "Μόνο αν έχουν την ίδια ταχύτητα πριν",
-      "Όταν η κρούση είναι ελαστική",
-      "Όταν η κρούση είναι απολύτως πλαστική",
-      "Όταν είναι ακίνητα"
-    ],
-    correct: 2
-  },
-  {
-    question: "Αν $p = mv$, τότε η ορμή σώματος μάζας $2\\,\\text{kg}$ που κινείται με $3\\,\\text{m/s}$ είναι:",
-    answers: [
-      "$5\\,\\text{kg·m/s}$",
-      "$6\\,\\text{kg·m/s}$",
-      "$1.5\\,\\text{kg·m/s}$",
-      "$3\\,\\text{kg·m/s}$"
-    ],
-    correct: 1
-  },
-  {
-    question: "Δύο σώματα μάζας $m$ και $2m$ συγκρούονται πλαστικά. Το $m$ κινείται με ταχύτητα $u$ και το $2m$ είναι ακίνητο. Ποια είναι η τελική ταχύτητα $v$ του συσσωματώματος;",
-    answers: [
-      "$\\dfrac{u}{3}$",
-      "$\\dfrac{2u}{3}$",
-      "$\\dfrac{3u}{2}$",
-      "$\\dfrac{u}{2}$"
-    ],
-    correct: 0
-  },
-  {
-    question: "Αν σε ελαστική κρούση $m_1 = m_2$ και $u_2 = 0$, τότε μετά την κρούση ισχύει:",
-    answers: [
-      "$v_1 = 0$, $v_2 = u_1$",
-      "$v_1 = u_1$, $v_2 = 0$",
-      "$v_1 = v_2$",
-      "$v_1 = -u_1$, $v_2 = u_2$"
-    ],
-    correct: 0
-  },
-  {
-    question: "Αν σε πλαστική κρούση η αρχική κινητική ενέργεια είναι $K_\\text{πριν}$ και η τελική $K_\\text{μετά}$, τότε:",
-    answers: [
-      "$K_\\text{μετά} = K_\\text{πριν}$",
-      "$K_\\text{μετά} > K_\\text{πριν}$",
-      "$K_\\text{μετά} < K_\\text{πριν}$",
-      "$K_\\text{μετά} = 0$"
-    ],
-    correct: 2
   }
 ];
 
-let quizData = shuffleArray(quiz_krouseis).slice(0, 20);
+let quizData = shuffleArray(quiz_krouseis);
+let currentQuestion = 0;
+let score = 0;
+let timer;
+let timeLeft = 30;
+
 const quizContainer = document.getElementById("quiz");
+const submitBtn = document.getElementById("submitBtn");
+const nextBtn = document.getElementById("nextBtn");
+const resultContainer = document.getElementById("result");
+const timerDisplay = document.getElementById("time");
 
-function renderQuiz() {
+function renderQuestion() {
+  clearInterval(timer);
+  timeLeft = 30;
+  timerDisplay.textContent = timeLeft;
+  timer = setInterval(countdown, 1000);
+
   quizContainer.innerHTML = "";
-  quizData.forEach((q, index) => {
-    const div = document.createElement("div");
-    div.className = "question";
-    div.innerHTML = `
-      <p>${index + 1}. ${q.question}</p>
-      <div class="answers">
-        ${q.answers
-          .map(
-            (ans, i) => `
-          <label>
-            <input type="radio" name="q${index}" value="${i}" />
-            ${ans}
-          </label>
-        `
-          )
-          .join("")}
-      </div>
-    `;
-    quizContainer.appendChild(div);
-  });
-
-  if (window.MathJax) MathJax.typeset();
+  const q = quizData[currentQuestion];
+  const div = document.createElement("div");
+  div.className = "question";
+  div.id = "questionBox";
+  div.innerHTML = `
+    <p>${currentQuestion + 1}. ${q.question}</p>
+    <div class="answers">
+      ${q.answers
+        .map(
+          (ans, i) => `
+        <label>
+          <input type="radio" name="q" value="${i}" />
+          ${ans}
+        </label>
+      `
+        )
+        .join("")}
+    </div>
+  `;
+  quizContainer.appendChild(div);
+  if (window.MathJax) MathJax.typesetPromise();
 }
 
-function submitQuiz() {
-  let score = 0;
-  quizData.forEach((q, index) => {
-    const selected = document.querySelector(`input[name="q${index}"]:checked`);
-    if (selected && parseInt(selected.value) === q.correct) score++;
-  });
-  document.getElementById("result").innerText = `Σωστές: ${score} / ${quizData.length}`;
-  quizData.forEach((_, index) => {
-    const inputs = document.querySelectorAll(`input[name="q${index}"]`);
-    inputs.forEach(input => (input.disabled = true));
-  });
+function countdown() {
+  timeLeft--;
+  timerDisplay.textContent = timeLeft;
+  if (timeLeft === 0) {
+    clearInterval(timer);
+    checkAnswer();
+  }
 }
 
-function resetQuiz() {
-  quizData = shuffleArray(quiz_krouseis).slice(0, 20);
-  renderQuiz();
-  document.getElementById("result").innerText = "";
+submitBtn.addEventListener("click", checkAnswer);
+nextBtn.addEventListener("click", nextQuestion);
+
+function checkAnswer() {
+  clearInterval(timer);
+  const selected = document.querySelector(`input[name="q"]:checked`);
+  const questionBox = document.getElementById("questionBox");
+  if (selected) {
+    if (parseInt(selected.value) === quizData[currentQuestion].correct) {
+      score++;
+      questionBox.classList.add("correct");
+    } else {
+      questionBox.classList.add("wrong");
+    }
+  } else {
+    questionBox.classList.add("wrong");
+  }
+  submitBtn.disabled = true;
+  nextBtn.disabled = false;
+}
+
+function nextQuestion() {
+  currentQuestion++;
+  if (currentQuestion >= quizData.length) {
+    showResult();
+  } else {
+    renderQuestion();
+    submitBtn.disabled = false;
+    nextBtn.disabled = true;
+  }
+}
+
+function showResult() {
+  quizContainer.innerHTML = "";
+  resultContainer.innerText = `Τελικό σκορ: ${score} / ${quizData.length}`;
+  document.getElementById("controls").style.display = "none";
+  document.getElementById("timer").style.display = "none";
 }
 
 function shuffleArray(array) {
@@ -156,5 +138,4 @@ function shuffleArray(array) {
     .map(({ value }) => value);
 }
 
-renderQuiz();
-
+renderQuestion();
