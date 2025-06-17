@@ -1,39 +1,140 @@
+/* === Βασικό Στυλ === */
 body {
-  font-family: Arial, sans-serif;
-  background-color: #f9f9f9;
-  margin: 0;
-  padding: 20px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f4f6f8;
+  color: #2c3e50;
+  max-width: 900px;
+  margin: 3rem auto;
+  padding: 2rem;
+  line-height: 1.6;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
-.container {
-  max-width: 600px;
-  margin: auto;
-  padding: 20px;
-  background: #fff;
-  border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+
+h1 {
+  text-align: center;
+  color: #2a71d0;
+  margin-bottom: 2.5rem;
+  font-size: 2.2rem;
+  letter-spacing: 0.5px;
 }
+
+.quiz-container .question {
+  background: #ffffff;
+  border: 1px solid #e0e0e0;
+  border-left: 5px solid #2a71d0;
+  border-radius: 10px;
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s ease, background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.quiz-container .question:hover {
+  transform: scale(1.01);
+}
+
 .question p {
-  font-size: 1.2em;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
 }
+
 .answers label {
   display: block;
-  margin: 8px 0;
-}
-.correct {
-  background-color: #c8f7c5;
-  padding: 10px;
+  margin-bottom: 0.7rem;
+  cursor: pointer;
+  padding: 0.4rem 0.6rem;
   border-radius: 5px;
+  transition: background-color 0.2s ease, color 0.2s ease;
 }
-.incorrect {
-  background-color: #f7c5c5;
-  padding: 10px;
-  border-radius: 5px;
+
+.answers label:hover {
+  background-color: #f0f4fa;
 }
-#controls {
-  margin-top: 20px;
+
+input[type="radio"] {
+  margin-right: 0.6rem;
 }
-#timer {
-  margin-top: 20px;
-  font-weight: bold;
+
+button {
+  background-color: #2a71d0;
+  color: white;
+  border: none;
+  padding: 0.8rem 1.5rem;
+  margin: 1rem 0;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+button:hover {
+  background-color: #1f5bb5;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+#result {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #27ae60;
+  text-align: center;
+  margin-top: 2rem;
+}
+
+/* === Responsive για κινητά === */
+@media (max-width: 600px) {
+  body {
+    padding: 1rem;
+    margin: 1rem;
+  }
+
+  h1 {
+    font-size: 1.6rem;
+  }
+
+  .quiz-container .question {
+    padding: 1rem;
+  }
+
+  button {
+    width: 100%;
+    padding: 0.8rem;
+  }
+}
+
+/* === Dark Mode (με βάση το system preference) === */
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: #1e1e1e;
+    color: #f0f0f0;
+  }
+
+  h1 {
+    color: #66aaff;
+  }
+
+  .quiz-container .question {
+    background: #2c2c2c;
+    border-color: #444;
+    border-left-color: #66aaff;
+    box-shadow: 0 4px 12px rgba(255, 255, 255, 0.05);
+  }
+
+  .answers label:hover {
+    background-color: #333c4a;
+  }
+
+  button {
+    background-color: #4477cc;
+  }
+
+  button:hover {
+    background-color: #5a8de0;
+  }
+
+  #result {
+    color: #7bed9f;
+  }
 }
 
