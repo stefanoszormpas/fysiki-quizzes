@@ -87,7 +87,7 @@ document.addEventListener('DOMContentLoaded', function() {
             "η ορμή και η κινητική ενέργεια του συστήματος των σωμάτων.",
             "η ορμή του συστήματος και η κινητική ενέργεια του κάθε σώματος."
         ],
-        correctAnswer: 3,
+        correctAnswer: 2,
         explanation: "Κρούση = ΑΔΟ και ελαστική = ΑΔΕ "
     },
     
