@@ -1,4 +1,10 @@
-/* === Βασικό Στυλ === */
+/* ==== Γενικά ==== */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 body {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   background-color: #f4f6f8;
@@ -10,6 +16,7 @@ body {
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
+/* ==== Τίτλοι ==== */
 h1 {
   text-align: center;
   color: #2a71d0;
@@ -18,92 +25,171 @@ h1 {
   letter-spacing: 0.5px;
 }
 
-.quiz-container .question {
+/* ==== Quiz Cards στην αρχική σελίδα (index.html) ==== */
+.quiz-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  justify-content: center;
+  margin-bottom: 3rem;
+}
+
+.quiz-card {
+  background: white;
+  border-radius: 12px;
+  padding: 1.8rem 2rem;
+  width: 280px;
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.08);
+  text-decoration: none;
+  color: #2c3e50;
+  transition: transform 0.2s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  border-left: 6px solid #2a71d0;
+}
+
+.quiz-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 30px rgba(42, 113, 208, 0.3);
+}
+
+.quiz-card h2 {
+  margin: 0;
+  font-size: 1.4rem;
+  font-weight: 700;
+}
+
+.quiz-card p {
+  margin: 0;
+  font-size: 1rem;
+  color: #555;
+}
+
+/* ==== Container Quiz ==== */
+.quiz-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+/* ==== Ερωτήσεις (quiz.html) ==== */
+.quiz-container .question-container,
+.quiz-container .options-container,
+.quiz-container .results {
   background: #ffffff;
   border: 1px solid #e0e0e0;
-  border-left: 5px solid #2a71d0;
-  border-radius: 10px;
-  padding: 1.5rem;
-  margin-bottom: 2rem;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-  transition: transform 0.2s ease, background-color 0.3s ease, border-color 0.3s ease;
+  border-left: 6px solid #2a71d0;
+  border-radius: 12px;
+  padding: 1.8rem 2rem;
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.08);
+  transition: box-shadow 0.3s ease;
 }
 
-.quiz-container .question:hover {
-  transform: scale(1.01);
-}
-
-.question p {
+.quiz-container .question-container {
   font-weight: 600;
-  margin-bottom: 1rem;
-  font-size: 1.1rem;
+  font-size: 1.2rem;
+  color: #2c3e50;
 }
 
-.answers label {
+.quiz-container .options-container label {
   display: block;
-  margin-bottom: 0.7rem;
+  margin-bottom: 0.8rem;
   cursor: pointer;
-  padding: 0.4rem 0.6rem;
-  border-radius: 5px;
-  transition: background-color 0.2s ease, color 0.2s ease;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  border: 1px solid transparent;
+  transition: background-color 0.2s ease, border-color 0.2s ease;
 }
 
-.answers label:hover {
+.quiz-container .options-container label:hover {
   background-color: #f0f4fa;
+  border-color: #2a71d0;
 }
 
-input[type="radio"] {
-  margin-right: 0.6rem;
+.quiz-container .options-container input[type="radio"] {
+  margin-right: 0.7rem;
 }
 
-button {
+.quiz-container .controls {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.quiz-container button {
   background-color: #2a71d0;
   color: white;
   border: none;
   padding: 0.8rem 1.5rem;
-  margin: 1rem 0;
-  border-radius: 6px;
+  border-radius: 8px;
   font-size: 1rem;
-  font-weight: 500;
+  font-weight: 600;
   cursor: pointer;
-  transition: background-color 0.2s ease, box-shadow 0.2s ease;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
 }
 
-button:hover {
+.quiz-container button:disabled {
+  background-color: #8aaedb;
+  cursor: not-allowed;
+}
+
+.quiz-container button:hover:not(:disabled) {
   background-color: #1f5bb5;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
 }
 
-#result {
-  font-size: 1.3rem;
+/* ==== Timer ==== */
+.timer {
+  font-weight: 700;
+  color: #2a71d0;
+  font-size: 1.1rem;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+/* ==== Back Button ==== */
+.back-button {
+  display: inline-block;
+  margin-bottom: 1.5rem;
+  color: #2a71d0;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: color 0.2s ease;
+}
+
+.back-button:hover {
+  color: #1f5bb5;
+}
+
+/* ==== Αποτελέσματα ==== */
+#results-content {
+  font-size: 1.2rem;
   font-weight: 600;
   color: #27ae60;
   text-align: center;
   margin-top: 2rem;
 }
 
-/* === Responsive για κινητά === */
-@media (max-width: 600px) {
+/* ==== Responsive ==== */
+@media (max-width: 700px) {
+  .quiz-list {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .quiz-card {
+    width: 90%;
+  }
+
   body {
-    padding: 1rem;
     margin: 1rem;
-  }
-
-  h1 {
-    font-size: 1.6rem;
-  }
-
-  .quiz-container .question {
     padding: 1rem;
-  }
-
-  button {
-    width: 100%;
-    padding: 0.8rem;
   }
 }
 
-/* === Dark Mode (με βάση το system preference) === */
 @media (prefers-color-scheme: dark) {
   body {
     background-color: #1e1e1e;
@@ -114,32 +200,50 @@ button:hover {
     color: #66aaff;
   }
 
-  .quiz-container .question {
+  .quiz-card {
+    background: #2c2c2c;
+    border-left-color: #66aaff;
+    box-shadow: 0 6px 14px rgba(255, 255, 255, 0.1);
+    color: #e0e0e0;
+  }
+
+  .quiz-card:hover {
+    box-shadow: 0 12px 30px rgba(102, 170, 255, 0.4);
+  }
+
+  .quiz-container .question-container,
+  .quiz-container .options-container,
+  .quiz-container .results {
     background: #2c2c2c;
     border-color: #444;
     border-left-color: #66aaff;
-    box-shadow: 0 4px 12px rgba(255, 255, 255, 0.05);
+    box-shadow: 0 6px 14px rgba(255, 255, 255, 0.1);
+    color: #e0e0e0;
   }
 
-  .answers label:hover {
+  .quiz-container .options-container label:hover {
     background-color: #333c4a;
+    border-color: #66aaff;
   }
 
-  button {
+  .quiz-container button {
     background-color: #4477cc;
   }
 
-  button:hover {
+  .quiz-container button:hover:not(:disabled) {
     background-color: #5a8de0;
   }
 
-  #result {
+  #results-content {
     color: #7bed9f;
   }
-}
 
-  #result {
-    color: #7bed9f;
+  .back-button {
+    color: #66aaff;
+  }
+
+  .back-button:hover {
+    color: #a0caff;
   }
 }
 
