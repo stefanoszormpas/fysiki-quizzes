@@ -1,9 +1,9 @@
-/* Γενικά στυλ */
+/* Γενικά στυλ - Light Dark Mode */
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     line-height: 1.6;
-    color: #333;
-    background-color: #f5f7fa;
+    color: #f0f0f0;
+    background-color: #2c3e50;
     margin: 0;
     padding: 0;
 }
@@ -13,13 +13,18 @@ body {
     max-width: 1000px;
     margin: 50px auto;
     padding: 30px;
-    background-color: white;
+    background-color: #34495e;
     border-radius: 10px;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+    transition: transform 0.3s ease;
+}
+
+.welcome-container:hover {
+    transform: scale(1.02);
 }
 
 .welcome-container h1 {
-    color: #2c3e50;
+    color: #ecf0f1;
     text-align: center;
     margin-bottom: 30px;
 }
@@ -51,10 +56,11 @@ body {
 }
 
 .instructions {
-    background-color: #f8f9fa;
+    background-color: #3b4a5a;
     padding: 20px;
     border-radius: 8px;
     margin-top: 40px;
+    color: #ecf0f1;
 }
 
 /* Στυλ quiz σελίδας */
@@ -62,9 +68,10 @@ body {
     max-width: 800px;
     margin: 30px auto;
     padding: 30px;
-    background-color: white;
+    background-color: #34495e;
     border-radius: 10px;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+    transition: opacity 0.5s ease, transform 0.5s ease;
 }
 
 .back-button {
@@ -80,8 +87,9 @@ body {
     margin-bottom: 20px;
     text-align: center;
     padding: 10px;
-    background-color: #f8f9fa;
+    background-color: #3b4a5a;
     border-radius: 5px;
+    color: #f1f1f1;
 }
 
 .question-container {
@@ -89,6 +97,14 @@ body {
     min-height: 100px;
     font-size: 1.1em;
     line-height: 1.6;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.question-container.active {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 .options-container {
@@ -100,28 +116,30 @@ body {
 
 .option {
     padding: 15px;
-    border: 2px solid #e0e0e0;
+    border: 2px solid #4d5b6b;
     border-radius: 8px;
     cursor: pointer;
     transition: all 0.3s;
     font-size: 1em;
+    background-color: #3b4a5a;
+    color: #ecf0f1;
 }
 
 .option:hover {
-    background-color: #f0f0f0;
-    border-color: #d0d0d0;
+    background-color: #5a6b7c;
+    border-color: #6d7b8d;
 }
 
 .correct {
-    background-color: #d4edda;
-    border-color: #c3e6cb;
-    color: #155724;
+    background-color: #27ae60;
+    border-color: #1e8449;
+    color: #ecf0f1;
 }
 
 .incorrect {
-    background-color: #f8d7da;
-    border-color: #f5c6cb;
-    color: #721c24;
+    background-color: #c0392b;
+    border-color: #922b21;
+    color: #ecf0f1;
 }
 
 .controls {
@@ -138,15 +156,16 @@ button {
     border-radius: 6px;
     cursor: pointer;
     font-size: 1em;
-    transition: background-color 0.3s;
+    transition: background-color 0.3s, transform 0.3s;
 }
 
 button:hover {
     background-color: #2980b9;
+    transform: scale(1.05);
 }
 
 button:disabled {
-    background-color: #bdc3c7;
+    background-color: #7f8c8d;
     cursor: not-allowed;
 }
 
@@ -154,36 +173,39 @@ button:disabled {
     margin-top: 40px;
     padding: 25px;
     border-radius: 8px;
-    background-color: #f8f9fa;
+    background-color: #3b4a5a;
     display: none;
+    color: #f1f1f1;
 }
 
 /* Στυλ για μαθηματικούς τύπους */
 .math-display {
     margin: 15px 0;
     padding: 15px;
-    background-color: #f8f9fa;
+    background-color: #3b4a5a;
     border-radius: 6px;
     overflow-x: auto;
+    color: #ecf0f1;
 }
 
-/* Ανταποκριση για κινητά */
+/* Responsive για κινητά */
 @media (max-width: 768px) {
     .welcome-container, .quiz-container {
         margin: 20px;
         padding: 20px;
     }
-    
     .quiz-list {
         grid-template-columns: 1fr;
     }
 }
-/* Στυλ σελίδας αποτελεσμάτων */
+
+/* Σελίδα αποτελεσμάτων */
 .question-review {
     padding: 15px;
     margin: 10px 0;
     border-radius: 5px;
-    background-color: #f8f9fa;
+    background-color: #3b4a5a;
+    color: #ecf0f1;
 }
 
 .question-review.correct {
@@ -196,6 +218,7 @@ button:disabled {
 
 .explanation {
     font-style: italic;
-    color: #6c757d;
+    color: #bdc3c7;
     margin-top: 10px;
 }
+
