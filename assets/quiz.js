@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', async function() {
     let questions = [];
 
     async function loadQuestions() {
-        const response = await fetch('questions.json');
+        const response = await fetch('assets/questions.json');
         questions = await response.json();
     }
 
