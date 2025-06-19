@@ -95,6 +95,12 @@ document.addEventListener('DOMContentLoaded', async function() {
             submitBtn.style.display = 'none';
         }
     }
+// Μετατροπή sec σε min
+    function formatTime(seconds) {
+    const mins = Math.floor(seconds / 60);
+    const secs = seconds % 60;
+    return `${mins}:${secs.toString().padStart(2, '0')}`;
+}
 
     // Χρονόμετρο
     function startTimer() {
@@ -149,7 +155,7 @@ document.addEventListener('DOMContentLoaded', async function() {
         currentQuestionIndex = 0;
         userAnswers = new Array(questions.length).fill(null);
         score = 0;
-        timeLeft = 60;
+        timeLeft = 600;
         quizCompleted = false;
         
         resultsDiv.style.display = 'none';
