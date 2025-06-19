@@ -14,7 +14,8 @@ document.addEventListener('DOMContentLoaded', async function() {
     let currentQuestionIndex = 0;
     let userAnswers = new Array(questions.length).fill(null);
     let score = 0;
-    let timeLeft = 60;
+    let initialTime = 600;
+    let timeLeft = initialTime;
     let timer;
     let quizCompleted = false;
 
@@ -104,17 +105,17 @@ document.addEventListener('DOMContentLoaded', async function() {
 
     // Χρονόμετρο
     function startTimer() {
-        timeSpan.textContent = timeLeft;
-        timer = setInterval(() => {
-            timeLeft--;
-            timeSpan.textContent = timeLeft;
-            
-            if (timeLeft <= 0) {
-                clearInterval(timer);
-                endQuiz();
-            }
-        }, 1000);
-    }
+    timeSpan.textContent = formatTime(timeLeft);
+    timer = setInterval(() => {
+        timeLeft--;
+        timeSpan.textContent = formatTime(timeLeft);
+        
+        if (timeLeft <= 0) {
+            clearInterval(timer);
+            endQuiz();
+        }
+    }, 1000);
+}
 
     // Τερματισμός quiz
     function endQuiz() {
@@ -152,18 +153,18 @@ document.addEventListener('DOMContentLoaded', async function() {
 
     // Επανεκκίνηση quiz
     function restartQuiz() {
-        currentQuestionIndex = 0;
-        userAnswers = new Array(questions.length).fill(null);
-        score = 0;
-        timeLeft = 600;
-        quizCompleted = false;
-        
-        resultsDiv.style.display = 'none';
-        shuffleQuestions();
-        showQuestion();
-        clearInterval(timer);
-        startTimer();
-    }
+    currentQuestionIndex = 0;
+    userAnswers = new Array(questions.length).fill(null);
+    score = 0;
+    timeLeft = initialTime;
+    quizCompleted = false;
+
+    resultsDiv.style.display = 'none';
+    shuffleQuestions();
+    showQuestion();
+    clearInterval(timer);
+    startTimer();
+}
 
     // Εκ νέου απόδοση μαθηματικών τύπων
     function renderMath() {
