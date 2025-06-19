@@ -158,3 +158,30 @@ h1 {
     font-size: 0.9rem;
   }
 }
+.question-review {
+    border: 1px solid #ddd;
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+}
+
+.correct {
+    background-color: #d4edda;
+    color: #155724;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+.incorrect {
+    background-color: #f8d7da;
+    color: #721c24;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+.explanation {
+    font-style: italic;
+    margin-top: 10px;
+    color: #555;
+}
