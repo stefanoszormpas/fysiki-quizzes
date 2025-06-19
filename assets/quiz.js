@@ -149,7 +149,7 @@ document.addEventListener('DOMContentLoaded', async function() {
         currentQuestionIndex = 0;
         userAnswers = new Array(questions.length).fill(null);
         score = 0;
-        timeLeft = 600;
+        timeLeft = 60;
         quizCompleted = false;
         
         resultsDiv.style.display = 'none';
