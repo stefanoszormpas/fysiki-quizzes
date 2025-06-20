@@ -37,7 +37,30 @@ document.addEventListener('DOMContentLoaded', async function() {
         showQuestion();
         startTimer();
     }
+//Χρωματισμός επιλογών στις multiple correct
+options.forEach((option, index) => {
+    if (correctAnswers.includes(index)) {
+        // Σωστή απάντηση
+        if (userAnswers.includes(index)) {
+            // Ο χρήστης τη διάλεξε σωστά
+            color = "green";
+        } else {
+            // Ο χρήστης την άφησε αλλά είναι σωστή
+            color = "green"; // ή π.χ. "lightgreen" να το δείχνεις ως missed correct
+        }
+    } else {
+        if (userAnswers.includes(index)) {
+            // Ο χρήστης διάλεξε λάθος απάντηση
+            color = "red";
+        } else {
+            // Δεν την επέλεξε και είναι λάθος
+            color = "default";
+        }
+    }
+});
 
+
+    
     // Ανακάτεμα ερωτήσεων
     function shuffleQuestions() {
         for (let i = questions.length - 1; i > 0; i--) {
