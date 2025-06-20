@@ -1,23 +1,10 @@
 document.addEventListener('DOMContentLoaded', async function() {
-    // Φόρτωση ερωτήσεων από JSON
-    let questions = [];
-
-  async function loadQuestions() {
-    const urlParams = new URLSearchParams(window.location.search);
-    const quizId = urlParams.get('quiz') || '1';
-    const response = await fetch(assets/questions${quizId}.json);
-    questions = await response.json();
-}
-
-
-    await loadQuestions();
-
-
     // Μεταβλητές κατάστασης
+    let questions = [];
     let currentQuestionIndex = 0;
-    let userAnswers = new Array(questions.length).fill(null);
+    let userAnswers = [];
     let score = 0;
-    let initialTime = 600;
+    let initialTime = 600; // 10 λεπτά (σε δευτερόλεπτα)
     let timeLeft = initialTime;
     let timer;
     let quizCompleted = false;
@@ -28,20 +15,28 @@ document.addEventListener('DOMContentLoaded', async function() {
     const prevBtn = document.getElementById('prev-btn');
     const nextBtn = document.getElementById('next-btn');
     const submitBtn = document.getElementById('submit-btn');
-    const resultsDiv = document.querySelector('.results');
     const timeSpan = document.getElementById('time');
 
-    // Αρχικοποίηση quiz
-    function initQuiz() {
-        shuffleQuestions();
-        showQuestion();
-        startTimer();
+    // Φόρτωση ερωτήσεων από JSON
+    async function loadQuestions() {
+        try {
+            const urlParams = new URLSearchParams(window.location.search);
+            const quizId = urlParams.get('quiz') || '1'; // Προεπιλεγμένο quizId = 1
+            const response = await fetch(`assets/questions${quizId}.json`);
+            
+            if (!response.ok) {
+                throw new Error('Αποτυχία φόρτωσης ερωτήσεων');
+            }
+            
+            questions = await response.json();
+            userAnswers = new Array(questions.length).fill(null); // Αρχικοποίηση πίνακα απαντήσεων
+        } catch (error) {
+            console.error('Σφάλμα:', error);
+            questionContainer.innerHTML = '<p class="error">Πρόβλημα φόρτωσης ερωτήσεων. Παρακαλώ δοκιμάστε ξανά.</p>';
+        }
     }
 
-
-
-    
-    // Ανακάτεμα ερωτήσεων
+    // Ανακάτεμα ερωτήσεων (shuffle)
     function shuffleQuestions() {
         for (let i = questions.length - 1; i > 0; i--) {
             const j = Math.floor(Math.random() * (i + 1));
@@ -49,17 +44,20 @@ document.addEventListener('DOMContentLoaded', async function() {
         }
     }
 
-    // Εμφάνιση ερώτησης
+    // Εμφάνιση τρέχουσας ερώτησης
     function showQuestion() {
+        if (questions.length === 0) return;
+
         const question = questions[currentQuestionIndex];
-        questionContainer.innerHTML = <div class="math-display">${question.question}</div>;
+        questionContainer.innerHTML = `<div class="math-display">${question.question}</div>`;
         
         optionsContainer.innerHTML = '';
         question.options.forEach((option, index) => {
             const optionElement = document.createElement('div');
             optionElement.classList.add('option');
-            optionElement.innerHTML = <div class="math-display">${option}</div>;
+            optionElement.innerHTML = `<div class="math-display">${option}</div>`;
             
+            // Επισήμανση σωστής/λάθος απάντησης (μόνο αν έχει απαντηθεί)
             if (userAnswers[currentQuestionIndex] !== null) {
                 if (index === question.correctAnswer) {
                     optionElement.classList.add('correct');
@@ -73,24 +71,18 @@ document.addEventListener('DOMContentLoaded', async function() {
         });
         
         updateNavigationButtons();
-        renderMath();
+        renderMath(); // Απόδοση μαθηματικών με MathJax
     }
 
-    // Επιλογή απάντησης
+    // Επιλογή απάντησης από τον χρήστη
     function selectOption(optionIndex) {
         if (quizCompleted) return;
         
         userAnswers[currentQuestionIndex] = optionIndex;
-        
-        const question = questions[currentQuestionIndex];
-        if (optionIndex === question.correctAnswer) {
-            score++;
-        }
-        
         showQuestion();
     }
 
-    // Ενημέρωση κουμπιών navigation
+    // Ενημέρωση κουμπιών "Προηγούμενη" / "Επόμενη"
     function updateNavigationButtons() {
         prevBtn.disabled = currentQuestionIndex === 0;
         
@@ -102,88 +94,66 @@ document.addEventListener('DOMContentLoaded', async function() {
             submitBtn.style.display = 'none';
         }
     }
-// Μετατροπή sec σε min
+
+    // Μορφοποίηση χρόνου (από δευτερόλεπτα σε MM:SS)
     function formatTime(seconds) {
-    const mins = Math.floor(seconds / 60);
-    const secs = seconds % 60;
-    return ${mins}:${secs.toString().padStart(2, '0')};
-}
+        const mins = Math.floor(seconds / 60);
+        const secs = seconds % 60;
+        return `${mins}:${secs.toString().padStart(2, '0')}`;
+    }
 
     // Χρονόμετρο
     function startTimer() {
-    timeSpan.textContent = formatTime(timeLeft);
-    timer = setInterval(() => {
-        timeLeft--;
         timeSpan.textContent = formatTime(timeLeft);
-        
-        if (timeLeft <= 0) {
-            clearInterval(timer);
-            endQuiz();
-        }
-    }, 1000);
-}
+        timer = setInterval(() => {
+            timeLeft--;
+            timeSpan.textContent = formatTime(timeLeft);
+            
+            if (timeLeft <= 0 && !quizCompleted) {
+                clearInterval(timer);
+                endQuiz();
+            }
+        }, 1000);
+    }
 
-    // Τερματισμός quiz
+    // Τερματισμός quiz και υπολογισμός αποτελεσμάτων
     function endQuiz() {
         quizCompleted = true;
         clearInterval(timer);
         
-        const options = document.querySelectorAll('.option');
-        options.forEach(option => {
+        // Απενεργοποίηση επιλογών
+        document.querySelectorAll('.option').forEach(option => {
             option.style.cursor = 'not-allowed';
         });
         
-        showResults();
+        // Υπολογισμός τελικού score
+        score = userAnswers.reduce((total, answer, index) => {
+            return total + (answer === questions[index].correctAnswer ? 1 : 0);
+        }, 0);
+        
+        // Αποθήκευση αποτελεσμάτων και ανακατεύθυνση
+        const resultsData = {
+            score: score,
+            totalQuestions: questions.length,
+            userAnswers: userAnswers,
+            questions: questions
+        };
+        
+        sessionStorage.setItem('quizResults', JSON.stringify(resultsData));
+        window.location.href = 'results.html';
     }
 
-    // Εμφάνιση αποτελεσμάτων
-   function showResults() {
-    const resultsData = {
-        score: score,
-        totalQuestions: questions.length,
-        userAnswers: userAnswers,
-        questions: questions.map(q => ({
-            question: q.question,
-            options: q.options,
-            correctAnswer: q.correctAnswer,
-            explanation: q.explanation
-        }))
-    };
-
-    // Αποθήκευση στο sessionStorage
-    sessionStorage.setItem('quizResults', JSON.stringify(resultsData));
-    
-    // Ανακατεύθυνση στη σελίδα αποτελεσμάτων
-    window.location.href = 'results.html';
-}
-
-    // Επανεκκίνηση quiz
-    function restartQuiz() {
-    currentQuestionIndex = 0;
-    userAnswers = new Array(questions.length).fill(null);
-    score = 0;
-    timeLeft = initialTime;
-    quizCompleted = false;
-
-    resultsDiv.style.display = 'none';
-    shuffleQuestions();
-    showQuestion();
-    clearInterval(timer);
-    startTimer();
-}
-
-    // Εκ νέου απόδοση μαθηματικών τύπων
+    // Απόδοση μαθηματικών εξισώσεων με MathJax
     function renderMath() {
         if (window.MathJax) {
             MathJax.typesetPromise().catch(err => {
-                console.error('MathJax typesetting error:', err);
-                // Επανάληψη αν αποτύχει η πρώτη προσπάθεια
-                setTimeout(renderMath, 500);
+                console.error('MathJax error:', err);
+                setTimeout(renderMath, 500); // Retry after 500ms
             });
         }
     }
 
-    // Event listeners
+    // Event Listeners
     prevBtn.addEventListener('click', () => {
         if (currentQuestionIndex > 0) {
             currentQuestionIndex--;
@@ -200,6 +170,15 @@ document.addEventListener('DOMContentLoaded', async function() {
 
     submitBtn.addEventListener('click', endQuiz);
 
-    // Αρχικοποίηση quiz
+    // Αρχικοποίηση Quiz
+    async function initQuiz() {
+        await loadQuestions();
+        if (questions.length > 0) {
+            shuffleQuestions();
+            showQuestion();
+            startTimer();
+        }
+    }
+
     initQuiz();
 });
