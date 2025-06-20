@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Κεντρική Ελαστική Κρούση </title>
+    <title>Quiz</title>
     <script>
     window.MathJax = {
       tex: {
@@ -19,7 +19,7 @@
 <body>
     <div class="quiz-container">
         <a href="index.html" class="back-button">← Πίσω</a>
-        <h1>Κεντρική Ελαστική Κρούση</h1>
+        <h1 id="quiz-title">Quiz</h1>
         <div class="timer">Χρόνος: <span id="time">10:00</span> δευτερόλεπτα</div>
         <div class="question-container"></div>
         <div class="options-container"></div>
@@ -32,5 +32,17 @@
     </div>
 
     <script src="assets/quiz.js"></script>
+    <script>
+        // Βάλε δυναμικό τίτλο ανάλογα με το quiz id
+        const params = new URLSearchParams(window.location.search);
+        const quizId = params.get("quiz") || "1";
+        const titles = {
+            "1": "Κεντρική Ελαστική Κρούση",
+            "2": "Πλαστική Κρούση",
+            "3": "Κρούσεις σε Κεκλιμένο Επίπεδο"
+            // προσθέτεις όσα θέλεις
+        };
+        document.getElementById("quiz-title").textContent = titles[quizId] || "Quiz";
+    </script>
 </body>
 </html>
