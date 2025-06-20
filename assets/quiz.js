@@ -2,10 +2,13 @@ document.addEventListener('DOMContentLoaded', async function() {
     // Φόρτωση ερωτήσεων από JSON
     let questions = [];
 
-    async function loadQuestions() {
-        const response = await fetch('assets/questions.json');
-        questions = await response.json();
-    }
+  async function loadQuestions() {
+    const urlParams = new URLSearchParams(window.location.search);
+    const quizId = urlParams.get('quiz') || '1';
+    const response = await fetch(`assets/questions${quizId}.json`);
+    questions = await response.json();
+}
+
 
     await loadQuestions();
 
