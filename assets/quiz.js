@@ -4,6 +4,15 @@ document.addEventListener('DOMContentLoaded', async function() {
     let currentQuestionIndex = 0;
     let userAnswers = [];
     let score = 0;
+    const urlParams = new URLSearchParams(window.location.search);
+const quizId = urlParams.get('quiz') || '1';
+
+// Διαφορετικοί χρόνοι για κάθε quiz (σε δευτερόλεπτα)
+const quizTimes = {
+    "1": 600,  
+    "2": 600,  
+    "3": 900   
+};
     let initialTime = 600; // 10 λεπτά (σε δευτερόλεπτα)
     let timeLeft = initialTime;
     let timer;
