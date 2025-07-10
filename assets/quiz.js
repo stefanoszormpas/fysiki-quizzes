@@ -89,6 +89,9 @@ document.getElementById("progress-bar-fill").style.width = `${progress}%`;
 
     updateNavigationButtons();
     renderMath();
+        // Ενημέρωση progress bar
+const progress = ((currentQuestionIndex + 1) / questions.length) * 100;
+document.getElementById("progress-bar-fill").style.width = `${progress}%`;
 }
 
 
