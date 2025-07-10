@@ -32,17 +32,45 @@
     </div>
 
     <script src="assets/quiz.js"></script>
-    <script>
-        // Βάλε δυναμικό τίτλο ανάλογα με το quiz id
-        const params = new URLSearchParams(window.location.search);
-        const quizId = params.get("quiz") || "1";
-        const titles = {
-            "1": "Κεντρική Ελαστική Κρούση",
-            "2": "Πλαστική Κρούση",
-            "3": "ΑΑΤ - Χρονικές εξισώσεις και φάση της ΑΑΤ"
-            // προσθέτεις όσα θέλεις
-        };
-        document.getElementById("quiz-title").textContent = titles[quizId] || "Quiz";
-    </script>
+   <script>
+    const params = new URLSearchParams(window.location.search);
+    const quizId = params.get("quiz") || "1";
+
+    const titles = {
+        "1": "Κεντρική Ελαστική Κρούση",
+        "2": "Πλαστική Κρούση",
+        "3": "ΑΑΤ - Χρονικές εξισώσεις και φάση της ΑΑΤ"
+    };
+
+    const quizTimes = {
+        "1": 600,  
+        "2": 600,  
+        "3": 900   
+    };
+
+    document.getElementById("quiz-title").textContent = titles[quizId] || "Quiz";
+
+    const totalTime = quizTimes[quizId] || 600; // default 10 λεπτά
+    const timeDisplay = document.getElementById("time");
+
+    let timeLeft = totalTime;
+
+    function updateTimer() {
+        const minutes = Math.floor(timeLeft / 60);
+        const seconds = timeLeft % 60;
+        timeDisplay.textContent = `${minutes}:${seconds.toString().padStart(2, '0')}`;
+        if (timeLeft > 0) {
+            timeLeft--;
+        } else {
+            clearInterval(timerInterval);
+            alert("Ο χρόνος τελείωσε!");
+            // Εδώ μπορείς να κάνεις auto-submit
+        }
+    }
+
+    updateTimer();
+    const timerInterval = setInterval(updateTimer, 1000);
+</script>
+
 </body>
 </html>
