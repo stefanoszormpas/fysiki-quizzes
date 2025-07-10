@@ -52,6 +52,10 @@ let quizCompleted = false;
             const j = Math.floor(Math.random() * (i + 1));
             [questions[i], questions[j]] = [questions[j], questions[i]];
         }
+        // Ενημέρωση progress bar
+const progress = ((currentQuestionIndex + 1) / questions.length) * 100;
+document.getElementById("progress-bar-fill").style.width = `${progress}%`;
+
     }
 
     // Εμφάνιση τρέχουσας ερώτησης
