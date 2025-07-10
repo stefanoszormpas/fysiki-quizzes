@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Quiz</title>
+    
+    <!-- MathJax για εξισώσεις -->
     <script>
     window.MathJax = {
       tex: {
@@ -13,14 +15,18 @@
       }
     };
     </script>
-    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script id="MathJax-script" async 
+        src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+    </script>
+
+    <!-- CSS -->
     <link rel="stylesheet" href="assets/style.css">
 </head>
 <body>
     <div class="quiz-container">
         <a href="index.html" class="back-button">← Πίσω</a>
         <h1 id="quiz-title">Quiz</h1>
-        <div class="timer">Χρόνος: <span id="time">10:00</span> δευτερόλεπτα</div>
+        <div class="timer">Χρόνος: <span id="time">00:00</span> δευτερόλεπτα</div>
         <div class="question-container"></div>
         <div class="options-container"></div>
         <div class="controls">
@@ -31,46 +37,50 @@
         <div class="results"></div>
     </div>
 
+    <!-- Quiz Script -->
     <script src="assets/quiz.js"></script>
-   <script>
-    const params = new URLSearchParams(window.location.search);
-    const quizId = params.get("quiz") || "1";
 
-    const titles = {
-        "1": "Κεντρική Ελαστική Κρούση",
-        "2": "Πλαστική Κρούση",
-        "3": "ΑΑΤ - Χρονικές εξισώσεις και φάση της ΑΑΤ"
-    };
+    <!-- Timer και δυναμικός τίτλος -->
+    <script>
+        const params = new URLSearchParams(window.location.search);
+        const quizId = params.get("quiz") || "1";
 
-    const quizTimes = {
-        "1": 600,  
-        "2": 600,  
-        "3": 900   
-    };
+        const titles = {
+            "1": "Κεντρική Ελαστική Κρούση",
+            "2": "Πλαστική Κρούση",
+            "3": "ΑΑΤ - Χρονικές εξισώσεις και φάση της ΑΑΤ"
+        };
 
-    document.getElementById("quiz-title").textContent = titles[quizId] || "Quiz";
+        const quizTimes = {
+            "1": 600, 
+            "2": 600, 
+            "3": 900  
+        };
 
-    const totalTime = quizTimes[quizId] || 600; // default 10 λεπτά
-    const timeDisplay = document.getElementById("time");
+        // Ορισμός τίτλου
+        document.getElementById("quiz-title").textContent = titles[quizId] || "Quiz";
 
-    let timeLeft = totalTime;
+        // Ορισμός χρόνου
+        const totalTime = quizTimes[quizId] || 600; // default: 10 λεπτά
+        const timeDisplay = document.getElementById("time");
+        let timeLeft = totalTime;
 
-    function updateTimer() {
-        const minutes = Math.floor(timeLeft / 60);
-        const seconds = timeLeft % 60;
-        timeDisplay.textContent = `${minutes}:${seconds.toString().padStart(2, '0')}`;
-        if (timeLeft > 0) {
-            timeLeft--;
-        } else {
-            clearInterval(timerInterval);
-            alert("Ο χρόνος τελείωσε!");
-            // Εδώ μπορείς να κάνεις auto-submit
+        function updateTimer() {
+            const minutes = Math.floor(timeLeft / 60);
+            const seconds = timeLeft % 60;
+            timeDisplay.textContent = `${minutes}:${seconds.toString().padStart(2, '0')}`;
+            if (timeLeft > 0) {
+                timeLeft--;
+            } else {
+                clearInterval(timerInterval);
+                alert("Ο χρόνος τελείωσε!");
+                // Αν θες: κάνε auto-submit εδώ
+            }
         }
-    }
 
-    updateTimer();
-    const timerInterval = setInterval(updateTimer, 1000);
-</script>
-
+        updateTimer(); // αρχική εμφάνιση
+        const timerInterval = setInterval(updateTimer, 1000); // ανά δευτερόλεπτο
+    </script>
 </body>
 </html>
+
