@@ -56,33 +56,37 @@ let quizCompleted = false;
 
     // Εμφάνιση τρέχουσας ερώτησης
     function showQuestion() {
-        if (questions.length === 0) return;
+    if (questions.length === 0) return;
 
-        const question = questions[currentQuestionIndex];
-        questionContainer.innerHTML = `<div class="math-display">${question.question}</div>`;
+    const question = questions[currentQuestionIndex];
+    questionContainer.innerHTML = `<div class="math-display">${question.question}</div>`;
+    
+    optionsContainer.innerHTML = '';
+    question.options.forEach((option, index) => {
+        const optionElement = document.createElement('div');
+        optionElement.classList.add('option');
+        optionElement.innerHTML = `<div class="math-display">${option}</div>`;
         
-        optionsContainer.innerHTML = '';
-        question.options.forEach((option, index) => {
-            const optionElement = document.createElement('div');
-            optionElement.classList.add('option');
-            optionElement.innerHTML = `<div class="math-display">${option}</div>`;
-            
-            // Επισήμανση σωστής/λάθος απάντησης (μόνο αν έχει απαντηθεί)
-            if (userAnswers[currentQuestionIndex] !== null) {
-                if (index === question.correctAnswer) {
-                    optionElement.classList.add('correct');
-                } else if (userAnswers[currentQuestionIndex] === index && index !== question.correctAnswer) {
-                    optionElement.classList.add('incorrect');
-                }
+        if (userAnswers[currentQuestionIndex] !== null) {
+            if (index === question.correctAnswer) {
+                optionElement.classList.add('correct');
+            } else if (userAnswers[currentQuestionIndex] === index && index !== question.correctAnswer) {
+                optionElement.classList.add('incorrect');
             }
-            
-            optionElement.addEventListener('click', () => selectOption(index));
-            optionsContainer.appendChild(optionElement);
-        });
-        
-        updateNavigationButtons();
-        renderMath(); // Απόδοση μαθηματικών με MathJax
-    }
+        }
+
+        optionElement.addEventListener('click', () => selectOption(index));
+        optionsContainer.appendChild(optionElement);
+    });
+
+    // Ενημέρωση αριθμού ερώτησης
+    document.getElementById("current-number").textContent = currentQuestionIndex + 1;
+    document.getElementById("total-number").textContent = questions.length;
+
+    updateNavigationButtons();
+    renderMath();
+}
+
 
     // Επιλογή απάντησης από τον χρήστη
     function selectOption(optionIndex) {
