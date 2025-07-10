@@ -236,4 +236,20 @@ h1 {
         gap: 10px;
     }
 }
+.progress-bar-container {
+    width: 100%;
+    background-color: #e0e0e0;
+    border-radius: 8px;
+    height: 14px;
+    overflow: hidden;
+    margin-top: 12px;
+}
+
+.progress-bar-fill {
+    height: 100%;
+    width: 0%;
+    background-color: #42a5f5; /* μπλε φυσικής */
+    transition: width 0.4s ease;
+}
+
 
