@@ -60,27 +60,7 @@
         // Ορισμός τίτλου
         document.getElementById("quiz-title").textContent = titles[quizId] || "Quiz";
 
-        // Ορισμός χρόνου
-        const totalTime = quizTimes[quizId] || 600; // default: 10 λεπτά
-        const timeDisplay = document.getElementById("time");
-        let timeLeft = totalTime;
-
-        function updateTimer() {
-            const minutes = Math.floor(timeLeft / 60);
-            const seconds = timeLeft % 60;
-            timeDisplay.textContent = `${minutes}:${seconds.toString().padStart(2, '0')}`;
-            if (timeLeft > 0) {
-                timeLeft--;
-            } else {
-                clearInterval(timerInterval);
-                alert("Ο χρόνος τελείωσε!");
-                // Αν θες: κάνε auto-submit εδώ
-            }
-        }
-
-        updateTimer(); // αρχική εμφάνιση
-        const timerInterval = setInterval(updateTimer, 1000); // ανά δευτερόλεπτο
-    </script>
+       
 </body>
 </html>
 
