@@ -13,10 +13,11 @@ const quizTimes = {
     "2": 600,  
     "3": 900   
 };
-    let initialTime = 600; // 10 λεπτά (σε δευτερόλεπτα)
-    let timeLeft = initialTime;
-    let timer;
-    let quizCompleted = false;
+
+let initialTime = quizTimes[quizId] || 600; // Αν δεν υπάρχει, default 600
+let timeLeft = initialTime;
+let timer;
+let quizCompleted = false;
 
     // Στοιχεία DOM
     const questionContainer = document.querySelector('.question-container');
