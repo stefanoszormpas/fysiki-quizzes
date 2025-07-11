@@ -64,7 +64,22 @@ document.getElementById("progress-bar-fill").style.width = `${progress}%`;
     if (questions.length === 0) return;
 
     const question = questions[currentQuestionIndex];
-    questionContainer.innerHTML = `<div class="math-display">${question.question}</div>`;
+    questionContainer.innerHTML = "";
+
+const questionText = document.createElement("div");
+questionText.className = "math-display";
+questionText.innerHTML = question.question;
+questionContainer.appendChild(questionText);
+
+// ✅ Αν υπάρχει εικόνα, πρόσθεσέ την
+if (question.image) {
+    const image = document.createElement("img");
+    image.src = question.image;
+    image.alt = "Εικόνα ερώτησης";
+    image.classList.add("quiz-image");
+    questionContainer.appendChild(image);
+}
+
     
     optionsContainer.innerHTML = '';
     question.options.forEach((option, index) => {
