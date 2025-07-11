@@ -11,7 +11,8 @@ const quizId = urlParams.get('quiz') || '1';
 const quizTimes = {
     "1": 600,  
     "2": 600,  
-    "3": 900   
+    "3": 900,
+    "4": 600
 };
 
 let initialTime = quizTimes[quizId] || 600; // Αν δεν υπάρχει, default 600
