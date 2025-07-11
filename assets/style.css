@@ -10,10 +10,10 @@
   color: #333;
 }
 .quiz-image {
-  max-width: 100%;
-  width: 500px;
-  height: auto;
-  display: block;
+  max-width: 100%;   /* η εικόνα δεν ξεπερνάει το πλάτος του γονικού της στοιχείου */
+  height: auto;      /* το ύψος προσαρμόζεται αυτόματα για να διατηρηθεί η αναλογία */
+  display: block;    /* για να μην έχει "κενά" κάτω από την εικόνα */
+  
   margin: 1rem auto;
   border-radius: 8px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
