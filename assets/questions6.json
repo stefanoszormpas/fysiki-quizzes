@@ -107,7 +107,7 @@
     "direction": 0
   },
   "explanation": "Σύμφωνα με τον νόμο Biot–Savart, \\( \\Delta B = \\frac{\\mu_0}{4 \\pi} \\cdot \\frac{I \\Delta \\ell}{r^2} \\sin \\theta \\). Η διεύθυνση είναι κάθετη στο επίπεδο που ορίζεται από τα \\( \\Delta \\ell \\) και \\( r \\), με φορά που δίνεται από τον κανόνα του δεξιού χεριού.",
-  "image": "assets/images/Biot.jpg"
+  "image": "assets/images/Biot.jpeg"
 }
 
 ]
