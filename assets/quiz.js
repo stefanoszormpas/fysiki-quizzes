@@ -14,7 +14,8 @@ const quizTimes = {
     "3": 900,
     "4": 600,
     "5": 900,
-    "6": 900
+    "6": 900,
+    "7": 900
 };
 
 let initialTime = quizTimes[quizId] || 600; // Αν δεν υπάρχει, default 600
