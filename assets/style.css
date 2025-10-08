@@ -353,7 +353,94 @@ h1 {
     overflow: hidden;
     margin-top: 12px;
 }
+/* CSS για αποτελέσματα Σωστού-Λάθους */
 
+.statement-review {
+    background: #f8f9fa;
+    padding: 12px;
+    margin: 10px 0;
+    border-radius: 6px;
+    border-left: 4px solid #dee2e6;
+}
+
+.statement-review.statement-correct {
+    background: #d4edda;
+    border-left-color: #28a745;
+}
+
+.statement-review.statement-incorrect {
+    background: #f8d7da;
+    border-left-color: #dc3545;
+}
+
+.statement-text {
+    font-weight: 500;
+    margin-bottom: 8px;
+    color: #212529;
+}
+
+/* Βελτίωση της εμφάνισης των ερωτήσεων στα αποτελέσματα */
+.question-review {
+    background: white;
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    border-left: 5px solid #dee2e6;
+}
+
+.question-review.correct {
+    border-left-color: #28a745;
+    background: #f8fff9;
+}
+
+.question-review.incorrect {
+    border-left-color: #dc3545;
+    background: #fff8f8;
+}
+
+.question-review p {
+    margin: 10px 0;
+    line-height: 1.6;
+}
+
+.question-review .correct {
+    color: #28a745;
+    font-weight: 600;
+}
+
+.question-review .incorrect {
+    color: #dc3545;
+    font-weight: 600;
+}
+
+.explanation {
+    background: #e7f3ff;
+    padding: 12px;
+    border-radius: 6px;
+    margin-top: 15px;
+    border-left: 3px solid #007bff;
+    font-style: italic;
+    color: #004085;
+}
+
+/* Responsive για μικρές οθόνες */
+@media (max-width: 600px) {
+    .question-review {
+        padding: 15px;
+        margin: 15px 0;
+    }
+    
+    .statement-review {
+        padding: 10px;
+        margin: 8px 0;
+    }
+    
+    .explanation {
+        padding: 10px;
+        font-size: 14px;
+    }
+}
 .progress-bar-fill {
     height: 100%;
     width: 0%;
