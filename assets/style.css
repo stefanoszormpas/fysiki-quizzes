@@ -9,6 +9,106 @@
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   color: #333;
 }
+/* Στυλ για Σωστό-Λάθος ερωτήσεις */
+.true-false-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+}
+
+.true-false-statement {
+    background: #f8f9fa;
+    padding: 15px;
+    border-radius: 8px;
+    border: 2px solid #dee2e6;
+    transition: all 0.3s ease;
+}
+
+.true-false-statement:hover {
+    border-color: #adb5bd;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.statement-text {
+    margin-bottom: 12px;
+    font-weight: 500;
+    font-size: 16px;
+    color: #212529;
+    line-height: 1.6;
+}
+
+.tf-buttons {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+
+.tf-button {
+    flex: 1;
+    max-width: 150px;
+    padding: 12px 20px;
+    border: 2px solid #007bff;
+    background: white;
+    color: #007bff;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 15px;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.tf-button:hover {
+    background: #e7f3ff;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 123, 255, 0.2);
+}
+
+.tf-button:active {
+    transform: translateY(0);
+}
+
+.tf-button.selected {
+    background: #007bff;
+    color: white;
+    border-color: #0056b3;
+}
+
+.tf-button.correct {
+    background: #28a745;
+    border-color: #1e7e34;
+    color: white;
+}
+
+.tf-button.incorrect {
+    background: #dc3545;
+    border-color: #bd2130;
+    color: white;
+}
+
+.tf-button.correct:hover,
+.tf-button.incorrect:hover {
+    transform: none;
+    cursor: not-allowed;
+}
+
+/* Responsive design για μικρές οθόνες */
+@media (max-width: 600px) {
+    .tf-button {
+        max-width: none;
+        padding: 10px 15px;
+        font-size: 14px;
+    }
+    
+    .statement-text {
+        font-size: 15px;
+    }
+    
+    .true-false-statement {
+        padding: 12px;
+    }
+}
 .quiz-image {
   max-width: 100%;   /* η εικόνα δεν ξεπερνάει το πλάτος του γονικού της στοιχείου */
   height: auto;      /* το ύψος προσαρμόζεται αυτόματα για να διατηρηθεί η αναλογία */
