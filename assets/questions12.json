@@ -1,0 +1,191 @@
+[
+  {
+    "type": "multiple-choice",
+    "question": "Η φάση \\(\\varphi\\) μιας ΑΑΤ εκφράζεται από:",
+    "options": [
+      "\\(\\varphi = \\omega t\\)",
+      "\\(\\varphi = \\omega t + \\varphi_0\\)",
+      "\\(\\varphi = \\omega t - \\varphi_0\\)",
+      "\\(\\varphi = \\omega t + \\pi\\)"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Γενικά \\(\\varphi(t)=\\omega t+\\varphi_0\\). Η \\(\\varphi_0\\) καθορίζει τις αρχικές συνθήκες. fileciteturn1file4"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "Η απλή αρμονική ταλάντωση δεν έχει αρχική φάση (\\(\\varphi_0=0\\)) όταν:",
+    "options": [
+      "για \\(t=0\\) είναι \\(x=0\\)",
+      "για \\(t=0\\) είναι \\(x=0\\) και \\(\\upsilon<0\\)",
+      "για \\(t=0\\) είναι \\(\\upsilon=0\\)",
+      "για \\(t=0\\) είναι \\(x=0\\) και \\(\\upsilon>0\\)"
+    ],
+    "correctAnswer": 3,
+    "explanation": "Με \\(x=A\\sin(\\omega t+\\varphi_0)\\), για \\(\\varphi_0=0\\) πρέπει στο \\(t=0\\): \\(x=0\\) και \\(\\upsilon=+A\\omega>0\\). fileciteturn1file4"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "Η φάση μιας ΑΑΤ:",
+    "options": [
+      "είναι σταθερή",
+      "αυξάνεται γραμμικά με το χρόνο",
+      "είναι αρμονική συνάρτηση του χρόνου",
+      "μειώνεται γραμμικά με το χρόνο"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Για σταθερή \\(\\omega\\), \\(\\varphi(t)=\\omega t+\\varphi_0\\) αυξάνεται γραμμικά. fileciteturn1file4"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "Η γωνιακή συχνότητα \\(\\omega\\) μιας ΑΑΤ είναι ο ρυθμός μεταβολής της:",
+    "options": [
+      "συχνότητας",
+      "απομάκρυνσης",
+      "ταχύτητας",
+      "φάσης"
+    ],
+    "correctAnswer": 3,
+    "explanation": "Ορισμός: \\(\\omega=\\dfrac{d\\varphi}{dt}\\). Είναι ρυθμός μεταβολής της φάσης. fileciteturn1file4"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "Σε μία περίοδο, το υλικό σημείο περνάει από τη θέση ισορροπίας:",
+    "options": [
+      "μία φορά",
+      "δύο φορές",
+      "τρεις φορές",
+      "τέσσερις φορές"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Σε κάθε περίοδο περνά δύο φορές: καθώς πηγαίνει από +A στο −A και αντίστροφα. fileciteturn1file4"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "Περίοδοι δεικτών ρολογιού: (Ι) δευτερολεπτοδείκτης, (ΙΙ) λεπτοδείκτης, (ΙΙΙ) ωροδείκτης",
+    "options": [
+      "(Ι) 1 min, (ΙΙ) 1 min, (ΙΙΙ) 24 h",
+      "(Ι) 1 s, (ΙΙ) 60 min, (ΙΙΙ) 12 h",
+      "(Ι) 60 min, (ΙΙ) 12 h, (ΙΙΙ) 1 h"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Τυπικά: 60 s, 3600 s, 12 h. Η σωστή αντιστοίχιση είναι (Ι) 1 s, (ΙΙ) 60 min, (ΙΙΙ) 12 h. fileciteturn1file4"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "Υλικό σημείο κάνει ΑΑΤ με περίοδο \\(T=0{,}5\\,\\mathrm{s}\\). Η \\(\\omega\\) είναι:",
+    "options": [
+      "\\(2\\pi\\,\\mathrm{rad/s}\\)",
+      "\\(4\\pi\\,\\mathrm{rad/s}\\)",
+      "\\(0{,}5\\pi\\,\\mathrm{rad/s}\\)"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Ω=2π/T=4π rad/s. fileciteturn1file13"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "Υλικό σημείο κάνει ΑΑΤ με \\(f=10\\,\\mathrm{Hz}\\). Σε χρόνο 2 s ο αριθμός πλήρων ταλαντώσεων είναι:",
+    "options": [
+      "10",
+      "20",
+      "5",
+      "200"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Ν = f·t = 10·2 = 20. fileciteturn1file13"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "Υλικό σημείο με \\(T=2\\,\\mathrm{s}\\). Σε \\(\\Delta t=20\\,\\mathrm{s}\\) θα περάσει από τη θέση ισορροπίας:",
+    "options": [
+      "20 φορές",
+      "10 φορές",
+      "40 φορές",
+      "5 φορές"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Σε 20 s έχουμε 10 περιόδους, διέλευση από Ο δύο φορές/περίοδο ⇒ 20 φορές. fileciteturn1file13"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "Σε ΑΑΤ, ο χρόνος από τη μία ακραία θέση στην άλλη είναι 2 s. Τότε:",
+    "options": [
+      "Η περίοδος είναι 2 s και η συχνότητα 0,5 Hz",
+      "Η περίοδος είναι 1 s και η συχνότητα 1 Hz",
+      "Η περίοδος είναι 4 s και η συχνότητα 0,25 Hz"
+    ],
+    "correctAnswer": 2,
+    "explanation": "Από άκρο σε άκρο είναι μισή περίοδος ⇒ T=4 s, f=1/T=0,25 Hz. fileciteturn1file11"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "Υλικό σημείο διέρχεται 20 φορές το δευτερόλεπτο από τη θέση ισορροπίας του. Η περίοδος είναι:",
+    "options": [
+      "0,1 s",
+      "0,05 s",
+      "0,2 s"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Διελεύσεις από Ο/ s = 2f ⇒ f=10 Hz ⇒ T=0,1 s. (Η σωστή επιλογή στο αρχείο αντιστοιχεί στο 0,1 s). fileciteturn1file11"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "Υλικό σημείο με συχνότητα \\(f=0{,}5\\,\\mathrm{Hz}\\). Ο χρόνος μεταξύ διαδοχικών μηδενισμών ταχύτητας είναι:",
+    "options": [
+      "1 s",
+      "2 s",
+      "0,5 s"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Μηδενισμός ταχύτητας στις ακραίες θέσεις ανά \\(T/2\\). Με T=2 s ⇒ T/2=1 s. fileciteturn1file11"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "Η «διαφορά φάσης» μεταξύ απομάκρυνσης και ταχύτητας στην ΑΑΤ σημαίνει ότι:",
+    "options": [
+      "Μηδενίζονται ταυτόχρονα αλλά δεν μεγιστοποιούνται ταυτόχρονα",
+      "Μεγιστοποιούνται ταυτόχρονα αλλά δεν μηδενίζονται ταυτόχρονα",
+      "Ούτε μηδενίζονται ούτε μεγιστοποιούνται ταυτόχρονα",
+      "Μηδενίζονται και μεγιστοποιούνται ταυτόχρονα"
+    ],
+    "correctAnswer": 2,
+    "explanation": "Υπάρχει διαφορά φάσης \\(\\pi/2\\) μεταξύ \\(x\\) και \\(\\upsilon\\), άρα ούτε ταυτόχρονοι μηδενισμοί ούτε κορυφές. fileciteturn1file12"
+  },
+  {
+    "type": "true-false-multiple",
+    "question": "Για ΑΑΤ με \\(x=A\\sin(\\omega t)\\), επιλέξτε Σ/Λ:",
+    "statements": [
+      "Στο διάστημα [T/2, 3T/4], ταχύτητα και επιτάχυνση έχουν αντίθετες κατευθύνσεις.",
+      "Στο διάστημα [T/2, 3T/4], απομάκρυνση και ταχύτητα έχουν το ίδιο πρόσημο.",
+      "Στο διάστημα [T/4, 3T/4], απομάκρυνση και επιτάχυνση έχουν αντίθετα πρόσημα.",
+      "Στο διάστημα [T/4, T/2], ταχύτητα και επιτάχυνση έχουν αντίθετες κατευθύνσεις."
+    ],
+    "correctAnswers": [
+      true,
+      false,
+      true,
+      true
+    ],
+    "explanation": "Έλεγχος προσημών από \\(x= A\\sin\\theta\\), \\(\\upsilon= A\\omega\\cos\\theta\\), \\(a=-A\\omega^2\\sin\\theta\\). fileciteturn1file7"
+  },
+  {
+    "type": "true-false-multiple",
+    "question": "Υλικό σημείο με \\(x=A\\sin(\\omega t)\\) και \\(t_0=0\\) στο \\(x=+A\\). Ποιες σχέσεις είναι σωστές;",
+    "statements": [
+      "\\(x = A\\sin(\\omega t)\\)",
+      "\\(x = A\\cos(\\omega t)\\)",
+      "\\(\\upsilon = -A\\omega\\sin(\\omega t)\\)",
+      "\\(\\upsilon = A\\omega\\cos(\\omega t)\\)",
+      "\\(a = -A\\omega^2\\sin(\\omega t + 3\\pi/2)\\)",
+      "\\(a = A\\omega^2\\sin(\\omega t + 3\\pi/2)\\)"
+    ],
+    "correctAnswers": [
+      false,
+      true,
+      false,
+      false,
+      true,
+      false
+    ],
+    "explanation": "Για αρχική συνθήκη \\(x(0)=+A\\): \\(x=A\\cos\\omega t\\), \\(\\upsilon=-A\\omega\\sin\\omega t\\), \\(a=-A\\omega^2\\cos\\omega t\\). Η μορφή με \\(+3\\pi/2\\) ισοδυναμεί με \\(-\\cos\\). fileciteturn1file2"
+  }
+]
