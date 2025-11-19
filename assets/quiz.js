@@ -16,7 +16,14 @@ document.addEventListener('DOMContentLoaded', async function() {
         "5": 900,
         "6": 900,
         "7": 900,
-        "8":1200
+        "8":1200,
+        "9":1200,
+        "10":1200,
+        "11":1200,
+        "12":1200,
+        "13":1200,
+        "14":1200,
+        "15":1200
     };
 
     let initialTime = quizTimes[quizId] || 600;
