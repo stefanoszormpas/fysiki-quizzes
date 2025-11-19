@@ -1,4 +1,4 @@
-const questions = [
+[
   {
     type: "multiple-choice",
     question: "Σε φθίνουσα ταλάντωση με δύναμη F = -bυ, η περίοδος:",
