@@ -94,7 +94,13 @@
       "Αν η b γίνει πολύ μεγάλη η κίνηση γίνεται απεριοδική.",
       "Η συχνότητα είναι πάντα μικρότερη από της αμείωτης."
     ],
-    "correctAnswers": [false, false, true, false, true, true],
+    "correctAnswers": [
+      false, 
+      false, 
+      true, 
+      false, 
+      true, 
+      true],
     "explanation": "Μεγάλη b ⇒ μπορεί να γίνει απεριοδική. Ο λόγος δύο διαδοχικών πλατών είναι σταθερός."
   },
   {
