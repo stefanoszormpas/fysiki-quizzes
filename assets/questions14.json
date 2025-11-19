@@ -1,4 +1,4 @@
-[
+const questions = [
   {
     type: "multiple-choice",
     question: "Σε φθίνουσα ταλάντωση με δύναμη F = -bυ, η περίοδος:",
@@ -80,13 +80,7 @@
       "Το πλάτος μειώνεται πιο γρήγορα.",
       "Η συχνότητα παραμένει σταθερή."
     ],
-    correctAnswers: [
-      true,
-      false,
-      true,
-      true,
-      false
-    ],
+    correctAnswers: [true, false, true, true, false],
     explanation: "Αύξηση b ⇒ T↑, ενέργεια χάνεται ταχύτερα, πλάτος μειώνεται γρηγορότερα, f μειώνεται."
   },
   {
@@ -100,14 +94,7 @@
       "Αν η b γίνει πολύ μεγάλη η κίνηση γίνεται απεριοδική.",
       "Η συχνότητα είναι πάντα μικρότερη από της αμείωτης."
     ],
-    correctAnswers: [
-      false,
-      false,
-      true,
-      false,
-      true,
-      true
-    ],
+    correctAnswers: [false, false, true, false, true, true],
     explanation: "Μεγάλη b ⇒ απεριοδική, σταθερός λόγος πλατών, f < f0."
   },
   {
@@ -135,3 +122,4 @@
     explanation: "Για μικρή απόσβεση η περίοδος είναι πρακτικά ανεξάρτητη της b."
   }
 ];
+
