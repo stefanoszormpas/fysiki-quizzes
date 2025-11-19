@@ -20,7 +20,7 @@
       "αυξάνεται συνεχώς"
     ],
     "correctAnswer": 1,
-    "explanation": "Η πραγματική περίοδος είναι \\(T = T_₀ \\\sqrt{(1 + (b/2m)^²)} > T_₀\\)"
+    "explanation": "Η πραγματική περίοδος είναι \\(T = T_₀ \\sqrt{(1 + (b/2m)^²)} > T_₀\\)"
   },
   {
     "type": "multiple-choice",
