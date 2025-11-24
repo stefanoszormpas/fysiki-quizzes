@@ -28,7 +28,9 @@ document.addEventListener('DOMContentLoaded', async function() {
         "17":1200,
         "18":1200,
         "19":1200,
-        "20":1200
+        "20":1200,
+        "21":1200,
+        "22":1200
     };
 
     let initialTime = quizTimes[quizId] || 600;
