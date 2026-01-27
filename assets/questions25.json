@@ -88,17 +88,17 @@
     "correctAnswer": 1
   },
   {
-    "type": "multiple-choice",
-    "question": "Η ομογενής ράβδος ισορροπεί γύρω από σταθερό άξονα στο σημείο Ο.",
-    "image": "assets/images/A2.20ropi.png",
-    "options": [
-      "\\(F_1\\cdot OA = F_2\\cdot OΓ\\)",
-      "\\(F_1+F_2-w=0\\)",
-      "\\(\\Sigma \\tau_O=0\\)",
-      "\\(F_1\\cdot OA + w\\cdot OK - F_2\\cdot OΓ=0\\)"
-    ],
-    "correctAnswer": 2
-  },
+  "type": "multiple-choice",
+  "question": "Η ομογενής ράβδος ισορροπεί γύρω από σταθερό άξονα στο σημείο Ο.",
+  "image": "assets/images/A2.20ropi.png",
+  "options": [
+    "\\(F_1\\cdot OA = F_2\\cdot O\\Gamma\\)",
+    "\\(F_1+F_2-w=0\\)",
+    "\\(\\Sigma \\tau_O=0\\)",
+    "\\(F_1\\cdot OA + w\\cdot OK - F_2\\cdot O\\Gamma=0\\)"
+  ],
+  "correctAnswer": 2
+},
   {
     "type": "multiple-choice",
     "question": "Ποιες από τις προτάσεις που ακολουθούν είναι σωστές;",
