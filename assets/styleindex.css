@@ -1,88 +1,199 @@
-/* Κεντρικό container του index */
-.welcome-container {
-  max-width: 800px;
-  margin: 50px auto;
-  padding: 20px 30px;
-  background: #fefefe;
-  border-radius: 10px;
-  box-shadow: 0 6px 15px rgba(0,0,0,0.1);
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  color: #222;
-  text-align: center;
-}
-.quiz-image {
-  max-width: 100%;   /* η εικόνα δεν ξεπερνάει το πλάτος του γονικού της στοιχείου */
-  height: auto;      /* το ύψος προσαρμόζεται αυτόματα για να διατηρηθεί η αναλογία */
-  display: block;    /* για να μην έχει "κενά" κάτω από την εικόνα */
-  
-  margin: 1rem auto;
-  border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-/* Τίτλος */
-.welcome-container h1 {
-  margin-bottom: 20px;
-  font-weight: 700;
-  font-size: 2.2rem;
-  color: #007bff;
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
-/* Λίστα quizzes */
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background: #f0f4f8;
+  color: #222;
+}
+
+.welcome-container {
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 20px 16px 40px;
+}
+
+.quiz-image {
+  max-width: 280px;
+  width: 80%;
+  height: auto;
+  display: block;
+  margin: 20px auto 10px;
+  border-radius: 8px;
+}
+
+.welcome-container h1 {
+  text-align: center;
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #0056b3;
+  margin: 12px 0 6px;
+}
+
+.welcome-container > p {
+  text-align: center;
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 8px;
+}
+
+/* ── Κατηγορίες ── */
 .quiz-list {
   display: flex;
-  justify-content: center;
-  gap: 20px;
-  flex-wrap: wrap;
-  margin: 30px 0;
+  flex-direction: column;
+  gap: 0;
+  margin: 16px 0;
 }
 
-/* Κάρτες quizzes */
+.category-section {
+  margin-bottom: 12px;
+}
+
+.category-title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #fff;
+  background: #0056b3;
+  border-radius: 10px;
+  padding: 13px 18px;
+  cursor: pointer;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+  transition: background 0.2s;
+}
+
+.category-title:hover,
+.category-title:active {
+  background: #003d82;
+}
+
+.category-icon {
+  font-size: 1.3rem;
+  flex-shrink: 0;
+}
+
+.category-label {
+  flex: 1;
+}
+
+.arrow {
+  font-size: 0.85rem;
+  transition: transform 0.3s ease;
+  flex-shrink: 0;
+}
+
+.category-title.collapsed .arrow {
+  transform: rotate(-90deg);
+}
+
+/* ── Κάρτες ── */
+.category-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  gap: 12px;
+  padding: 12px 4px 4px;
+}
+
+.category-cards.hidden {
+  display: none;
+}
+
 .quiz-card {
   background: #007bff;
   color: white;
   text-decoration: none;
-  width: 230px;
   border-radius: 12px;
-  padding: 20px 15px;
-  box-shadow: 0 5px 15px rgba(0,123,255,0.3);
-  transition: background-color 0.3s ease;
+  padding: 16px 14px;
+  box-shadow: 0 4px 12px rgba(0, 123, 255, 0.25);
+  transition: background 0.2s, transform 0.15s;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  -webkit-tap-highlight-color: transparent;
 }
 
 .quiz-card:hover {
   background: #0056b3;
 }
 
-/* Τίτλος και περιγραφή κάθε quiz */
-.quiz-card h2 {
-  margin-bottom: 10px;
-  font-size: 1.3rem;
+.quiz-card:active {
+  transform: scale(0.97);
+  background: #003d82;
 }
 
-.quiz-card p {
-  font-size: 1rem;
+.quiz-card h2 {
+  font-size: 0.95rem;
+  font-weight: 700;
   line-height: 1.3;
 }
 
-/* Οδηγίες */
+.quiz-card p {
+  font-size: 0.82rem;
+  line-height: 1.4;
+  opacity: 0.9;
+}
+
+/* ── Οδηγίες ── */
 .instructions {
-  max-width: 500px;
-  margin: 0 auto;
-  text-align: left;
+  background: #fff;
+  border-radius: 10px;
+  padding: 16px 20px;
+  margin-top: 20px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.07);
 }
 
 .instructions h3 {
   font-weight: 700;
-  margin-bottom: 12px;
-  color: #007bff;
+  margin-bottom: 10px;
+  color: #0056b3;
+  font-size: 1rem;
 }
 
 .instructions ul {
   list-style-type: disc;
   padding-left: 20px;
-  font-size: 1rem;
+  font-size: 0.92rem;
   color: #444;
 }
 
 .instructions li {
-  margin-bottom: 8px;
+  margin-bottom: 6px;
+}
+
+/* ── Mobile: 2 στήλες σε μικρές οθόνες ── */
+@media (max-width: 480px) {
+  .welcome-container h1 {
+    font-size: 1.3rem;
+  }
+
+  .category-title {
+    font-size: 1rem;
+    padding: 12px 14px;
+  }
+
+  .category-cards {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+
+  .quiz-card h2 {
+    font-size: 0.88rem;
+  }
+
+  .quiz-card p {
+    font-size: 0.78rem;
+  }
+}
+
+/* ── Πολύ μικρές οθόνες: 1 στήλη ── */
+@media (max-width: 320px) {
+  .category-cards {
+    grid-template-columns: 1fr;
+  }
 }
