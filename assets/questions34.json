@@ -1,0 +1,106 @@
+[
+  {
+    "type": "multiple-choice",
+    "question": "Deux poulies sont reliées par une courroie (même vitesse linéaire). Le rayon de la grande poulie est le triple de celui de la petite. Le rapport \\(\\omega_{\\text{petite}}/\\omega_{\\text{grande}}\\) vaut :<br><span style='color:#6b7280;font-style:italic;font-size:0.9em'>Δύο τροχαλίες με ιμάντα· η μεγάλη έχει τριπλάσια ακτίνα. Ο λόγος των γωνιακών ταχυτήτων;</span>",
+    "options": ["\\(1/3\\)", "\\(3\\)", "\\(9\\)", "\\(1\\)"],
+    "correctAnswer": 1,
+    "explanation": "\\(v=r\\omega \\Rightarrow \\omega=v/r\\), donc le rapport vaut \\(r_{\\text{grande}}/r_{\\text{petite}}=3\\). · Αφού \\(v=r\\omega\\), ο λόγος ισούται με \\(r_{\\text{μεγ}}/r_{\\text{μικρ}}=3\\)."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "Lorsqu’on triple la fréquence de rotation d’un disque, sa vitesse angulaire :<br><span style='color:#6b7280;font-style:italic;font-size:0.9em'>Όταν τριπλασιάζουμε τη συχνότητα, η γωνιακή ταχύτητα:</span>",
+    "options": ["triple <span style='color:#6b7280'>(τριπλασιάζεται)</span>", "est divisée par 3 <span style='color:#6b7280'>(διά 3)</span>", "reste constante <span style='color:#6b7280'>(σταθερή)</span>", "est multipliée par 9 <span style='color:#6b7280'>(×9)</span>"],
+    "correctAnswer": 0,
+    "explanation": "\\(\\omega=2\\pi f\\) : la vitesse angulaire est proportionnelle à la fréquence. · \\(\\omega=2\\pi f\\), ανάλογη του \\(f\\)."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "Un plateau de tourne-disque tourne à 45 tours par minute. Sa vitesse angulaire vaut :<br><span style='color:#6b7280;font-style:italic;font-size:0.9em'>Πλατό πικάπ με 45 στροφές/min. Η γωνιακή ταχύτητα;</span>",
+    "options": ["\\(4{,}71\\ \\text{rad/s}\\)", "\\(0{,}75\\ \\text{rad/s}\\)", "\\(47{,}1\\ \\text{rad/s}\\)", "\\(2{,}83\\ \\text{rad/s}\\)"],
+    "correctAnswer": 0,
+    "explanation": "\\(f=45/60=0{,}75\\ \\text{Hz}\\), puis \\(\\omega=2\\pi f\\approx 4{,}71\\ \\text{rad/s}\\). · \\(f=0{,}75\\ \\text{Hz}\\), \\(\\omega=2\\pi f\\approx 4{,}71\\ \\text{rad/s}\\)."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "La lame d’un mixeur tourne à 12 000 tours/min. Sa fréquence de rotation vaut :<br><span style='color:#6b7280;font-style:italic;font-size:0.9em'>Λεπίδα μπλέντερ, 12 000 στροφές/min. Η συχνότητα;</span>",
+    "options": ["\\(200\\ \\text{Hz}\\)", "\\(12\\,000\\ \\text{Hz}\\)", "\\(3{,}33\\ \\text{Hz}\\)", "\\(1257\\ \\text{Hz}\\)"],
+    "correctAnswer": 0,
+    "explanation": "\\(f=12\\,000/60=200\\ \\text{Hz}\\). · \\(f=12\\,000/60=200\\ \\text{Hz}\\)."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "Un disque de rayon \\(11{,}5\\ \\text{cm}\\) tourne à 11 000 tours/min. La vitesse linéaire d’un point de la périphérie est environ :<br><span style='color:#6b7280;font-style:italic;font-size:0.9em'>Δίσκος ακτίνας 11,5 cm, 11 000 στροφές/min. Γραμμική ταχύτητα στην περιφέρεια;</span>",
+    "options": ["\\(132\\ \\text{m/s}\\)", "\\(1152\\ \\text{m/s}\\)", "\\(66\\ \\text{m/s}\\)", "\\(265\\ \\text{m/s}\\)"],
+    "correctAnswer": 0,
+    "explanation": "\\(\\omega=2\\pi f\\approx 1152\\ \\text{rad/s}\\), puis \\(v=r\\omega\\approx 132\\ \\text{m/s}\\). · \\(\\omega\\approx 1152\\ \\text{rad/s}\\), \\(v=r\\omega\\approx 132\\ \\text{m/s}\\)."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "Deux points \\(P\\) et \\(Q\\) d’un disque tournant à fréquence constante sont à des distances du centre telles que \\(r_Q/r_P=3\\). Que peut-on dire de leur vitesse linéaire \\(v\\) et angulaire \\(\\omega\\) ?<br><span style='color:#6b7280;font-style:italic;font-size:0.9em'>Δύο σημεία δίσκου (σταθερή συχνότητα), \\(r_Q/r_P=3\\). Για \\(v\\) και \\(\\omega\\);</span>",
+    "options": ["\\(v\\) et \\(\\omega\\) identiques <span style='color:#6b7280'>(ίδιες)</span>", "\\(v\\) différentes, \\(\\omega\\) identiques <span style='color:#6b7280'>(v διαφ., ω ίδιες)</span>", "\\(v\\) identiques, \\(\\omega\\) différentes", "les deux différentes <span style='color:#6b7280'>(και τα δύο διαφ.)</span>"],
+    "correctAnswer": 1,
+    "explanation": "Fréquence constante \\(\\Rightarrow\\) même \\(\\omega\\) ; et \\(v=r\\omega\\Rightarrow\\) vitesses linéaires différentes. · Ίδια \\(\\omega\\), διαφορετικές \\(v\\)."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "Pour ces deux mêmes points (\\(r_Q/r_P=3\\)), le rapport de leurs accélérations \\(a_Q/a_P\\) vaut :<br><span style='color:#6b7280;font-style:italic;font-size:0.9em'>Για τα ίδια σημεία, ο λόγος των επιταχύνσεων \\(a_Q/a_P\\);</span>",
+    "options": ["\\(1/3\\)", "\\(1/9\\)", "\\(3\\)", "\\(9\\)"],
+    "correctAnswer": 2,
+    "explanation": "\\(a=\\omega^{2} r\\) avec le même \\(\\omega\\) \\(\\Rightarrow a_Q/a_P=r_Q/r_P=3\\). · \\(a=\\omega^{2}r\\), ίδια \\(\\omega\\) \\(\\Rightarrow\\) λόγος \\(=3\\)."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "Quatre mobiles décrivent un MCU. Couples \\((v\\,;\\,r)\\) en SI : \\((2\\,;\\,0{,}5)\\), \\((4\\,;\\,4)\\), \\((3\\,;\\,1)\\), \\((6\\,;\\,9)\\). L’accélération centripète est la plus grande pour :<br><span style='color:#6b7280;font-style:italic;font-size:0.9em'>Τέσσερα κινητά σε ΟΚΚ. Για ποιο η κεντρομόλος επιτάχυνση είναι μεγαλύτερη;</span>",
+    "options": ["Mobile 1", "Mobile 2", "Mobile 3", "Mobile 4"],
+    "correctAnswer": 2,
+    "explanation": "\\(a=v^{2}/r\\) : \\(8\\) ; \\(4\\) ; \\(9\\) ; \\(4\\) m/s² \\(\\Rightarrow\\) Mobile 3. · \\(a=v^{2}/r\\) \\(\\Rightarrow\\) Κινητό 3 (9 m/s²)."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "Une moto prend un virage circulaire horizontal à vitesse constante grâce au frottement. Si \\(v\\) est multipliée par 3 (même rayon), la force de frottement nécessaire est :<br><span style='color:#6b7280;font-style:italic;font-size:0.9em'>Μοτοσικλέτα σε στροφή με τριβή. Αν \\(v\\times3\\) (ίδια ακτίνα), η απαιτούμενη τριβή;</span>",
+    "options": ["identique <span style='color:#6b7280'>(ίδια)</span>", "multipliée par 3 <span style='color:#6b7280'>(×3)</span>", "divisée par 3 <span style='color:#6b7280'>(διά 3)</span>", "multipliée par 9 <span style='color:#6b7280'>(×9)</span>"],
+    "correctAnswer": 3,
+    "explanation": "\\(F=mv^{2}/r\\) est proportionnelle à \\(v^{2}\\) \\(\\Rightarrow \\times 9\\). · \\(F\\propto v^{2}\\) \\(\\Rightarrow \\times 9\\)."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "Un objet de masse \\(0{,}50\\ \\text{kg}\\) est en MCU à \\(0{,}80\\ \\text{m}\\) de l’axe, à la vitesse \\(2{,}0\\ \\text{m/s}\\). La force de frottement (centripète) vaut :<br><span style='color:#6b7280;font-style:italic;font-size:0.9em'>Αντικείμενο 0,50 kg, 0,80 m από τον άξονα, v = 2,0 m/s. Η δύναμη τριβής (κεντρομόλος);</span>",
+    "options": ["\\(2{,}5\\ \\text{N}\\)", "\\(1{,}25\\ \\text{N}\\)", "\\(5{,}0\\ \\text{N}\\)", "\\(1{,}6\\ \\text{N}\\)"],
+    "correctAnswer": 0,
+    "explanation": "\\(F=mv^{2}/r=0{,}5\\cdot 4/0{,}8=2{,}5\\ \\text{N}\\). · \\(F=mv^{2}/r=2{,}5\\ \\text{N}\\)."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "Un avion décrit un cercle horizontal à \\(720\\ \\text{km/h}\\) (\\(=200\\ \\text{m/s}\\)), ailes inclinées de \\(40^\\circ\\) par rapport à l’horizontale. Le rayon de la trajectoire est environ :<br><span style='color:#6b7280;font-style:italic;font-size:0.9em'>Αεροπλάνο σε οριζόντιο κύκλο, 720 km/h, κλίση φτερών 40°. Η ακτίνα;</span>",
+    "options": ["\\(4{,}9\\ \\text{km}\\)", "\\(2{,}4\\ \\text{km}\\)", "\\(9{,}7\\ \\text{km}\\)", "\\(0{,}49\\ \\text{km}\\)"],
+    "correctAnswer": 0,
+    "explanation": "\\(\\tan\\theta=v^{2}/(g\\,r)\\Rightarrow r=v^{2}/(g\\tan\\theta)\\approx 4{,}86\\ \\text{km}\\). · \\(r=v^{2}/(g\\tan 40^\\circ)\\approx 4{,}86\\ \\text{km}\\)."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "Au cours d’un mouvement, on observe \\(a_\\tau<0\\) alors que \\(v_\\tau>0\\). Le mouvement est :<br><span style='color:#6b7280;font-style:italic;font-size:0.9em'>\\(a_\\tau<0\\) ενώ \\(v_\\tau>0\\). Η κίνηση είναι:</span>",
+    "options": ["accéléré <span style='color:#6b7280'>(επιταχυνόμενη)</span>", "retardé <span style='color:#6b7280'>(επιβραδυνόμενη)</span>", "uniforme <span style='color:#6b7280'>(ομαλή)</span>", "rectiligne <span style='color:#6b7280'>(ευθύγραμμη)</span>"],
+    "correctAnswer": 1,
+    "explanation": "Signes opposés \\(\\Rightarrow\\) la norme de \\(v\\) diminue \\(\\Rightarrow\\) mouvement retardé. · Αντίθετα πρόσημα \\(\\Rightarrow\\) επιβραδυνόμενη."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "Le vecteur position d’un mobile est \\(x=3\\cos(4t)\\), \\(y=3\\sin(4t)\\) (SI). La période du mouvement vaut :<br><span style='color:#6b7280;font-style:italic;font-size:0.9em'>Διάνυσμα θέσης \\(x=3\\cos(4t)\\), \\(y=3\\sin(4t)\\). Η περίοδος;</span>",
+    "options": ["\\(\\pi/2\\approx 1{,}57\\ \\text{s}\\)", "\\(\\pi\\approx 3{,}14\\ \\text{s}\\)", "\\(0{,}64\\ \\text{s}\\)", "\\(4\\ \\text{s}\\)"],
+    "correctAnswer": 0,
+    "explanation": "\\(\\omega=4\\ \\text{rad/s}\\Rightarrow T=2\\pi/\\omega=\\pi/2\\approx 1{,}57\\ \\text{s}\\). · \\(T=2\\pi/\\omega=\\pi/2\\approx 1{,}57\\ \\text{s}\\)."
+  },
+  {
+    "type": "true-false-multiple",
+    "question": "Vrai ou faux ? (mouvement circulaire et curviligne)<br><span style='color:#6b7280;font-style:italic;font-size:0.9em'>Σωστό ή Λάθος; (κυκλική &amp; καμπυλόγραμμη κίνηση)</span>",
+    "statements": [
+      "Dans un MCU, le vecteur accélération est constant. <span style='color:#6b7280'>(Σε ΟΚΚ η επιτάχυνση είναι σταθερή)</span>",
+      "L’accélération centripète pointe vers le centre de la trajectoire. <span style='color:#6b7280'>(δείχνει προς το κέντρο)</span>",
+      "Un mouvement rectiligne a un rayon de courbure infini. <span style='color:#6b7280'>(άπειρη ακτίνα καμπυλότητας)</span>",
+      "Si \\(a_\\tau\\) et \\(v_\\tau\\) sont de signes opposés, le mouvement est accéléré. <span style='color:#6b7280'>(αντίθετα πρόσημα ⇒ επιταχυνόμενη)</span>",
+      "La force centripète est une force fondamentale de la nature. <span style='color:#6b7280'>(θεμελιώδης δύναμη)</span>"
+    ],
+    "correctAnswers": [false, true, true, false, false],
+    "explanation": "1) Faux : sa norme est constante mais sa direction tourne. 2) Vrai. 3) Vrai (\\(\\rho\\to\\infty\\)). 4) Faux : retardé. 5) Faux : c’est le nom de la résultante. · 1) Λάθος 2) Σωστό 3) Σωστό 4) Λάθος (επιβραδυνόμενη) 5) Λάθος (συνισταμένη)."
+  }
+]
