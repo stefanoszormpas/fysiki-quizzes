@@ -89,7 +89,10 @@
         
 
         // Ορισμός τίτλου
-        document.getElementById("quiz-title").textContent = titles[quizId] || "Quiz";
+       const titleFromLink = params.get("title");
+const finalTitle = titleFromLink || titles[quizId] || "Quiz";
+document.getElementById("quiz-title").textContent = finalTitle;
+document.title = finalTitle;
 </script>
        
 </body>
