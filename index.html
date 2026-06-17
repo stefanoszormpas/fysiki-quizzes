@@ -240,11 +240,20 @@
         </div>
     </div>
 
-    <script>
-        function toggleCategory(titleEl) {
-            titleEl.classList.toggle('collapsed');
-            titleEl.nextElementSibling.classList.toggle('hidden');
+   <script>
+    function toggleCategory(titleEl) {
+        titleEl.classList.toggle('collapsed');
+        titleEl.nextElementSibling.classList.toggle('hidden');
+    }
+
+    document.querySelectorAll('.quiz-card').forEach(function (card) {
+        var h2 = card.querySelector('h2');
+        if (h2) {
+            var url = new URL(card.href, window.location.href);
+            url.searchParams.set('title', h2.textContent.trim());
+            card.href = url.toString();
         }
-    </script>
+    });
+</script>
 </body>
 </html>
