@@ -1,1 +1,177 @@
-
+[
+  {
+    "type": "multiple-choice",
+    "question": "Deux corps sphériques s’attirent. Si on double la distance entre leurs centres (mêmes masses), la force de gravitation est :<br><span style='color:#6b7280;font-style:italic;font-size:0.9em'>Αν διπλασιάσουμε την απόσταση των κέντρων (ίδιες μάζες), η δύναμη βαρύτητας:</span>",
+    "options": [
+      "divisée par 4 <span style='color:#6b7280'>(διά 4)</span>",
+      "divisée par 2 <span style='color:#6b7280'>(διά 2)</span>",
+      "doublée <span style='color:#6b7280'>(διπλάσια)</span>",
+      "inchangée <span style='color:#6b7280'>(ίδια)</span>"
+    ],
+    "correctAnswer": 0,
+    "explanation": "\\(F=K\\dfrac{Mm}{r^{2}}\\) varie en \\(1/r^{2}\\) : doubler \\(r\\) divise \\(F\\) par 4. · \\(F\\propto 1/r^{2}\\)."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "Deux satellites terrestres ont des rayons d’orbite \\(r_1\\) et \\(r_2=4\\,r_1\\). Le rapport de leurs périodes \\(T_2/T_1\\) vaut :<br><span style='color:#6b7280;font-style:italic;font-size:0.9em'>Δύο δορυφόροι με \\(r_2=4r_1\\). Ο λόγος περιόδων \\(T_2/T_1\\);</span>",
+    "options": [
+      "\\(2\\)",
+      "\\(4\\)",
+      "\\(8\\)",
+      "\\(16\\)"
+    ],
+    "correctAnswer": 2,
+    "explanation": "3<sup>e</sup> loi de Kepler : \\(T\\propto r^{3/2}\\), donc \\(T_2/T_1=4^{3/2}=8\\). · \\(T\\propto r^{3/2}\\Rightarrow 8\\)."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "La vitesse d’un satellite en orbite circulaire ne dépend PAS de :<br><span style='color:#6b7280;font-style:italic;font-size:0.9em'>Η ταχύτητα δορυφόρου σε κυκλική τροχιά ΔΕΝ εξαρτάται από:</span>",
+    "options": [
+      "la masse de la Terre <span style='color:#6b7280'>(μάζα Γης)</span>",
+      "la masse du satellite <span style='color:#6b7280'>(μάζα δορυφόρου)</span>",
+      "le rayon de l’orbite <span style='color:#6b7280'>(ακτίνα τροχιάς)</span>",
+      "la constante \\(K\\)"
+    ],
+    "correctAnswer": 1,
+    "explanation": "\\(v=\\sqrt{KM/r}\\) : la masse du satellite n’y figure pas. · \\(v=\\sqrt{KM/r}\\)."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "Un satellite se déplace avec une vitesse linéaire constante. Son orbite est :<br><span style='color:#6b7280;font-style:italic;font-size:0.9em'>Δορυφόρος με σταθερή γραμμική ταχύτητα. Η τροχιά του είναι:</span>",
+    "options": [
+      "elliptique <span style='color:#6b7280'>(ελλειπτική)</span>",
+      "circulaire <span style='color:#6b7280'>(κυκλική)</span>",
+      "parabolique <span style='color:#6b7280'>(παραβολική)</span>",
+      "rectiligne <span style='color:#6b7280'>(ευθύγραμμη)</span>"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Sur une ellipse la vitesse varie ; une vitesse constante implique une orbite circulaire. · Σταθερή \\(v\\) \\(\\Rightarrow\\) κυκλική."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "Pour un satellite en orbite circulaire, l’énergie mécanique du système Terre-satellite est :<br><span style='color:#6b7280;font-style:italic;font-size:0.9em'>Για δορυφόρο σε κυκλική τροχιά, η μηχανική ενέργεια του συστήματος είναι:</span>",
+    "options": [
+      "positive — système libre <span style='color:#6b7280'>(θετική)</span>",
+      "nulle <span style='color:#6b7280'>(μηδέν)</span>",
+      "cela dépend de la masse <span style='color:#6b7280'>(εξαρτάται)</span>",
+      "négative — système lié <span style='color:#6b7280'>(αρνητική — δέσμιο)</span>"
+    ],
+    "correctAnswer": 3,
+    "explanation": "\\(E_m=-K\\dfrac{Mm}{2r}<0\\) : le signe négatif traduit un système lié. · \\(E_m<0\\) \\(\\Rightarrow\\) δέσμιο."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "Sur une orbite elliptique, la vitesse du satellite est maximale :<br><span style='color:#6b7280;font-style:italic;font-size:0.9em'>Σε ελλειπτική τροχιά, η ταχύτητα είναι μέγιστη:</span>",
+    "options": [
+      "à l’apogée <span style='color:#6b7280'>(στο απόγειο)</span>",
+      "constante partout <span style='color:#6b7280'>(σταθερή)</span>",
+      "au périgée <span style='color:#6b7280'>(στο περίγειο)</span>",
+      "aux deux extrémités <span style='color:#6b7280'>(και στα δύο άκρα)</span>"
+    ],
+    "correctAnswer": 2,
+    "explanation": "\\(E_m\\) constante : au périgée \\(r\\) minimal \\(\\Rightarrow E_p\\) minimale \\(\\Rightarrow E_c\\) (et \\(v\\)) maximale. · μέγιστη στο περίγειο."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "La vitesse de libération d’un objet lancé depuis un astre dépend-elle de la masse de l’objet ?<br><span style='color:#6b7280;font-style:italic;font-size:0.9em'>Η ταχύτητα διαφυγής εξαρτάται από τη μάζα του εκτοξευόμενου σώματος;</span>",
+    "options": [
+      "Oui, proportionnelle à \\(m\\)",
+      "Non, seulement de \\(M\\) et \\(R\\) de l’astre <span style='color:#6b7280'>(Όχι)</span>",
+      "Oui, en \\(\\sqrt{m}\\)",
+      "Oui, en \\(1/m\\)"
+    ],
+    "correctAnswer": 1,
+    "explanation": "\\(v_{lib}=\\sqrt{2KM/R}\\) : indépendante de la masse de l’objet lancé. · ανεξάρτητη από τη μάζα του σώματος."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "Mars a une masse \\(\\approx M_T/9\\) et un rayon \\(\\approx R_T/2\\). Le champ de gravitation à sa surface vaut environ :<br><span style='color:#6b7280;font-style:italic;font-size:0.9em'>Ο Άρης: μάζα \\(\\approx M_T/9\\), ακτίνα \\(\\approx R_T/2\\). Το πεδίο βαρύτητας στην επιφάνεια;</span>",
+    "options": [
+      "\\(2{,}5\\ \\text{m/s}^2\\)",
+      "\\(9{,}8\\ \\text{m/s}^2\\)",
+      "\\(4{,}4\\ \\text{m/s}^2\\)",
+      "\\(19{,}6\\ \\text{m/s}^2\\)"
+    ],
+    "correctAnswer": 2,
+    "explanation": "\\(g=\\dfrac{1/9}{1/4}\\,g_0=\\dfrac{4}{9}g_0\\approx 4{,}4\\ \\text{m/s}^2\\)."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "Vitesse d’impact minimale d’une météorite (partie du repos, très loin) sur la Lune (\\(R_L=1740\\ \\text{km}\\), \\(M_L=7{,}35\\times10^{22}\\ \\text{kg}\\)) :<br><span style='color:#6b7280;font-style:italic;font-size:0.9em'>Ελάχιστη ταχύτητα πρόσκρουσης μετεωρίτη στη Σελήνη;</span>",
+    "options": [
+      "\\(11{,}2\\ \\text{km/s}\\)",
+      "\\(1{,}0\\ \\text{km/s}\\)",
+      "\\(7{,}9\\ \\text{km/s}\\)",
+      "\\(2{,}4\\ \\text{km/s}\\)"
+    ],
+    "correctAnswer": 3,
+    "explanation": "\\(v=\\sqrt{2KM_L/R_L}\\approx 2{,}4\\ \\text{km/s}\\) (vitesse de libération lunaire)."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "Pour un satellite en MCU autour de la Terre, quelle force joue le rôle de force centripète ?<br><span style='color:#6b7280;font-style:italic;font-size:0.9em'>Ποια δύναμη παίζει τον ρόλο της κεντρομόλου;</span>",
+    "options": [
+      "la poussée des moteurs <span style='color:#6b7280'>(ώση κινητήρων)</span>",
+      "la gravitation exercée par la Terre <span style='color:#6b7280'>(η βαρύτητα από τη Γη)</span>",
+      "la force centrifuge <span style='color:#6b7280'>(φυγόκεντρος)</span>",
+      "la force d’inertie <span style='color:#6b7280'>(αδρανειακή)</span>"
+    ],
+    "correctAnswer": 1,
+    "explanation": "C’est la force de gravitation de la Terre sur le satellite. · η βαρυτική δύναμη της Γης."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "Quand un satellite s’éloigne de la Terre, l’énergie potentielle de gravitation du système :<br><span style='color:#6b7280;font-style:italic;font-size:0.9em'>Όταν ο δορυφόρος απομακρύνεται από τη Γη, η βαρυτική δυναμική ενέργεια:</span>",
+    "options": [
+      "diminue <span style='color:#6b7280'>(μειώνεται)</span>",
+      "augmente <span style='color:#6b7280'>(αυξάνεται)</span>",
+      "reste constante <span style='color:#6b7280'>(σταθερή)</span>",
+      "devient positive <span style='color:#6b7280'>(θετική)</span>"
+    ],
+    "correctAnswer": 1,
+    "explanation": "\\(E_p=-K\\dfrac{Mm}{r}\\) augmente (vers 0) quand \\(r\\) augmente. · αυξάνεται προς το 0."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "Une planète plus proche du Soleil qu’une autre a une période de révolution :<br><span style='color:#6b7280;font-style:italic;font-size:0.9em'>Πλανήτης πιο κοντά στον Ήλιο έχει περίοδο περιφοράς:</span>",
+    "options": [
+      "plus longue <span style='color:#6b7280'>(μεγαλύτερη)</span>",
+      "identique <span style='color:#6b7280'>(ίδια)</span>",
+      "plus courte <span style='color:#6b7280'>(μικρότερη)</span>",
+      "nulle <span style='color:#6b7280'>(μηδέν)</span>"
+    ],
+    "correctAnswer": 2,
+    "explanation": "3<sup>e</sup> loi : \\(T\\propto r^{3/2}\\), donc \\(r\\) plus petit \\(\\Rightarrow T\\) plus court. · \\(T\\propto r^{3/2}\\)."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "L’altitude d’un satellite géostationnaire terrestre est environ :<br><span style='color:#6b7280;font-style:italic;font-size:0.9em'>Το ύψος γεωστατικού δορυφόρου είναι περίπου:</span>",
+    "options": [
+      "\\(400\\ \\text{km}\\)",
+      "\\(36\\,000\\ \\text{km}\\)",
+      "\\(1\\,000\\ \\text{km}\\)",
+      "\\(6\\,400\\ \\text{km}\\)"
+    ],
+    "correctAnswer": 1,
+    "explanation": "\\(T=86\\,164\\ \\text{s}\\Rightarrow r\\approx 42\\,000\\ \\text{km}\\), soit une altitude \\(\\approx 36\\,000\\ \\text{km}\\). · ύψος \\(\\approx 36\\,000\\) km."
+  },
+  {
+    "type": "true-false-multiple",
+    "question": "Vrai ou faux ? (mouvement des satellites)<br><span style='color:#6b7280;font-style:italic;font-size:0.9em'>Σωστό ή Λάθος; (κίνηση δορυφόρων)</span>",
+    "statements": [
+      "L’énergie mécanique du système Terre-satellite se conserve en l’absence de frottement. <span style='color:#6b7280'>(διατηρείται χωρίς τριβές)</span>",
+      "Sur une orbite circulaire, l’énergie cinétique du satellite varie au cours du mouvement. <span style='color:#6b7280'>(μεταβάλλεται)</span>",
+      "La force de gravitation effectue un travail nul sur une orbite circulaire. <span style='color:#6b7280'>(μηδενικό έργο)</span>",
+      "La vitesse de libération dépend de la masse de l’objet lancé. <span style='color:#6b7280'>(εξαρτάται από τη μάζα)</span>",
+      "Un satellite géostationnaire orbite dans le plan équatorial. <span style='color:#6b7280'>(στο ισημερινό επίπεδο)</span>"
+    ],
+    "correctAnswers": [
+      true,
+      false,
+      true,
+      false,
+      true
+    ],
+    "explanation": "1) Vrai. 2) Faux : MCU \\(\\Rightarrow E_c\\) constante. 3) Vrai : \\(\\vec F\\perp\\vec v\\). 4) Faux : indépendante de \\(m\\). 5) Vrai. · 1)Σωστό 2)Λάθος 3)Σωστό 4)Λάθος 5)Σωστό."
+  }
+]
