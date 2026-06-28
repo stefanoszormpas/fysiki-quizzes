@@ -1,1 +1,177 @@
-
+[
+  {
+    "type": "multiple-choice",
+    "question": "Une particule chargée ne subit AUCUNE force de Lorentz lorsque :<br><span style='color:#6b7280;font-style:italic;font-size:0.9em'>Ένα φορτίο ΔΕΝ δέχεται δύναμη Lorentz όταν:</span>",
+    "options": [
+      "sa vitesse est perpendiculaire à \\(\\vec B\\) <span style='color:#6b7280'>(\\(\\vec v\\perp\\vec B\\))</span>",
+      "sa vitesse est parallèle à \\(\\vec B\\) <span style='color:#6b7280'>(\\(\\vec v\\parallel\\vec B\\))</span>",
+      "elle est positive <span style='color:#6b7280'>(θετικό)</span>",
+      "sa vitesse est grande <span style='color:#6b7280'>(μεγάλη v)</span>"
+    ],
+    "correctAnswer": 1,
+    "explanation": "\\(F_m=|q|vB\\sin\\alpha\\) : si \\(\\vec v\\parallel\\vec B\\) (\\(\\alpha=0\\)), \\(\\sin\\alpha=0\\) et \\(F_m=0\\). · \\(\\vec v\\parallel\\vec B\\Rightarrow F_m=0\\)."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "La force de Lorentz est MAXIMALE lorsque :<br><span style='color:#6b7280;font-style:italic;font-size:0.9em'>Η δύναμη Lorentz είναι ΜΕΓΙΣΤΗ όταν:</span>",
+    "options": [
+      "\\(\\vec v\\perp\\vec B\\) <span style='color:#6b7280'>(κάθετη)</span>",
+      "\\(\\vec v\\parallel\\vec B\\) <span style='color:#6b7280'>(παράλληλη)</span>",
+      "\\(\\alpha=0^\\circ\\)",
+      "\\(B=0\\)"
+    ],
+    "correctAnswer": 0,
+    "explanation": "\\(\\sin\\alpha\\) maximal pour \\(\\alpha=90^\\circ\\) : \\(F_m=|q|vB\\). · \\(\\vec v\\perp\\vec B\\)."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "Le travail de la force de Lorentz sur une particule chargée est :<br><span style='color:#6b7280;font-style:italic;font-size:0.9em'>Το έργο της δύναμης Lorentz σε ένα φορτίο είναι:</span>",
+    "options": [
+      "positif <span style='color:#6b7280'>(θετικό)</span>",
+      "négatif <span style='color:#6b7280'>(αρνητικό)</span>",
+      "nul <span style='color:#6b7280'>(μηδέν)</span>",
+      "égal à \\(|q|vB\\)"
+    ],
+    "correctAnswer": 2,
+    "explanation": "\\(\\vec F_m\\perp\\vec v\\) à tout instant \\(\\Rightarrow\\) travail nul (la norme de \\(v\\) ne change pas). · \\(\\vec F\\perp\\vec v\\Rightarrow W=0\\)."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "La période du mouvement circulaire d’une particule dans un champ magnétique uniforme (\\(\\vec v\\perp\\vec B\\)) :<br><span style='color:#6b7280;font-style:italic;font-size:0.9em'>Η περίοδος της κυκλικής κίνησης φορτίου σε ομογενές \\(\\vec B\\):</span>",
+    "options": [
+      "est indépendante de la vitesse <span style='color:#6b7280'>(ανεξάρτητη της ταχύτητας)</span>",
+      "augmente avec la vitesse <span style='color:#6b7280'>(αυξάνει με v)</span>",
+      "diminue avec la vitesse <span style='color:#6b7280'>(μειώνεται με v)</span>",
+      "dépend de la charge seule <span style='color:#6b7280'>(μόνο από το φορτίο)</span>"
+    ],
+    "correctAnswer": 0,
+    "explanation": "\\(T=\\dfrac{2\\pi m}{|q|B}\\) ne contient pas \\(v\\). · \\(T=\\dfrac{2\\pi m}{|q|B}\\)."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "Si on double la vitesse de la particule (même \\(B\\)), le rayon de sa trajectoire :<br><span style='color:#6b7280;font-style:italic;font-size:0.9em'>Αν διπλασιάσουμε την ταχύτητα (ίδιο \\(B\\)), η ακτίνα:</span>",
+    "options": [
+      "reste constant <span style='color:#6b7280'>(σταθερή)</span>",
+      "double <span style='color:#6b7280'>(διπλασιάζεται)</span>",
+      "est divisé par 2 <span style='color:#6b7280'>(υποδιπλασιάζεται)</span>",
+      "quadruple <span style='color:#6b7280'>(×4)</span>"
+    ],
+    "correctAnswer": 1,
+    "explanation": "\\(r=\\dfrac{mv}{|q|B}\\propto v\\). · \\(r\\propto v\\)."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "Peut-on séparer des ions \\(^{12}\\text{C}^{3+}\\) et \\(^{16}\\text{O}^{4+}\\) avec un spectromètre de masse ?<br><span style='color:#6b7280;font-style:italic;font-size:0.9em'>Διαχωρίζονται τα \\(^{12}\\text{C}^{3+}\\) και \\(^{16}\\text{O}^{4+}\\) σε φασματογράφο μάζας;</span>",
+    "options": [
+      "Oui, masses différentes <span style='color:#6b7280'>(Ναι)</span>",
+      "Oui, charges différentes",
+      "Non, même rapport \\(m/q\\) <span style='color:#6b7280'>(Όχι, ίδιο \\(m/q\\))</span>",
+      "Cela dépend de la tension"
+    ],
+    "correctAnswer": 2,
+    "explanation": "\\(m/q=12u/3e=16u/4e=4\\,u/e\\) : même rayon, donc inséparables. · ίδιο \\(m/q\\Rightarrow\\) ίδια ακτίνα."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "Deux ions de même charge mais de masses différentes sont accélérés sous la même tension dans un spectromètre. L’ion le plus lourd décrit :<br><span style='color:#6b7280;font-style:italic;font-size:0.9em'>Δύο ιόντα ίδιου φορτίου, διαφορετικής μάζας, ίδια τάση. Το βαρύτερο διαγράφει:</span>",
+    "options": [
+      "un plus grand rayon <span style='color:#6b7280'>(μεγαλύτερη ακτίνα)</span>",
+      "un plus petit rayon <span style='color:#6b7280'>(μικρότερη ακτίνα)</span>",
+      "le même rayon <span style='color:#6b7280'>(ίδια ακτίνα)</span>",
+      "une droite <span style='color:#6b7280'>(ευθεία)</span>"
+    ],
+    "correctAnswer": 0,
+    "explanation": "\\(r=\\sqrt{\\dfrac{2mU}{|q|B^{2}}}\\propto\\sqrt{m}\\). · \\(r\\propto\\sqrt{m}\\)."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "Dans un sélecteur de vitesse (filtre de Wien), la vitesse sélectionnée vaut :<br><span style='color:#6b7280;font-style:italic;font-size:0.9em'>Σε επιλογέα ταχύτητας (φίλτρο Wien), η επιλεγμένη ταχύτητα:</span>",
+    "options": [
+      "\\(v=B/E\\)",
+      "\\(v=E/B\\)",
+      "\\(v=E\\,B\\)",
+      "\\(v=\\sqrt{E B}\\)"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Forces équilibrées : \\(|q|E=|q|vB\\Rightarrow v=E/B\\). · \\(|q|E=|q|vB\\Rightarrow v=E/B\\)."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "Un électron lancé à \\(5{,}0\\times10^{6}\\ \\text{m/s}\\) dans un champ \\(B=2{,}5\\ \\text{mT}\\) (\\(\\perp\\vec v\\)). Le rayon de sa trajectoire est environ :<br><span style='color:#6b7280;font-style:italic;font-size:0.9em'>Ηλεκτρόνιο στα \\(5{,}0\\times10^{6}\\ \\text{m/s}\\), \\(B=2{,}5\\ \\text{mT}\\). Η ακτίνα;</span>",
+    "options": [
+      "\\(11\\ \\text{cm}\\)",
+      "\\(1{,}1\\ \\text{m}\\)",
+      "\\(0{,}11\\ \\text{mm}\\)",
+      "\\(1{,}1\\ \\text{cm}\\)"
+    ],
+    "correctAnswer": 3,
+    "explanation": "\\(R=\\dfrac{m_e v}{eB}\\approx 1{,}1\\times10^{-2}\\ \\text{m}\\). · \\(R\\approx 1{,}1\\) cm."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "Un proton et une particule α entrent avec la même vitesse dans le même champ \\(\\vec B\\). Le rapport des rayons \\(r_\\alpha/r_p\\) vaut :<br><span style='color:#6b7280;font-style:italic;font-size:0.9em'>Πρωτόνιο και σωματίδιο α, ίδια ταχύτητα, ίδιο \\(\\vec B\\). Ο λόγος \\(r_\\alpha/r_p\\);</span>",
+    "options": [
+      "\\(1\\)",
+      "\\(1/2\\)",
+      "\\(2\\)",
+      "\\(4\\)"
+    ],
+    "correctAnswer": 2,
+    "explanation": "\\(r=\\dfrac{mv}{|q|B}\\) : \\(r_\\alpha/r_p=\\dfrac{4u/2e}{1u/e}=2\\). · \\(r_\\alpha=2r_p\\)."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "Pour ce même proton et cette même particule α, le rapport des fréquences \\(f_\\alpha/f_p\\) vaut :<br><span style='color:#6b7280;font-style:italic;font-size:0.9em'>Για το ίδιο πρωτόνιο και α, ο λόγος συχνοτήτων \\(f_\\alpha/f_p\\);</span>",
+    "options": [
+      "\\(2\\)",
+      "\\(1/2\\)",
+      "\\(1\\)",
+      "\\(4\\)"
+    ],
+    "correctAnswer": 1,
+    "explanation": "\\(f=\\dfrac{|q|B}{2\\pi m}\\) : \\(f_\\alpha/f_p=\\dfrac{2e/4u}{e/1u}=\\dfrac12\\). · \\(f_\\alpha=f_p/2\\)."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "Dans un cyclotron, la tension entre les dés doit être alternative parce que :<br><span style='color:#6b7280;font-style:italic;font-size:0.9em'>Σε κύκλοτρο, η τάση στα «dés» πρέπει να είναι εναλλασσόμενη επειδή:</span>",
+    "options": [
+      "il faut accélérer la particule à chaque passage dans l’interstice <span style='color:#6b7280'>(επιτάχυνση σε κάθε πέρασμα)</span>",
+      "le champ magnétique varie <span style='color:#6b7280'>(μεταβάλλεται το \\(B\\))</span>",
+      "la masse augmente <span style='color:#6b7280'>(αυξάνει η μάζα)</span>",
+      "le rayon est constant <span style='color:#6b7280'>(σταθερή ακτίνα)</span>"
+    ],
+    "correctAnswer": 0,
+    "explanation": "La particule traverse l’interstice deux fois par tour, en sens opposés ; le champ doit s’inverser. Comme \\(T\\) est indépendant de \\(v\\), la fréquence est fixe. · αντιστροφή κάθε μισή στροφή, σταθερή συχνότητα."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "La vitesse maximale de sortie d’un cyclotron dépend de :<br><span style='color:#6b7280;font-style:italic;font-size:0.9em'>Η μέγιστη ταχύτητα εξόδου από κύκλοτρο εξαρτάται από:</span>",
+    "options": [
+      "la tension seulement <span style='color:#6b7280'>(μόνο την τάση)</span>",
+      "le nombre de tours seulement <span style='color:#6b7280'>(μόνο τις στροφές)</span>",
+      "la vitesse initiale <span style='color:#6b7280'>(αρχική ταχύτητα)</span>",
+      "\\(B\\) et \\(r_{max}\\) <span style='color:#6b7280'>(\\(B\\) και \\(r_{max}\\))</span>"
+    ],
+    "correctAnswer": 3,
+    "explanation": "\\(v_{max}=\\dfrac{|q|B\\,r_{max}}{m}\\). · \\(v_{max}=\\dfrac{|q|B r_{max}}{m}\\)."
+  },
+  {
+    "type": "true-false-multiple",
+    "question": "Vrai ou faux ? (champ magnétique uniforme)<br><span style='color:#6b7280;font-style:italic;font-size:0.9em'>Σωστό ή Λάθος; (ομογενές μαγνητικό πεδίο)</span>",
+    "statements": [
+      "La force de Lorentz est toujours perpendiculaire à la vitesse. <span style='color:#6b7280'>(πάντα κάθετη στη \\(\\vec v\\))</span>",
+      "La force de Lorentz peut modifier la norme de la vitesse. <span style='color:#6b7280'>(αλλάζει το μέτρο της \\(v\\))</span>",
+      "La période de rotation est indépendante de la vitesse. <span style='color:#6b7280'>(ανεξάρτητη της ταχύτητας)</span>",
+      "Le rayon de la trajectoire est proportionnel à la vitesse. <span style='color:#6b7280'>(\\(r\\propto v\\))</span>",
+      "Dans un sélecteur de vitesse, \\(v=B/E\\). <span style='color:#6b7280'>(\\(v=B/E\\))</span>"
+    ],
+    "correctAnswers": [
+      true,
+      false,
+      true,
+      true,
+      false
+    ],
+    "explanation": "1) Vrai. 2) Faux : seule la direction change (travail nul). 3) Vrai. 4) Vrai. 5) Faux : \\(v=E/B\\). · 1)Σ 2)Λ 3)Σ 4)Σ 5)Λ (\\(v=E/B\\))."
+  }
+]
