@@ -285,9 +285,9 @@
       "Στο \\(t_1\\) η \\(\\vec{\\alpha}\\) αλλάζει φορά.",
       "Στο διάστημα \\(0 - t_2\\) το \\(d\\vec{\\omega}\\) έχει σταθερή κατεύθυνση."
     ],
-    "correctAnswers": [false, false, true, true],
+    "correctAnswers": [false, true, false, true],
     "image": "assets/images/A1_23.png",
-    "explanation": "Στο \\(t_1\\) αλλάζει η κλίση της \\(\\omega(t)\\), άρα αλλάζει και η φορά της \\(\\alpha\\)."
+    "explanation": "Στο \\(t_1\\) αλλάζει το πρόσημο της \\(\\omega(t)\\), άρα αλλάζει και η φορά της. Η κλιση  \\(\\alpha\\) παραμενει σταθερη ."
   },
   {
     "type": "multiple-choice",
