@@ -1,177 +1,177 @@
 [
   {
     "type": "multiple-choice",
-    "question": "Une particule chargée ne subit AUCUNE force de Lorentz lorsque :<br><span style='color:#6b7280;font-style:italic;font-size:0.9em'>Ένα φορτίο ΔΕΝ δέχεται δύναμη Lorentz όταν:</span>",
+    "question": "Une particule chargée ne subit AUCUNE force de Lorentz lorsque :<br><span style='color:#6b7280;font-style:italic;font-size:0.9em'>Ένα φορτισμένο σωματίδιο ΔΕΝ δέχεται δύναμη Lorentz όταν:</span>",
     "options": [
       "sa vitesse est perpendiculaire à \\(\\vec B\\) <span style='color:#6b7280'>(\\(\\vec v\\perp\\vec B\\))</span>",
       "sa vitesse est parallèle à \\(\\vec B\\) <span style='color:#6b7280'>(\\(\\vec v\\parallel\\vec B\\))</span>",
       "elle est positive <span style='color:#6b7280'>(θετικό)</span>",
-      "sa vitesse est grande <span style='color:#6b7280'>(μεγάλη v)</span>"
+      "sa vitesse est grande <span style='color:#6b7280'>(μεγάλη \\(v\\))</span>"
     ],
     "correctAnswer": 1,
-    "explanation": "\\(F_m=|q|vB\\sin\\alpha\\) : si \\(\\vec v\\parallel\\vec B\\) (\\(\\alpha=0\\)), \\(\\sin\\alpha=0\\) et \\(F_m=0\\). · \\(\\vec v\\parallel\\vec B\\Rightarrow F_m=0\\)."
+    "explanation": "\\(F_m=|q|vB\\sin\\alpha\\) : si \\(\\vec v\\parallel\\vec B\\) (\\(\\alpha=0\\) ou \\(180^\\circ\\)), \\(\\sin\\alpha=0\\) et \\(F_m=0\\) : mouvement rectiligne uniforme. · \\(\\vec v\\parallel\\vec B\\Rightarrow F_m=0\\)."
   },
   {
     "type": "multiple-choice",
     "question": "La force de Lorentz est MAXIMALE lorsque :<br><span style='color:#6b7280;font-style:italic;font-size:0.9em'>Η δύναμη Lorentz είναι ΜΕΓΙΣΤΗ όταν:</span>",
     "options": [
-      "\\(\\vec v\\perp\\vec B\\) <span style='color:#6b7280'>(κάθετη)</span>",
-      "\\(\\vec v\\parallel\\vec B\\) <span style='color:#6b7280'>(παράλληλη)</span>",
+      "\\(\\vec v\\perp\\vec B\\) <span style='color:#6b7280'>(κάθετα)</span>",
+      "\\(\\vec v\\parallel\\vec B\\) <span style='color:#6b7280'>(παράλληλα)</span>",
       "\\(\\alpha=0^\\circ\\)",
       "\\(B=0\\)"
     ],
     "correctAnswer": 0,
-    "explanation": "\\(\\sin\\alpha\\) maximal pour \\(\\alpha=90^\\circ\\) : \\(F_m=|q|vB\\). · \\(\\vec v\\perp\\vec B\\)."
+    "explanation": "\\(\\alpha=90^\\circ\\Rightarrow\\sin\\alpha=1\\) et \\(F_m=|q|vB\\). · \\(F_m=|q|vB\\)."
   },
   {
     "type": "multiple-choice",
-    "question": "Le travail de la force de Lorentz sur une particule chargée est :<br><span style='color:#6b7280;font-style:italic;font-size:0.9em'>Το έργο της δύναμης Lorentz σε ένα φορτίο είναι:</span>",
+    "question": "Un neutron pénètre dans un champ magnétique uniforme. Pourquoi n’est-il pas dévié ?<br><span style='color:#6b7280;font-style:italic;font-size:0.9em'>Ένα νετρόνιο μπαίνει σε ομογενές μαγνητικό πεδίο. Γιατί δεν εκτρέπεται;</span>",
     "options": [
-      "positif <span style='color:#6b7280'>(θετικό)</span>",
-      "négatif <span style='color:#6b7280'>(αρνητικό)</span>",
-      "nul <span style='color:#6b7280'>(μηδέν)</span>",
-      "égal à \\(|q|vB\\)"
-    ],
-    "correctAnswer": 2,
-    "explanation": "\\(\\vec F_m\\perp\\vec v\\) à tout instant \\(\\Rightarrow\\) travail nul (la norme de \\(v\\) ne change pas). · \\(\\vec F\\perp\\vec v\\Rightarrow W=0\\)."
-  },
-  {
-    "type": "multiple-choice",
-    "question": "La période du mouvement circulaire d’une particule dans un champ magnétique uniforme (\\(\\vec v\\perp\\vec B\\)) :<br><span style='color:#6b7280;font-style:italic;font-size:0.9em'>Η περίοδος της κυκλικής κίνησης φορτίου σε ομογενές \\(\\vec B\\):</span>",
-    "options": [
-      "est indépendante de la vitesse <span style='color:#6b7280'>(ανεξάρτητη της ταχύτητας)</span>",
-      "augmente avec la vitesse <span style='color:#6b7280'>(αυξάνει με v)</span>",
-      "diminue avec la vitesse <span style='color:#6b7280'>(μειώνεται με v)</span>",
-      "dépend de la charge seule <span style='color:#6b7280'>(μόνο από το φορτίο)</span>"
-    ],
-    "correctAnswer": 0,
-    "explanation": "\\(T=\\dfrac{2\\pi m}{|q|B}\\) ne contient pas \\(v\\). · \\(T=\\dfrac{2\\pi m}{|q|B}\\)."
-  },
-  {
-    "type": "multiple-choice",
-    "question": "Si on double la vitesse de la particule (même \\(B\\)), le rayon de sa trajectoire :<br><span style='color:#6b7280;font-style:italic;font-size:0.9em'>Αν διπλασιάσουμε την ταχύτητα (ίδιο \\(B\\)), η ακτίνα:</span>",
-    "options": [
-      "reste constant <span style='color:#6b7280'>(σταθερή)</span>",
-      "double <span style='color:#6b7280'>(διπλασιάζεται)</span>",
-      "est divisé par 2 <span style='color:#6b7280'>(υποδιπλασιάζεται)</span>",
-      "quadruple <span style='color:#6b7280'>(×4)</span>"
+      "Sa masse est trop grande <span style='color:#6b7280'>(πολύ μεγάλη μάζα)</span>",
+      "Il est électriquement neutre : \\(q=0\\Rightarrow F_m=0\\) <span style='color:#6b7280'>(είναι ηλεκτρικά ουδέτερο)</span>",
+      "Sa vitesse est trop faible <span style='color:#6b7280'>(μικρή ταχύτητα)</span>",
+      "Le champ magnétique n’agit que sur les électrons <span style='color:#6b7280'>(μόνο στα ηλεκτρόνια)</span>"
     ],
     "correctAnswer": 1,
-    "explanation": "\\(r=\\dfrac{mv}{|q|B}\\propto v\\). · \\(r\\propto v\\)."
+    "explanation": "\\(F_m=|q|vB\\sin\\alpha\\) avec \\(q=0\\). Un champ magnétique ne dévie pas une particule neutre. · \\(q=0\\)."
   },
   {
     "type": "multiple-choice",
-    "question": "Peut-on séparer des ions \\(^{12}\\text{C}^{3+}\\) et \\(^{16}\\text{O}^{4+}\\) avec un spectromètre de masse ?<br><span style='color:#6b7280;font-style:italic;font-size:0.9em'>Διαχωρίζονται τα \\(^{12}\\text{C}^{3+}\\) και \\(^{16}\\text{O}^{4+}\\) σε φασματογράφο μάζας;</span>",
+    "question": "On place un électron AU REPOS dans un champ magnétique uniforme. Que se passe-t-il ?<br><span style='color:#6b7280;font-style:italic;font-size:0.9em'>Τοποθετούμε ένα ηλεκτρόνιο ΑΚΙΝΗΤΟ σε ομογενές μαγνητικό πεδίο. Τι συμβαίνει;</span>",
     "options": [
-      "Oui, masses différentes <span style='color:#6b7280'>(Ναι)</span>",
-      "Oui, charges différentes",
-      "Non, même rapport \\(m/q\\) <span style='color:#6b7280'>(Όχι, ίδιο \\(m/q\\))</span>",
-      "Cela dépend de la tension"
-    ],
-    "correctAnswer": 2,
-    "explanation": "\\(m/q=12u/3e=16u/4e=4\\,u/e\\) : même rayon, donc inséparables. · ίδιο \\(m/q\\Rightarrow\\) ίδια ακτίνα."
-  },
-  {
-    "type": "multiple-choice",
-    "question": "Deux ions de même charge mais de masses différentes sont accélérés sous la même tension dans un spectromètre. L’ion le plus lourd décrit :<br><span style='color:#6b7280;font-style:italic;font-size:0.9em'>Δύο ιόντα ίδιου φορτίου, διαφορετικής μάζας, ίδια τάση. Το βαρύτερο διαγράφει:</span>",
-    "options": [
-      "un plus grand rayon <span style='color:#6b7280'>(μεγαλύτερη ακτίνα)</span>",
-      "un plus petit rayon <span style='color:#6b7280'>(μικρότερη ακτίνα)</span>",
-      "le même rayon <span style='color:#6b7280'>(ίδια ακτίνα)</span>",
-      "une droite <span style='color:#6b7280'>(ευθεία)</span>"
+      "Il reste au repos <span style='color:#6b7280'>(μένει ακίνητο)</span>",
+      "Il accélère en ligne droite <span style='color:#6b7280'>(επιταχύνεται ευθύγραμμα)</span>",
+      "Il se met à tourner en cercle <span style='color:#6b7280'>(κινείται σε κύκλο)</span>",
+      "Cela dépend de l’orientation de \\(\\vec B\\) <span style='color:#6b7280'>(εξαρτάται από τον προσανατολισμό)</span>"
     ],
     "correctAnswer": 0,
-    "explanation": "\\(r=\\sqrt{\\dfrac{2mU}{|q|B^{2}}}\\propto\\sqrt{m}\\). · \\(r\\propto\\sqrt{m}\\)."
+    "explanation": "\\(v=0\\Rightarrow F_m=|q|vB\\sin\\alpha=0\\). Un champ magnétique ne peut pas mettre une charge au repos en mouvement (contrairement à un champ électrique). · \\(v=0\\Rightarrow F_m=0\\)."
   },
   {
     "type": "multiple-choice",
-    "question": "Dans un sélecteur de vitesse (filtre de Wien), la vitesse sélectionnée vaut :<br><span style='color:#6b7280;font-style:italic;font-size:0.9em'>Σε επιλογέα ταχύτητας (φίλτρο Wien), η επιλεγμένη ταχύτητα:</span>",
+    "question": "Le travail de la force de Lorentz sur une particule chargée en mouvement est :<br><span style='color:#6b7280;font-style:italic;font-size:0.9em'>Το έργο της δύναμης Lorentz σε κινούμενο φορτίο είναι:</span>",
     "options": [
-      "\\(v=B/E\\)",
-      "\\(v=E/B\\)",
-      "\\(v=E\\,B\\)",
-      "\\(v=\\sqrt{E B}\\)"
-    ],
-    "correctAnswer": 1,
-    "explanation": "Forces équilibrées : \\(|q|E=|q|vB\\Rightarrow v=E/B\\). · \\(|q|E=|q|vB\\Rightarrow v=E/B\\)."
-  },
-  {
-    "type": "multiple-choice",
-    "question": "Un électron lancé à \\(5{,}0\\times10^{6}\\ \\text{m/s}\\) dans un champ \\(B=2{,}5\\ \\text{mT}\\) (\\(\\perp\\vec v\\)). Le rayon de sa trajectoire est environ :<br><span style='color:#6b7280;font-style:italic;font-size:0.9em'>Ηλεκτρόνιο στα \\(5{,}0\\times10^{6}\\ \\text{m/s}\\), \\(B=2{,}5\\ \\text{mT}\\). Η ακτίνα;</span>",
-    "options": [
-      "\\(11\\ \\text{cm}\\)",
-      "\\(1{,}1\\ \\text{m}\\)",
-      "\\(0{,}11\\ \\text{mm}\\)",
-      "\\(1{,}1\\ \\text{cm}\\)"
-    ],
-    "correctAnswer": 3,
-    "explanation": "\\(R=\\dfrac{m_e v}{eB}\\approx 1{,}1\\times10^{-2}\\ \\text{m}\\). · \\(R\\approx 1{,}1\\) cm."
-  },
-  {
-    "type": "multiple-choice",
-    "question": "Un proton et une particule α entrent avec la même vitesse dans le même champ \\(\\vec B\\). Le rapport des rayons \\(r_\\alpha/r_p\\) vaut :<br><span style='color:#6b7280;font-style:italic;font-size:0.9em'>Πρωτόνιο και σωματίδιο α, ίδια ταχύτητα, ίδιο \\(\\vec B\\). Ο λόγος \\(r_\\alpha/r_p\\);</span>",
-    "options": [
-      "\\(1\\)",
-      "\\(1/2\\)",
-      "\\(2\\)",
-      "\\(4\\)"
+      "toujours positif <span style='color:#6b7280'>(πάντα θετικό)</span>",
+      "toujours négatif <span style='color:#6b7280'>(πάντα αρνητικό)</span>",
+      "toujours nul <span style='color:#6b7280'>(πάντα μηδέν)</span>",
+      "positif ou négatif selon l’orientation de \\(\\vec B\\) <span style='color:#6b7280'>(θετικό ή αρνητικό)</span>"
     ],
     "correctAnswer": 2,
-    "explanation": "\\(r=\\dfrac{mv}{|q|B}\\) : \\(r_\\alpha/r_p=\\dfrac{4u/2e}{1u/e}=2\\). · \\(r_\\alpha=2r_p\\)."
+    "explanation": "\\(\\vec F_m\\perp\\vec v\\) à tout instant. D’après le TEC, l’énergie cinétique et la norme de \\(v\\) ne changent pas : le mouvement est uniforme. · \\(W=0\\)."
   },
   {
     "type": "multiple-choice",
-    "question": "Pour ce même proton et cette même particule α, le rapport des fréquences \\(f_\\alpha/f_p\\) vaut :<br><span style='color:#6b7280;font-style:italic;font-size:0.9em'>Για το ίδιο πρωτόνιο και α, ο λόγος συχνοτήτων \\(f_\\alpha/f_p\\);</span>",
+    "question": "Un proton et un électron pénètrent avec la même vitesse \\(v\\) dans un champ magnétique uniforme \\(\\vec B\\perp\\vec v\\). Les forces magnétiques subies ont :<br><span style='color:#6b7280;font-style:italic;font-size:0.9em'>Πρωτόνιο και ηλεκτρόνιο μπαίνουν με ίδια ταχύτητα \\(v\\) σε ομογενές \\(\\vec B\\perp\\vec v\\). Οι μαγνητικές δυνάμεις έχουν:</span>",
     "options": [
-      "\\(2\\)",
-      "\\(1/2\\)",
-      "\\(1\\)",
-      "\\(4\\)"
-    ],
-    "correctAnswer": 1,
-    "explanation": "\\(f=\\dfrac{|q|B}{2\\pi m}\\) : \\(f_\\alpha/f_p=\\dfrac{2e/4u}{e/1u}=\\dfrac12\\). · \\(f_\\alpha=f_p/2\\)."
-  },
-  {
-    "type": "multiple-choice",
-    "question": "Dans un cyclotron, la tension entre les dés doit être alternative parce que :<br><span style='color:#6b7280;font-style:italic;font-size:0.9em'>Σε κύκλοτρο, η τάση στα «dés» πρέπει να είναι εναλλασσόμενη επειδή:</span>",
-    "options": [
-      "il faut accélérer la particule à chaque passage dans l’interstice <span style='color:#6b7280'>(επιτάχυνση σε κάθε πέρασμα)</span>",
-      "le champ magnétique varie <span style='color:#6b7280'>(μεταβάλλεται το \\(B\\))</span>",
-      "la masse augmente <span style='color:#6b7280'>(αυξάνει η μάζα)</span>",
-      "le rayon est constant <span style='color:#6b7280'>(σταθερή ακτίνα)</span>"
+      "même intensité, sens opposés <span style='color:#6b7280'>(ίδιο μέτρο, αντίθετη φορά)</span>",
+      "une intensité plus grande pour le proton <span style='color:#6b7280'>(μεγαλύτερο μέτρο για το πρωτόνιο)</span>",
+      "une intensité plus grande pour l’électron <span style='color:#6b7280'>(μεγαλύτερο μέτρο για το ηλεκτρόνιο)</span>",
+      "même intensité et même sens <span style='color:#6b7280'>(ίδιο μέτρο και φορά)</span>"
     ],
     "correctAnswer": 0,
-    "explanation": "La particule traverse l’interstice deux fois par tour, en sens opposés ; le champ doit s’inverser. Comme \\(T\\) est indépendant de \\(v\\), la fréquence est fixe. · αντιστροφή κάθε μισή στροφή, σταθερή συχνότητα."
+    "explanation": "\\(F_m=|q|vB\\) avec \\(|q_p|=|q_e|=e\\) : même intensité. Les charges sont de signes opposés, donc les forces sont de sens opposés. L’électron, plus léger, a toutefois une accélération bien plus grande. · ίδιο μέτρο, αντίθετη φορά."
   },
   {
     "type": "multiple-choice",
-    "question": "La vitesse maximale de sortie d’un cyclotron dépend de :<br><span style='color:#6b7280;font-style:italic;font-size:0.9em'>Η μέγιστη ταχύτητα εξόδου από κύκλοτρο εξαρτάται από:</span>",
+    "question": "Dans la photo de la page titre, des électrons sont injectés à \\(1800\\ \\text{km/s}\\) perpendiculairement à un champ \\(B=10^{-4}\\ \\text{T}\\). L’intensité de la force de Lorentz vaut (\\(e=1{,}602\\times10^{-19}\\ \\text{C}\\)) :<br><span style='color:#6b7280;font-style:italic;font-size:0.9em'>Ηλεκτρόνια με ταχύτητα 1800 km/s κάθετα σε πεδίο \\(B=10^{-4}\\) T. Το μέτρο της δύναμης Lorentz είναι:</span>",
     "options": [
-      "la tension seulement <span style='color:#6b7280'>(μόνο την τάση)</span>",
-      "le nombre de tours seulement <span style='color:#6b7280'>(μόνο τις στροφές)</span>",
-      "la vitesse initiale <span style='color:#6b7280'>(αρχική ταχύτητα)</span>",
-      "\\(B\\) et \\(r_{max}\\) <span style='color:#6b7280'>(\\(B\\) και \\(r_{max}\\))</span>"
+      "\\(2{,}9\\times10^{-17}\\ \\text{N}\\)",
+      "\\(2{,}9\\times10^{-20}\\ \\text{N}\\)",
+      "\\(2{,}9\\times10^{-14}\\ \\text{N}\\)",
+      "\\(0\\ \\text{N}\\)"
     ],
-    "correctAnswer": 3,
-    "explanation": "\\(v_{max}=\\dfrac{|q|B\\,r_{max}}{m}\\). · \\(v_{max}=\\dfrac{|q|B r_{max}}{m}\\)."
+    "correctAnswer": 0,
+    "explanation": "\\(F_m=e\\,v\\,B=1{,}602\\times10^{-19}\\cdot1{,}8\\times10^{6}\\cdot10^{-4}\\approx2{,}9\\times10^{-17}\\ \\text{N}\\)."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "Une particule \\(\\alpha\\) (\\(q=2e\\), \\(m=6{,}64\\times10^{-27}\\ \\text{kg}\\)) se déplace à \\(2{,}0\\times10^{6}\\ \\text{m/s}\\) perpendiculairement à un champ de \\(200\\ \\text{mT}\\). Comparée à son poids (\\(g=10\\ \\text{m/s}^2\\)), la force magnétique est environ :<br><span style='color:#6b7280;font-style:italic;font-size:0.9em'>Σωμάτιο α με \\(v=2{,}0\\times10^6\\) m/s κάθετα σε πεδίο 200 mT. Σε σύγκριση με το βάρος του (\\(g=10\\) m/s²), η μαγνητική δύναμη είναι περίπου:</span>",
+    "options": [
+      "du même ordre de grandeur <span style='color:#6b7280'>(ίδιας τάξης μεγέθους)</span>",
+      "\\(10^{6}\\) fois plus petite <span style='color:#6b7280'>(10⁶ φορές μικρότερη)</span>",
+      "\\(10^{12}\\) fois plus grande <span style='color:#6b7280'>(10¹² φορές μεγαλύτερη)</span>",
+      "\\(10^{3}\\) fois plus grande <span style='color:#6b7280'>(10³ φορές μεγαλύτερη)</span>"
+    ],
+    "correctAnswer": 2,
+    "explanation": "\\(F_m=2e\\,vB=2\\cdot1{,}6\\times10^{-19}\\cdot2{,}0\\times10^{6}\\cdot0{,}20\\approx1{,}3\\times10^{-13}\\ \\text{N}\\) ; \\(P=mg\\approx6{,}6\\times10^{-26}\\ \\text{N}\\). Rapport \\(\\approx2\\times10^{12}\\) : on néglige le poids des particules. · το βάρος αμελητέο."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "Des ions fer entrent à \\(v=5\\times10^{4}\\ \\text{m/s}\\) dans un champ \\(B=2\\ \\text{mT}\\) (\\(\\perp\\vec v\\)) et subissent \\(F_m=4{,}806\\times10^{-17}\\ \\text{N}\\). Quelle est leur charge ?<br><span style='color:#6b7280;font-style:italic;font-size:0.9em'>Ιόντα σιδήρου με \\(v=5\\times10^4\\) m/s σε \\(B=2\\) mT (\\(\\perp\\vec v\\)) δέχονται \\(F_m=4{,}806\\times10^{-17}\\) N. Ποιο το φορτίο τους;</span>",
+    "options": [
+      "\\(+e\\) (Fe⁺)",
+      "\\(+2e\\) (Fe²⁺)",
+      "\\(+3e\\) (Fe³⁺)",
+      "\\(+4e\\) (Fe⁴⁺)"
+    ],
+    "correctAnswer": 2,
+    "explanation": "\\(q=\\dfrac{F_m}{vB}=\\dfrac{4{,}806\\times10^{-17}}{5\\times10^{4}\\cdot2\\times10^{-3}}=4{,}806\\times10^{-19}\\ \\text{C}=3e\\Rightarrow \\text{Fe}^{3+}\\)."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "Des électrons accélérés par \\(U=100\\ \\text{V}\\) (à partir du repos) entrent dans un champ \\(B=10\\ \\text{mT}\\) perpendiculaire à leur vitesse. La force subie vaut environ :<br><span style='color:#6b7280;font-style:italic;font-size:0.9em'>Ηλεκτρόνια επιταχύνονται από τάση 100 V (από την ηρεμία) και μπαίνουν σε πεδίο \\(B=10\\) mT κάθετο στην ταχύτητα. Η δύναμη είναι περίπου:</span>",
+    "options": [
+      "\\(9{,}5\\times10^{-15}\\ \\text{N}\\)",
+      "\\(9{,}5\\times10^{-18}\\ \\text{N}\\)",
+      "\\(1{,}6\\times10^{-17}\\ \\text{N}\\)",
+      "\\(5{,}9\\times10^{-15}\\ \\text{N}\\)"
+    ],
+    "correctAnswer": 0,
+    "explanation": "TEC : \\(\\tfrac12m_ev^2=eU\\Rightarrow v=\\sqrt{\\tfrac{2eU}{m_e}}\\approx5{,}9\\times10^{6}\\ \\text{m/s}\\). Puis \\(F_m=evB\\approx1{,}602\\times10^{-19}\\cdot5{,}9\\times10^{6}\\cdot10^{-2}\\approx9{,}5\\times10^{-15}\\ \\text{N}\\)."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "Une tige de \\(20\\ \\text{cm}\\) repose sur deux rails distants de \\(MN=15\\ \\text{cm}\\), dans un champ \\(B=0{,}3\\ \\text{T}\\) perpendiculaire au plan des rails. Elle est parcourue par \\(I=10\\ \\text{A}\\). La force de Laplace vaut :<br><span style='color:#6b7280;font-style:italic;font-size:0.9em'>Ράβδος 20 cm πάνω σε δύο ράγες που απέχουν \\(MN=15\\) cm, σε πεδίο \\(B=0{,}3\\) T κάθετο στο επίπεδο των ραγών. Ρεύμα \\(I=10\\) A. Η δύναμη Laplace είναι:</span>",
+    "options": [
+      "\\(0{,}45\\ \\text{N}\\)",
+      "\\(0{,}60\\ \\text{N}\\)",
+      "\\(0{,}90\\ \\text{N}\\)",
+      "\\(0\\ \\text{N}\\)"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Seule la partie du conducteur parcourue par le courant et plongée dans \\(\\vec B\\) compte : \\(\\ell=MN=0{,}15\\ \\text{m}\\). \\(F_m=I\\ell B=10\\cdot0{,}15\\cdot0{,}3=0{,}45\\ \\text{N}\\). · \\(\\ell=15\\) cm, όχι 20 cm."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "Un conducteur rectiligne parcouru par un courant est placé dans un champ magnétique parallèle au conducteur. La force de Laplace est :<br><span style='color:#6b7280;font-style:italic;font-size:0.9em'>Ευθύγραμμος αγωγός με ρεύμα σε μαγνητικό πεδίο παράλληλο προς τον αγωγό. Η δύναμη Laplace είναι:</span>",
+    "options": [
+      "maximale <span style='color:#6b7280'>(μέγιστη)</span>",
+      "nulle <span style='color:#6b7280'>(μηδενική)</span>",
+      "égale à \\(I\\ell B/2\\) <span style='color:#6b7280'>(\\(I\\ell B/2\\))</span>",
+      "dirigée le long du conducteur <span style='color:#6b7280'>(κατά μήκος του αγωγού)</span>"
+    ],
+    "correctAnswer": 1,
+    "explanation": "\\(F_m=I\\ell B\\sin\\alpha\\) avec \\(\\alpha=0\\) ou \\(180^\\circ\\) : \\(F_m=0\\). · \\(F_m=0\\)."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "Un conducteur-pendule dévie dans un champ magnétique. Si on inverse À LA FOIS les pôles de la batterie ET l’aimant, le sens de déviation :<br><span style='color:#6b7280;font-style:italic;font-size:0.9em'>Αγωγός-εκκρεμές εκτρέπεται σε μαγνητικό πεδίο. Αν αντιστρέψουμε ΤΑΥΤΟΧΡΟΝΑ τους πόλους της μπαταρίας ΚΑΙ τον μαγνήτη, η φορά εκτροπής:</span>",
+    "options": [
+      "s’inverse <span style='color:#6b7280'>(αντιστρέφεται)</span>",
+      "reste le même <span style='color:#6b7280'>(παραμένει ίδια)</span>",
+      "devient nul <span style='color:#6b7280'>(μηδενίζεται)</span>",
+      "devient perpendiculaire <span style='color:#6b7280'>(γίνεται κάθετη)</span>"
+    ],
+    "correctAnswer": 1,
+    "explanation": "\\(\\vec F=I\\vec\\ell\\times\\vec B\\) : changer le signe de \\(I\\) ET celui de \\(\\vec B\\) donne \\((-)(-)=(+)\\). · δύο αντιστροφές αλληλοαναιρούνται."
   },
   {
     "type": "true-false-multiple",
-    "question": "Vrai ou faux ? (champ magnétique uniforme)<br><span style='color:#6b7280;font-style:italic;font-size:0.9em'>Σωστό ή Λάθος; (ομογενές μαγνητικό πεδίο)</span>",
+    "question": "Vrai ou faux ? (particule chargée dans un champ magnétique uniforme)<br><span style='color:#6b7280;font-style:italic;font-size:0.9em'>Σωστό ή Λάθος; (φορτίο σε ομογενές μαγνητικό πεδίο)</span>",
     "statements": [
-      "La force de Lorentz est toujours perpendiculaire à la vitesse. <span style='color:#6b7280'>(πάντα κάθετη στη \\(\\vec v\\))</span>",
-      "La force de Lorentz peut modifier la norme de la vitesse. <span style='color:#6b7280'>(αλλάζει το μέτρο της \\(v\\))</span>",
-      "La période de rotation est indépendante de la vitesse. <span style='color:#6b7280'>(ανεξάρτητη της ταχύτητας)</span>",
-      "Le rayon de la trajectoire est proportionnel à la vitesse. <span style='color:#6b7280'>(\\(r\\propto v\\))</span>",
-      "Dans un sélecteur de vitesse, \\(v=B/E\\). <span style='color:#6b7280'>(\\(v=B/E\\))</span>"
+      "La force de Lorentz est toujours perpendiculaire au vecteur champ magnétique \\(\\vec B\\). <span style='color:#6b7280'>(πάντα κάθετη στο \\(\\vec B\\))</span>",
+      "La trajectoire d’une particule chargée est toujours un cercle. <span style='color:#6b7280'>(η τροχιά είναι πάντα κύκλος)</span>",
+      "Le mouvement d’une particule chargée est toujours uniforme (norme de \\(v\\) constante). <span style='color:#6b7280'>(πάντα ομαλή κίνηση)</span>",
+      "On peut dévier un neutron à l’aide d’un champ magnétique. <span style='color:#6b7280'>(νετρόνιο εκτρέπεται από μαγνητικό πεδίο)</span>",
+      "On peut mettre un proton en mouvement à partir du repos à l’aide d’un champ magnétique. <span style='color:#6b7280'>(πρωτόνιο από ηρεμία με μαγνητικό πεδίο)</span>"
     ],
     "correctAnswers": [
       true,
       false,
       true,
-      true,
+      false,
       false
     ],
-    "explanation": "1) Vrai. 2) Faux : seule la direction change (travail nul). 3) Vrai. 4) Vrai. 5) Faux : \\(v=E/B\\). · 1)Σ 2)Λ 3)Σ 4)Σ 5)Λ (\\(v=E/B\\))."
+    "explanation": "1) Vrai : \\(\\vec F_m\\perp\\vec v\\) et \\(\\vec F_m\\perp\\vec B\\). 2) Faux : droite si \\(\\vec v\\parallel\\vec B\\), cercle si \\(\\vec v\\perp\\vec B\\), hélice sinon. 3) Vrai : travail nul. 4) Faux : \\(q=0\\). 5) Faux : \\(v=0\\Rightarrow F_m=0\\) (il faut un champ électrique). · 1)Σ 2)Λ 3)Σ 4)Λ 5)Λ"
   }
 ]

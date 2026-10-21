@@ -1,169 +1,157 @@
 [
   {
     "type": "multiple-choice",
-    "question": "Deux corps sphériques s’attirent. Si on double la distance entre leurs centres (mêmes masses), la force de gravitation est :<br><span style='color:#6b7280;font-style:italic;font-size:0.9em'>Αν διπλασιάσουμε την απόσταση των κέντρων (ίδιες μάζες), η δύναμη βαρύτητας:</span>",
+    "question": "Un astronaute est trois fois plus éloigné du centre de la Terre que lorsqu’il se trouve à sa surface. La force de gravitation qu’il subit vaut :<br><span style='color:#6b7280;font-style:italic;font-size:0.9em'>Ένας αστροναύτης βρίσκεται τρεις φορές πιο μακριά από το κέντρο της Γης απ’ ό,τι στην επιφάνεια. Η δύναμη βαρύτητας που δέχεται είναι:</span>",
     "options": [
-      "divisée par 4 <span style='color:#6b7280'>(διά 4)</span>",
-      "divisée par 2 <span style='color:#6b7280'>(διά 2)</span>",
-      "doublée <span style='color:#6b7280'>(διπλάσια)</span>",
-      "inchangée <span style='color:#6b7280'>(ίδια)</span>"
+      "le tiers de celle à la surface <span style='color:#6b7280'>(το 1/3)</span>",
+      "le neuvième de celle à la surface <span style='color:#6b7280'>(το 1/9)</span>",
+      "zéro <span style='color:#6b7280'>(μηδέν)</span>",
+      "le triple de celle à la surface <span style='color:#6b7280'>(το τριπλάσιο)</span>"
+    ],
+    "correctAnswer": 1,
+    "explanation": "\\(F_g=K\\dfrac{Mm}{r^{2}}\\propto\\dfrac1{r^{2}}\\) : \\(r\\) devient \\(3r\\), donc \\(F_g\\) est divisée par \\(3^2=9\\). · \\(F\\propto 1/r^2\\Rightarrow F/9\\)."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "Deux masses ponctuelles sont distantes de \\(r\\) et s’attirent avec la force \\(F_g\\). Si chaque masse est doublée ET la distance est doublée, la nouvelle force vaut :<br><span style='color:#6b7280;font-style:italic;font-size:0.9em'>Δύο σημειακές μάζες σε απόσταση \\(r\\) έλκονται με δύναμη \\(F_g\\). Αν διπλασιαστεί κάθε μάζα ΚΑΙ η απόσταση, η νέα δύναμη είναι:</span>",
+    "options": [
+      "\\(\\dfrac18F_g\\)",
+      "\\(\\dfrac14F_g\\)",
+      "\\(F_g\\)",
+      "\\(4F_g\\)"
+    ],
+    "correctAnswer": 2,
+    "explanation": "\\(F'=K\\dfrac{(2m_1)(2m_2)}{(2r)^2}=K\\dfrac{4m_1m_2}{4r^2}=F_g\\). · η δύναμη μένει ίδια."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "Quelle est l’unité SI de l’intensité du champ de gravitation \\(G\\) ?<br><span style='color:#6b7280;font-style:italic;font-size:0.9em'>Ποια είναι η μονάδα SI της έντασης του πεδίου βαρύτητας \\(G\\);</span>",
+    "options": [
+      "N/m",
+      "N/kg",
+      "N/s",
+      "m·s²"
+    ],
+    "correctAnswer": 1,
+    "explanation": "\\(G=\\dfrac{F_g}{m}\\) : newton par kilogramme (\\(1\\ \\text{N/kg}=1\\ \\text{m/s}^2\\)). · \\(\\text{N/kg}\\)."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "À une distance \\(r\\) d’une masse source \\(M\\), le champ de gravitation vaut \\(G\\). Si on double la distance (à \\(2r\\)), l’intensité du champ devient :<br><span style='color:#6b7280;font-style:italic;font-size:0.9em'>Σε απόσταση \\(r\\) από μάζα \\(M\\) το πεδίο έχει ένταση \\(G\\). Αν η απόσταση γίνει \\(2r\\), η ένταση γίνεται:</span>",
+    "options": [
+      "\\(G/2\\) <span style='color:#6b7280'>(μισή)</span>",
+      "\\(G/4\\) <span style='color:#6b7280'>(το 1/4)</span>",
+      "\\(2G\\) <span style='color:#6b7280'>(διπλάσια)</span>",
+      "\\(G\\) (inchangée) <span style='color:#6b7280'>(ίδια)</span>"
+    ],
+    "correctAnswer": 1,
+    "explanation": "\\(G=K\\dfrac{M}{r^{2}}\\) : loi en carré inverse, donc \\(G\\) est divisée par 4. La masse témoin \\(m\\) n’intervient pas. · \\(G\\propto 1/r^2\\)."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "Soit \\(G_0\\) l’intensité du champ de gravitation à la surface de la Terre (rayon \\(R\\)). À l’altitude \\(y=R\\) (donc à \\(2R\\) du centre), l’intensité vaut :<br><span style='color:#6b7280;font-style:italic;font-size:0.9em'>Έστω \\(G_0\\) η ένταση στην επιφάνεια της Γης (ακτίνα \\(R\\)). Σε ύψος \\(y=R\\) (δηλ. \\(2R\\) από το κέντρο) η ένταση είναι:</span>",
+    "options": [
+      "\\(G_0/2\\)",
+      "\\(G_0/4\\)",
+      "\\(G_0/3\\)",
+      "\\(2G_0\\)"
+    ],
+    "correctAnswer": 1,
+    "explanation": "\\(G(y)=G_0\\dfrac{R^{2}}{(R+y)^{2}}=G_0\\dfrac{R^{2}}{(2R)^{2}}=\\dfrac{G_0}{4}\\). Attention : la distance se mesure depuis le CENTRE de la Terre. · \\(G_0/4\\), όχι \\(G_0/2\\)."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "Tu atterris sur une planète de même masse que la Terre, mais de diamètre deux fois plus grand. La force de gravitation que tu subis à sa surface, par rapport à celle sur Terre, est :<br><span style='color:#6b7280;font-style:italic;font-size:0.9em'>Προσγειώνεσαι σε πλανήτη με ίδια μάζα με τη Γη αλλά διπλάσια διάμετρο. Η δύναμη βαρύτητας στην επιφάνεια σε σχέση με τη Γη είναι:</span>",
+    "options": [
+      "deux fois plus grande <span style='color:#6b7280'>(διπλάσια)</span>",
+      "quatre fois plus petite <span style='color:#6b7280'>(4 φορές μικρότερη)</span>",
+      "deux fois plus petite <span style='color:#6b7280'>(2 φορές μικρότερη)</span>",
+      "identique <span style='color:#6b7280'>(ίδια)</span>"
+    ],
+    "correctAnswer": 1,
+    "explanation": "\\(R'=2R\\) donc \\(F\\propto 1/R'^2\\) est divisée par 4. · \\(F\\to F/4\\)."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "Tu atterris sur une planète dont la masse ET le diamètre sont deux fois ceux de la Terre. Le champ de gravitation à sa surface est :<br><span style='color:#6b7280;font-style:italic;font-size:0.9em'>Προσγειώνεσαι σε πλανήτη με διπλάσια μάζα ΚΑΙ διπλάσια διάμετρο από τη Γη. Το πεδίο στην επιφάνεια είναι:</span>",
+    "options": [
+      "le double de celui de la Terre <span style='color:#6b7280'>(διπλάσιο)</span>",
+      "identique <span style='color:#6b7280'>(ίδιο)</span>",
+      "la moitié de celui de la Terre <span style='color:#6b7280'>(το μισό)</span>",
+      "le quart de celui de la Terre <span style='color:#6b7280'>(το 1/4)</span>"
+    ],
+    "correctAnswer": 2,
+    "explanation": "\\(G'=K\\dfrac{2M}{(2R)^{2}}=K\\dfrac{2M}{4R^{2}}=\\dfrac{G}{2}\\). · \\(G'=G/2\\)."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "L’accélération \\(g\\) mesurée au niveau de la mer en chute libre vaut 9,78 m/s² à l’équateur et 9,83 m/s² aux pôles. Pourquoi cette différence ?<br><span style='color:#6b7280;font-style:italic;font-size:0.9em'>Η επιτάχυνση \\(g\\) στη στάθμη της θάλασσας είναι 9,78 m/s² στον ισημερινό και 9,83 m/s² στους πόλους. Γιατί;</span>",
+    "options": [
+      "La constante \\(K\\) change avec la latitude <span style='color:#6b7280'>(το \\(K\\) αλλάζει)</span>",
+      "La rotation de la Terre crée un effet centrifuge, maximal à l’équateur et nul aux pôles <span style='color:#6b7280'>(η περιστροφή της Γης: φυγόκεντρος επίδραση μέγιστη στον ισημερινό)</span>",
+      "La masse du corps change <span style='color:#6b7280'>(αλλάζει η μάζα)</span>",
+      "La Terre n’attire pas aux pôles <span style='color:#6b7280'>(δεν έλκει στους πόλους)</span>"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Le champ de pesanteur \\(\\vec g\\) résulte du champ de gravitation \\(\\vec G\\) et de la rotation de la Terre ; aux pôles \\(g\\approx G\\simeq 9{,}82\\ \\text{N/kg}\\). · \\(\\vec g\\ne\\vec G\\) λόγω περιστροφής."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "On sait que \\(G=9{,}83\\ \\text{N/kg}\\) à la surface de la Terre (\\(R=6371\\ \\text{km}\\), \\(K=6{,}674\\times10^{-11}\\) SI). La masse de la Terre vaut environ :<br><span style='color:#6b7280;font-style:italic;font-size:0.9em'>Αν \\(G=9{,}83\\) N/kg στην επιφάνεια (\\(R=6371\\) km), η μάζα της Γης είναι περίπου:</span>",
+    "options": [
+      "\\(6{,}0\\times10^{22}\\ \\text{kg}\\)",
+      "\\(6{,}0\\times10^{24}\\ \\text{kg}\\)",
+      "\\(6{,}7\\times10^{24}\\ \\text{kg}\\)",
+      "\\(6{,}0\\times10^{27}\\ \\text{kg}\\)"
+    ],
+    "correctAnswer": 1,
+    "explanation": "\\(M=\\dfrac{G R^{2}}{K}=\\dfrac{9{,}83\\,(6{,}371\\times10^{6})^{2}}{6{,}674\\times10^{-11}}\\approx 6{,}0\\times10^{24}\\ \\text{kg}\\)."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "Force de gravitation entre la Terre (\\(5{,}97\\times10^{24}\\) kg) et la Lune (\\(7{,}35\\times10^{22}\\) kg), distantes de \\(384\\,400\\ \\text{km}\\) :<br><span style='color:#6b7280;font-style:italic;font-size:0.9em'>Δύναμη βαρύτητας Γης–Σελήνης (απόσταση 384 400 km):</span>",
+    "options": [
+      "\\(2{,}0\\times10^{20}\\ \\text{N}\\)",
+      "\\(2{,}0\\times10^{26}\\ \\text{N}\\)",
+      "\\(5{,}1\\times10^{14}\\ \\text{N}\\)",
+      "\\(9{,}8\\times10^{22}\\ \\text{N}\\)"
     ],
     "correctAnswer": 0,
-    "explanation": "\\(F=K\\dfrac{Mm}{r^{2}}\\) varie en \\(1/r^{2}\\) : doubler \\(r\\) divise \\(F\\) par 4. · \\(F\\propto 1/r^{2}\\)."
+    "explanation": "\\(F_g=K\\dfrac{m_Tm_L}{r^{2}}=\\dfrac{6{,}674\\times10^{-11}\\cdot5{,}97\\times10^{24}\\cdot7{,}35\\times10^{22}}{(3{,}844\\times10^{8})^{2}}\\approx 2{,}0\\times10^{20}\\ \\text{N}\\)."
   },
   {
     "type": "multiple-choice",
-    "question": "Deux satellites terrestres ont des rayons d’orbite \\(r_1\\) et \\(r_2=4\\,r_1\\). Le rapport de leurs périodes \\(T_2/T_1\\) vaut :<br><span style='color:#6b7280;font-style:italic;font-size:0.9em'>Δύο δορυφόροι με \\(r_2=4r_1\\). Ο λόγος περιόδων \\(T_2/T_1\\);</span>",
+    "question": "La force de gravitation exercée par la Lune sur la Terre est, comparée à celle exercée par la Terre sur la Lune :<br><span style='color:#6b7280;font-style:italic;font-size:0.9em'>Η δύναμη της Σελήνης στη Γη σε σύγκριση με τη δύναμη της Γης στη Σελήνη είναι:</span>",
     "options": [
-      "\\(2\\)",
-      "\\(4\\)",
-      "\\(8\\)",
-      "\\(16\\)"
+      "plus petite (la Lune est plus légère) <span style='color:#6b7280'>(μικρότερη)</span>",
+      "plus grande <span style='color:#6b7280'>(μεγαλύτερη)</span>",
+      "de même intensité <span style='color:#6b7280'>(ίδιου μέτρου)</span>",
+      "nulle <span style='color:#6b7280'>(μηδενική)</span>"
     ],
     "correctAnswer": 2,
-    "explanation": "3<sup>e</sup> loi de Kepler : \\(T\\propto r^{3/2}\\), donc \\(T_2/T_1=4^{3/2}=8\\). · \\(T\\propto r^{3/2}\\Rightarrow 8\\)."
+    "explanation": "Principe de l’action et de la réaction : \\(F_{L/T}=F_{T/L}=K\\dfrac{m_Tm_L}{r^2}\\). · 3ος νόμος του Νεύτωνα."
   },
   {
     "type": "multiple-choice",
-    "question": "La vitesse d’un satellite en orbite circulaire ne dépend PAS de :<br><span style='color:#6b7280;font-style:italic;font-size:0.9em'>Η ταχύτητα δορυφόρου σε κυκλική τροχιά ΔΕΝ εξαρτάται από:</span>",
+    "question": "Une personne de \\(70\\ \\text{kg}\\) monte de \\(200\\ \\text{m}\\) (champ uniforme, \\(G\\simeq g=10\\ \\text{N/kg}\\)). La variation de son énergie potentielle de gravitation vaut :<br><span style='color:#6b7280;font-style:italic;font-size:0.9em'>Άτομο 70 kg ανεβαίνει 200 m (ομογενές πεδίο, \\(G\\simeq g=10\\) N/kg). Η μεταβολή της δυναμικής ενέργειας βαρύτητας είναι:</span>",
     "options": [
-      "la masse de la Terre <span style='color:#6b7280'>(μάζα Γης)</span>",
-      "la masse du satellite <span style='color:#6b7280'>(μάζα δορυφόρου)</span>",
-      "le rayon de l’orbite <span style='color:#6b7280'>(ακτίνα τροχιάς)</span>",
-      "la constante \\(K\\)"
+      "\\(1{,}4\\times10^{3}\\ \\text{J}\\)",
+      "\\(1{,}4\\times10^{5}\\ \\text{J}\\)",
+      "\\(-1{,}4\\times10^{5}\\ \\text{J}\\)",
+      "\\(3{,}5\\times10^{2}\\ \\text{J}\\)"
     ],
     "correctAnswer": 1,
-    "explanation": "\\(v=\\sqrt{KM/r}\\) : la masse du satellite n’y figure pas. · \\(v=\\sqrt{KM/r}\\)."
-  },
-  {
-    "type": "multiple-choice",
-    "question": "Un satellite se déplace avec une vitesse linéaire constante. Son orbite est :<br><span style='color:#6b7280;font-style:italic;font-size:0.9em'>Δορυφόρος με σταθερή γραμμική ταχύτητα. Η τροχιά του είναι:</span>",
-    "options": [
-      "elliptique <span style='color:#6b7280'>(ελλειπτική)</span>",
-      "circulaire <span style='color:#6b7280'>(κυκλική)</span>",
-      "parabolique <span style='color:#6b7280'>(παραβολική)</span>",
-      "rectiligne <span style='color:#6b7280'>(ευθύγραμμη)</span>"
-    ],
-    "correctAnswer": 1,
-    "explanation": "Sur une ellipse la vitesse varie ; une vitesse constante implique une orbite circulaire. · Σταθερή \\(v\\) \\(\\Rightarrow\\) κυκλική."
-  },
-  {
-    "type": "multiple-choice",
-    "question": "Pour un satellite en orbite circulaire, l’énergie mécanique du système Terre-satellite est :<br><span style='color:#6b7280;font-style:italic;font-size:0.9em'>Για δορυφόρο σε κυκλική τροχιά, η μηχανική ενέργεια του συστήματος είναι:</span>",
-    "options": [
-      "positive — système libre <span style='color:#6b7280'>(θετική)</span>",
-      "nulle <span style='color:#6b7280'>(μηδέν)</span>",
-      "cela dépend de la masse <span style='color:#6b7280'>(εξαρτάται)</span>",
-      "négative — système lié <span style='color:#6b7280'>(αρνητική — δέσμιο)</span>"
-    ],
-    "correctAnswer": 3,
-    "explanation": "\\(E_m=-K\\dfrac{Mm}{2r}<0\\) : le signe négatif traduit un système lié. · \\(E_m<0\\) \\(\\Rightarrow\\) δέσμιο."
-  },
-  {
-    "type": "multiple-choice",
-    "question": "Sur une orbite elliptique, la vitesse du satellite est maximale :<br><span style='color:#6b7280;font-style:italic;font-size:0.9em'>Σε ελλειπτική τροχιά, η ταχύτητα είναι μέγιστη:</span>",
-    "options": [
-      "à l’apogée <span style='color:#6b7280'>(στο απόγειο)</span>",
-      "constante partout <span style='color:#6b7280'>(σταθερή)</span>",
-      "au périgée <span style='color:#6b7280'>(στο περίγειο)</span>",
-      "aux deux extrémités <span style='color:#6b7280'>(και στα δύο άκρα)</span>"
-    ],
-    "correctAnswer": 2,
-    "explanation": "\\(E_m\\) constante : au périgée \\(r\\) minimal \\(\\Rightarrow E_p\\) minimale \\(\\Rightarrow E_c\\) (et \\(v\\)) maximale. · μέγιστη στο περίγειο."
-  },
-  {
-    "type": "multiple-choice",
-    "question": "La vitesse de libération d’un objet lancé depuis un astre dépend-elle de la masse de l’objet ?<br><span style='color:#6b7280;font-style:italic;font-size:0.9em'>Η ταχύτητα διαφυγής εξαρτάται από τη μάζα του εκτοξευόμενου σώματος;</span>",
-    "options": [
-      "Oui, proportionnelle à \\(m\\)",
-      "Non, seulement de \\(M\\) et \\(R\\) de l’astre <span style='color:#6b7280'>(Όχι)</span>",
-      "Oui, en \\(\\sqrt{m}\\)",
-      "Oui, en \\(1/m\\)"
-    ],
-    "correctAnswer": 1,
-    "explanation": "\\(v_{lib}=\\sqrt{2KM/R}\\) : indépendante de la masse de l’objet lancé. · ανεξάρτητη από τη μάζα του σώματος."
-  },
-  {
-    "type": "multiple-choice",
-    "question": "Mars a une masse \\(\\approx M_T/9\\) et un rayon \\(\\approx R_T/2\\). Le champ de gravitation à sa surface vaut environ :<br><span style='color:#6b7280;font-style:italic;font-size:0.9em'>Ο Άρης: μάζα \\(\\approx M_T/9\\), ακτίνα \\(\\approx R_T/2\\). Το πεδίο βαρύτητας στην επιφάνεια;</span>",
-    "options": [
-      "\\(2{,}5\\ \\text{m/s}^2\\)",
-      "\\(9{,}8\\ \\text{m/s}^2\\)",
-      "\\(4{,}4\\ \\text{m/s}^2\\)",
-      "\\(19{,}6\\ \\text{m/s}^2\\)"
-    ],
-    "correctAnswer": 2,
-    "explanation": "\\(g=\\dfrac{1/9}{1/4}\\,g_0=\\dfrac{4}{9}g_0\\approx 4{,}4\\ \\text{m/s}^2\\)."
-  },
-  {
-    "type": "multiple-choice",
-    "question": "Vitesse d’impact minimale d’une météorite (partie du repos, très loin) sur la Lune (\\(R_L=1740\\ \\text{km}\\), \\(M_L=7{,}35\\times10^{22}\\ \\text{kg}\\)) :<br><span style='color:#6b7280;font-style:italic;font-size:0.9em'>Ελάχιστη ταχύτητα πρόσκρουσης μετεωρίτη στη Σελήνη;</span>",
-    "options": [
-      "\\(11{,}2\\ \\text{km/s}\\)",
-      "\\(1{,}0\\ \\text{km/s}\\)",
-      "\\(7{,}9\\ \\text{km/s}\\)",
-      "\\(2{,}4\\ \\text{km/s}\\)"
-    ],
-    "correctAnswer": 3,
-    "explanation": "\\(v=\\sqrt{2KM_L/R_L}\\approx 2{,}4\\ \\text{km/s}\\) (vitesse de libération lunaire)."
-  },
-  {
-    "type": "multiple-choice",
-    "question": "Pour un satellite en MCU autour de la Terre, quelle force joue le rôle de force centripète ?<br><span style='color:#6b7280;font-style:italic;font-size:0.9em'>Ποια δύναμη παίζει τον ρόλο της κεντρομόλου;</span>",
-    "options": [
-      "la poussée des moteurs <span style='color:#6b7280'>(ώση κινητήρων)</span>",
-      "la gravitation exercée par la Terre <span style='color:#6b7280'>(η βαρύτητα από τη Γη)</span>",
-      "la force centrifuge <span style='color:#6b7280'>(φυγόκεντρος)</span>",
-      "la force d’inertie <span style='color:#6b7280'>(αδρανειακή)</span>"
-    ],
-    "correctAnswer": 1,
-    "explanation": "C’est la force de gravitation de la Terre sur le satellite. · η βαρυτική δύναμη της Γης."
-  },
-  {
-    "type": "multiple-choice",
-    "question": "Quand un satellite s’éloigne de la Terre, l’énergie potentielle de gravitation du système :<br><span style='color:#6b7280;font-style:italic;font-size:0.9em'>Όταν ο δορυφόρος απομακρύνεται από τη Γη, η βαρυτική δυναμική ενέργεια:</span>",
-    "options": [
-      "diminue <span style='color:#6b7280'>(μειώνεται)</span>",
-      "augmente <span style='color:#6b7280'>(αυξάνεται)</span>",
-      "reste constante <span style='color:#6b7280'>(σταθερή)</span>",
-      "devient positive <span style='color:#6b7280'>(θετική)</span>"
-    ],
-    "correctAnswer": 1,
-    "explanation": "\\(E_p=-K\\dfrac{Mm}{r}\\) augmente (vers 0) quand \\(r\\) augmente. · αυξάνεται προς το 0."
-  },
-  {
-    "type": "multiple-choice",
-    "question": "Une planète plus proche du Soleil qu’une autre a une période de révolution :<br><span style='color:#6b7280;font-style:italic;font-size:0.9em'>Πλανήτης πιο κοντά στον Ήλιο έχει περίοδο περιφοράς:</span>",
-    "options": [
-      "plus longue <span style='color:#6b7280'>(μεγαλύτερη)</span>",
-      "identique <span style='color:#6b7280'>(ίδια)</span>",
-      "plus courte <span style='color:#6b7280'>(μικρότερη)</span>",
-      "nulle <span style='color:#6b7280'>(μηδέν)</span>"
-    ],
-    "correctAnswer": 2,
-    "explanation": "3<sup>e</sup> loi : \\(T\\propto r^{3/2}\\), donc \\(r\\) plus petit \\(\\Rightarrow T\\) plus court. · \\(T\\propto r^{3/2}\\)."
-  },
-  {
-    "type": "multiple-choice",
-    "question": "L’altitude d’un satellite géostationnaire terrestre est environ :<br><span style='color:#6b7280;font-style:italic;font-size:0.9em'>Το ύψος γεωστατικού δορυφόρου είναι περίπου:</span>",
-    "options": [
-      "\\(400\\ \\text{km}\\)",
-      "\\(36\\,000\\ \\text{km}\\)",
-      "\\(1\\,000\\ \\text{km}\\)",
-      "\\(6\\,400\\ \\text{km}\\)"
-    ],
-    "correctAnswer": 1,
-    "explanation": "\\(T=86\\,164\\ \\text{s}\\Rightarrow r\\approx 42\\,000\\ \\text{km}\\), soit une altitude \\(\\approx 36\\,000\\ \\text{km}\\). · ύψος \\(\\approx 36\\,000\\) km."
+    "explanation": "\\(\\Delta E_p=mGh=70\\cdot10\\cdot200=1{,}4\\times10^{5}\\ \\text{J}=140\\ \\text{kJ}\\) (positive : on monte). · \\(\\Delta E_p=mGh\\)."
   },
   {
     "type": "true-false-multiple",
-    "question": "Vrai ou faux ? (mouvement des satellites)<br><span style='color:#6b7280;font-style:italic;font-size:0.9em'>Σωστό ή Λάθος; (κίνηση δορυφόρων)</span>",
+    "question": "Vrai ou faux ? (champ et énergie potentielle de gravitation)<br><span style='color:#6b7280;font-style:italic;font-size:0.9em'>Σωστό ή Λάθος; (πεδίο και δυναμική ενέργεια βαρύτητας)</span>",
     "statements": [
-      "L’énergie mécanique du système Terre-satellite se conserve en l’absence de frottement. <span style='color:#6b7280'>(διατηρείται χωρίς τριβές)</span>",
-      "Sur une orbite circulaire, l’énergie cinétique du satellite varie au cours du mouvement. <span style='color:#6b7280'>(μεταβάλλεται)</span>",
-      "La force de gravitation effectue un travail nul sur une orbite circulaire. <span style='color:#6b7280'>(μηδενικό έργο)</span>",
-      "La vitesse de libération dépend de la masse de l’objet lancé. <span style='color:#6b7280'>(εξαρτάται από τη μάζα)</span>",
-      "Un satellite géostationnaire orbite dans le plan équatorial. <span style='color:#6b7280'>(στο ισημερινό επίπεδο)</span>"
+      "La force gravitationnelle est toujours attractive et sa portée est infinie. <span style='color:#6b7280'>(πάντα ελκτική, άπειρη εμβέλεια)</span>",
+      "La constante universelle \\(K\\) vaut une autre valeur sur la Lune que sur la Terre. <span style='color:#6b7280'>(το \\(K\\) είναι διαφορετικό στη Σελήνη)</span>",
+      "Si on déplace un corps perpendiculairement aux lignes de champ, son énergie potentielle de gravitation ne change pas. <span style='color:#6b7280'>(κάθετα στις δυναμικές γραμμές, η \\(E_p\\) δεν αλλάζει)</span>",
+      "L’énergie potentielle de pesanteur \\(E_p=mgh\\) d’un corps ne dépend pas de sa masse. <span style='color:#6b7280'>(η \\(E_p\\) δεν εξαρτάται από τη μάζα)</span>",
+      "Dans un champ de gravitation uniforme, les lignes de champ sont des droites parallèles et équidistantes. <span style='color:#6b7280'>(ομογενές πεδίο: παράλληλες, ισαπέχουσες ευθείες)</span>"
     ],
     "correctAnswers": [
       true,
@@ -172,6 +160,6 @@
       false,
       true
     ],
-    "explanation": "1) Vrai. 2) Faux : MCU \\(\\Rightarrow E_c\\) constante. 3) Vrai : \\(\\vec F\\perp\\vec v\\). 4) Faux : indépendante de \\(m\\). 5) Vrai. · 1)Σωστό 2)Λάθος 3)Σωστό 4)Λάθος 5)Σωστό."
+    "explanation": "1) Vrai. 2) Faux : \\(K\\) est universelle. 3) Vrai : surface équipotentielle, \\(W=0\\). 4) Faux : \\(E_p\\propto m\\). 5) Vrai. · 1)Σ 2)Λ 3)Σ 4)Λ 5)Σ"
   }
 ]
