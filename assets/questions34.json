@@ -1,114 +1,132 @@
-{
-  "chapter": "Κεφάλαιο 1 — Κινηματική στο επίπεδο (Physique 2CB/2CC)",
-  "questions": [
-    {
-      "type": "multiple-choice",
-      "question": "Un point A se trouve au bord de la roue d'une bicyclette en mouvement. Par rapport à quel référentiel le point A décrit-il une trajectoire circulaire ?<br><em>Ένα σημείο Α βρίσκεται στην άκρη του τροχού ενός κινούμενου ποδηλάτου. Ως προς ποιο πλαίσιο αναφοράς το Α διαγράφει κυκλική τροχιά;</em>",
-      "options": [
-        "Le référentiel « sol »",
-        "Le référentiel « axe de rotation O »",
-        "Le référentiel « roue »",
-        "Aucun référentiel — la trajectoire est toujours circulaire"
-      ],
-      "correctAnswer": 1,
-      "explanation": "Ως προς τον άξονα περιστροφής O (κέντρο του τροχού), το σημείο Α διαγράφει κύκλο σταθερής ακτίνας. Ως προς το έδαφος διαγράφει κυκλοειδή καμπύλη, και ως προς τον ίδιο τον τροχό είναι ακίνητο."
-    },
-    {
-      "type": "true-false-multiple",
-      "question": "Οριζόντια βολή — Χαρακτήρισε τις προτάσεις ως σωστές ή λανθασμένες.<br><em>Tir horizontal — vrai ou faux ?</em>",
-      "statements": [
-        { "text": "Η οριζόντια ταχύτητα του βλήματος παραμένει σταθερή καθ' όλη τη διάρκεια της πτώσης.", "correct": true },
-        { "text": "Η κατακόρυφη ταχύτητα του βλήματος παραμένει σταθερή καθ' όλη τη διάρκεια της πτώσης.", "correct": false },
-        { "text": "Ο χρόνος πτώσης εξαρτάται μόνο από το ύψος εκτόξευσης, όχι από την οριζόντια ταχύτητα.", "correct": true },
-        { "text": "Η τροχιά της οριζόντιας βολής είναι ευθεία γραμμή.", "correct": false }
-      ],
-      "explanation": "Η οριζόντια κίνηση είναι ΕΓΚ (σταθερή ταχύτητα), ενώ η κατακόρυφη είναι ελεύθερη πτώση (αυξανόμενη ταχύτητα). Ο χρόνος πτώσης προκύπτει από \\( t=\\sqrt{2h/g} \\), ανεξάρτητα από \\(v_0\\). Η τροχιά είναι παραβολή, όχι ευθεία."
-    },
-    {
-      "type": "multiple-choice",
-      "question": "Quelles sont les caractéristiques du vecteur vitesse \\(\\vec{v}\\) d'un mobile ?<br><em>Ποια είναι τα χαρακτηριστικά του διανύσματος ταχύτητας;</em>",
-      "options": [
-        "Point d'application au centre de la trajectoire, direction radiale, sens vers l'extérieur",
-        "Point d'application le mobile, direction tangente à la trajectoire, sens du mouvement",
-        "Point d'application le mobile, direction perpendiculaire à la trajectoire, sens quelconque",
-        "Point d'application fixe à l'origine du repère, direction et sens constants"
-      ],
-      "correctAnswer": 1,
-      "explanation": "Το διάνυσμα ταχύτητας εφαρμόζεται στο κινητό, είναι εφαπτόμενο στην τροχιά και έχει τη φορά της κίνησης, με μέτρο \\(\\|\\vec{v}\\|=v\\) σε m/s."
-    },
-    {
-      "type": "multiple-choice",
-      "question": "Ένα κινητό έχει διάνυσμα ταχύτητας με συνιστώσες \\(v_x = 6\\ \\text{m/s}\\) και \\(v_y = 8\\ \\text{m/s}\\). Ποιο είναι το μέτρο της ταχύτητας;<br><em>Quelle est la norme de la vitesse ?</em>",
-      "options": [
-        "\\(7\\ \\text{m/s}\\)",
-        "\\(10\\ \\text{m/s}\\)",
-        "\\(14\\ \\text{m/s}\\)",
-        "\\(48\\ \\text{m/s}\\)"
-      ],
-      "correctAnswer": 1,
-      "explanation": "\\( v = \\sqrt{v_x^2+v_y^2} = \\sqrt{6^2+8^2} = \\sqrt{100} = 10\\ \\text{m/s} \\)."
-    },
-    {
-      "type": "multiple-choice",
-      "question": "Sans frottement, quelle est l'accélération \\(\\vec{a}\\) d'un projectile en tir oblique ?<br><em>Απουσία τριβών, ποια είναι η επιτάχυνση ενός βλήματος σε πλάγια βολή;</em>",
-      "options": [
-        "\\(\\vec{a} = \\vec{0}\\)",
-        "\\(\\vec{a}\\) dépend de la masse du projectile",
-        "\\(\\vec{a} = \\vec{g}\\), indépendante de la masse",
-        "\\(\\vec{a}\\) est toujours perpendiculaire à \\(\\vec{v}_0\\)"
-      ],
-      "correctAnswer": 2,
-      "explanation": "Η μόνη δύναμη είναι το βάρος \\(\\vec{P}=m\\vec{g}\\). Από τον 2ο νόμο του Newton: \\(\\vec{a}=\\vec{g}\\), ανεξάρτητα από τη μάζα m."
-    },
-    {
-      "type": "multiple-choice",
-      "question": "Pour une vitesse initiale \\(v_0\\) donnée et une trajectoire symétrique, pour quel angle de tir \\(\\alpha\\) la portée est-elle maximale ?<br><em>Για ποια γωνία βολής το βεληνεκές είναι μέγιστο;</em>",
-      "options": ["\\(\\alpha = 30°\\)", "\\(\\alpha = 45°\\)", "\\(\\alpha = 60°\\)", "\\(\\alpha = 90°\\)"],
-      "correctAnswer": 1,
-      "explanation": "\\( x_I = \\dfrac{v_0^2 \\sin(2\\alpha)}{g} \\) μεγιστοποιείται όταν \\(\\sin(2\\alpha)=1\\), δηλαδή \\(\\alpha=45°\\)."
-    },
-    {
-      "type": "true-false-multiple",
-      "question": "Εφαπτομενική και κάθετη επιτάχυνση — σωστό ή λάθος;<br><em>Accélération tangentielle et normale — vrai ou faux ?</em>",
-      "statements": [
-        { "text": "Στην ομαλή κυκλική κίνηση (ΟΚΚ), η επιτάχυνση έχει μόνο κάθετη συνιστώσα.", "correct": true },
-        { "text": "Στην ΕΟΜΚ (MRUV), η επιτάχυνση έχει μόνο κάθετη συνιστώσα.", "correct": false },
-        { "text": "Η εφαπτομενική επιτάχυνση πληροφορεί για τη μεταβολή της διεύθυνσης της ταχύτητας.", "correct": false },
-        { "text": "Αν \\(\\vec{a}_\\tau\\) είναι αντίρροπη της \\(\\vec{v}\\), η κίνηση επιβραδύνεται.", "correct": true }
-      ],
-      "explanation": "Στην ΟΚΚ μόνο η διεύθυνση της ταχύτητας αλλάζει (κάθετη συνιστώσα)· στην ΕΟΜΚ μόνο το μέτρο αλλάζει (εφαπτομενική συνιστώσα). Η εφαπτομενική συνιστώσα αφορά το μέτρο της ταχύτητας, όχι τη διεύθυνσή της."
-    },
-    {
-      "type": "multiple-choice",
-      "question": "Quelle est l'équation de la trajectoire d'un tir oblique (sans frottement) ?<br><em>Ποια είναι η μορφή της τροχιάς σε μια πλάγια βολή (χωρίς τριβές);</em>",
-      "options": [
-        "Une droite",
-        "Un cercle",
-        "Une parabole",
-        "Une hyperbole"
-      ],
-      "correctAnswer": 2,
-      "explanation": "Η εξίσωση \\( y = -\\dfrac{g}{2v_0^2\\cos^2\\alpha}x^2+\\tan\\alpha\\,x+y_0 \\) είναι δευτεροβάθμια ως προς x — άρα η τροχιά είναι παραβολή."
-    },
-    {
-      "type": "multiple-choice",
-      "question": "Ένα βλήμα εκτοξεύεται με \\(v_0 = 20\\ \\text{m/s}\\) υπό γωνία \\(\\alpha=30°\\) από το έδαφος. Ποιος είναι ο χρόνος για να φτάσει στην κορυφή της τροχιάς; (\\(g=10\\ \\text{m/s}^2\\))<br><em>Quel est le temps pour atteindre le sommet de la trajectoire ?</em>",
-      "options": ["\\(0{,}50\\ \\text{s}\\)", "\\(1{,}00\\ \\text{s}\\)", "\\(2{,}00\\ \\text{s}\\)", "\\(3{,}00\\ \\text{s}\\)"],
-      "correctAnswer": 1,
-      "explanation": "\\( t_S = \\dfrac{v_0\\sin\\alpha}{g} = \\dfrac{20 \\cdot 0{,}5}{10} = 1{,}00\\ \\text{s} \\)."
-    },
-    {
-      "type": "multiple-choice",
-      "question": "Une voiture roule en ligne droite en accélérant. Que peux-tu dire de son accélération normale \\(a_n\\) ?<br><em>Ένα αυτοκίνητο κινείται σε ευθεία γραμμή επιταχύνοντας. Τι ισχύει για την κάθετη επιτάχυνσή του;</em>",
-      "options": [
-        "\\(a_n\\) est maximale",
-        "\\(a_n = 0\\), car la direction de la vitesse ne change pas",
-        "\\(a_n\\) est égale à \\(a_\\tau\\)",
-        "\\(a_n\\) dépend de la masse de la voiture"
-      ],
-      "correctAnswer": 1,
-      "explanation": "Σε ευθύγραμμη κίνηση η διεύθυνση της ταχύτητας δεν αλλάζει, άρα \\(a_n = 0\\). Όλη η επιτάχυνση είναι εφαπτομενική."
-    }
-  ]
-}
-
+[
+  {
+    "type": "multiple-choice",
+    "question": "Un point A se trouve au bord de la roue d'une bicyclette en mouvement. Par rapport à quel référentiel le point A décrit-il une trajectoire circulaire ?<br><em>Ένα σημείο Α βρίσκεται στην άκρη του τροχού ενός κινούμενου ποδηλάτου. Ως προς ποιο πλαίσιο αναφοράς το Α διαγράφει κυκλική τροχιά;</em>",
+    "options": [
+      "Le référentiel « sol »",
+      "Le référentiel « axe de rotation O »",
+      "Le référentiel « roue »",
+      "Aucun référentiel — la trajectoire est toujours circulaire"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Ως προς τον άξονα περιστροφής O (κέντρο του τροχού), το σημείο Α διαγράφει κύκλο σταθερής ακτίνας. Ως προς το έδαφος διαγράφει κυκλοειδή καμπύλη, και ως προς τον ίδιο τον τροχό είναι ακίνητο."
+  },
+  {
+    "type": "true-false-multiple",
+    "question": "Οριζόντια βολή — Χαρακτήρισε τις προτάσεις ως σωστές ή λανθασμένες.<br><em>Tir horizontal — vrai ou faux ?</em>",
+    "statements": [
+      "Η οριζόντια ταχύτητα του βλήματος παραμένει σταθερή καθ' όλη τη διάρκεια της πτώσης.",
+      "Η κατακόρυφη ταχύτητα του βλήματος παραμένει σταθερή καθ' όλη τη διάρκεια της πτώσης.",
+      "Ο χρόνος πτώσης εξαρτάται μόνο από το ύψος εκτόξευσης, όχι από την οριζόντια ταχύτητα.",
+      "Η τροχιά της οριζόντιας βολής είναι ευθεία γραμμή."
+    ],
+    "explanation": "Η οριζόντια κίνηση είναι ΕΓΚ (σταθερή ταχύτητα), ενώ η κατακόρυφη είναι ελεύθερη πτώση (αυξανόμενη ταχύτητα). Ο χρόνος πτώσης προκύπτει από \\( t=\\sqrt{2h/g} \\), ανεξάρτητα από \\(v_0\\). Η τροχιά είναι παραβολή, όχι ευθεία.",
+    "correctAnswers": [
+      true,
+      false,
+      true,
+      false
+    ]
+  },
+  {
+    "type": "multiple-choice",
+    "question": "Quelles sont les caractéristiques du vecteur vitesse \\(\\vec{v}\\) d'un mobile ?<br><em>Ποια είναι τα χαρακτηριστικά του διανύσματος ταχύτητας;</em>",
+    "options": [
+      "Point d'application au centre de la trajectoire, direction radiale, sens vers l'extérieur",
+      "Point d'application le mobile, direction tangente à la trajectoire, sens du mouvement",
+      "Point d'application le mobile, direction perpendiculaire à la trajectoire, sens quelconque",
+      "Point d'application fixe à l'origine du repère, direction et sens constants"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Το διάνυσμα ταχύτητας εφαρμόζεται στο κινητό, είναι εφαπτόμενο στην τροχιά και έχει τη φορά της κίνησης, με μέτρο \\(\\|\\vec{v}\\|=v\\) σε m/s."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "Ένα κινητό έχει διάνυσμα ταχύτητας με συνιστώσες \\(v_x = 6\\ \\text{m/s}\\) και \\(v_y = 8\\ \\text{m/s}\\). Ποιο είναι το μέτρο της ταχύτητας;<br><em>Quelle est la norme de la vitesse ?</em>",
+    "options": [
+      "\\(7\\ \\text{m/s}\\)",
+      "\\(10\\ \\text{m/s}\\)",
+      "\\(14\\ \\text{m/s}\\)",
+      "\\(48\\ \\text{m/s}\\)"
+    ],
+    "correctAnswer": 1,
+    "explanation": "\\( v = \\sqrt{v_x^2+v_y^2} = \\sqrt{6^2+8^2} = \\sqrt{100} = 10\\ \\text{m/s} \\)."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "Sans frottement, quelle est l'accélération \\(\\vec{a}\\) d'un projectile en tir oblique ?<br><em>Απουσία τριβών, ποια είναι η επιτάχυνση ενός βλήματος σε πλάγια βολή;</em>",
+    "options": [
+      "\\(\\vec{a} = \\vec{0}\\)",
+      "\\(\\vec{a}\\) dépend de la masse du projectile",
+      "\\(\\vec{a} = \\vec{g}\\), indépendante de la masse",
+      "\\(\\vec{a}\\) est toujours perpendiculaire à \\(\\vec{v}_0\\)"
+    ],
+    "correctAnswer": 2,
+    "explanation": "Η μόνη δύναμη είναι το βάρος \\(\\vec{P}=m\\vec{g}\\). Από τον 2ο νόμο του Newton: \\(\\vec{a}=\\vec{g}\\), ανεξάρτητα από τη μάζα m."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "Pour une vitesse initiale \\(v_0\\) donnée et une trajectoire symétrique, pour quel angle de tir \\(\\alpha\\) la portée est-elle maximale ?<br><em>Για ποια γωνία βολής το βεληνεκές είναι μέγιστο;</em>",
+    "options": [
+      "\\(\\alpha = 30°\\)",
+      "\\(\\alpha = 45°\\)",
+      "\\(\\alpha = 60°\\)",
+      "\\(\\alpha = 90°\\)"
+    ],
+    "correctAnswer": 1,
+    "explanation": "\\( x_I = \\dfrac{v_0^2 \\sin(2\\alpha)}{g} \\) μεγιστοποιείται όταν \\(\\sin(2\\alpha)=1\\), δηλαδή \\(\\alpha=45°\\)."
+  },
+  {
+    "type": "true-false-multiple",
+    "question": "Εφαπτομενική και κάθετη επιτάχυνση — σωστό ή λάθος;<br><em>Accélération tangentielle et normale — vrai ou faux ?</em>",
+    "statements": [
+      "Στην ομαλή κυκλική κίνηση (ΟΚΚ), η επιτάχυνση έχει μόνο κάθετη συνιστώσα.",
+      "Στην ΕΟΜΚ (MRUV), η επιτάχυνση έχει μόνο κάθετη συνιστώσα.",
+      "Η εφαπτομενική επιτάχυνση πληροφορεί για τη μεταβολή της διεύθυνσης της ταχύτητας.",
+      "Αν \\(\\vec{a}_\\tau\\) είναι αντίρροπη της \\(\\vec{v}\\), η κίνηση επιβραδύνεται."
+    ],
+    "explanation": "Στην ΟΚΚ μόνο η διεύθυνση της ταχύτητας αλλάζει (κάθετη συνιστώσα)· στην ΕΟΜΚ μόνο το μέτρο αλλάζει (εφαπτομενική συνιστώσα). Η εφαπτομενική συνιστώσα αφορά το μέτρο της ταχύτητας, όχι τη διεύθυνσή της.",
+    "correctAnswers": [
+      true,
+      false,
+      false,
+      true
+    ]
+  },
+  {
+    "type": "multiple-choice",
+    "question": "Quelle est l'équation de la trajectoire d'un tir oblique (sans frottement) ?<br><em>Ποια είναι η μορφή της τροχιάς σε μια πλάγια βολή (χωρίς τριβές);</em>",
+    "options": [
+      "Une droite",
+      "Un cercle",
+      "Une parabole",
+      "Une hyperbole"
+    ],
+    "correctAnswer": 2,
+    "explanation": "Η εξίσωση \\( y = -\\dfrac{g}{2v_0^2\\cos^2\\alpha}x^2+\\tan\\alpha\\,x+y_0 \\) είναι δευτεροβάθμια ως προς x — άρα η τροχιά είναι παραβολή."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "Ένα βλήμα εκτοξεύεται με \\(v_0 = 20\\ \\text{m/s}\\) υπό γωνία \\(\\alpha=30°\\) από το έδαφος. Ποιος είναι ο χρόνος για να φτάσει στην κορυφή της τροχιάς; (\\(g=10\\ \\text{m/s}^2\\))<br><em>Quel est le temps pour atteindre le sommet de la trajectoire ?</em>",
+    "options": [
+      "\\(0{,}50\\ \\text{s}\\)",
+      "\\(1{,}00\\ \\text{s}\\)",
+      "\\(2{,}00\\ \\text{s}\\)",
+      "\\(3{,}00\\ \\text{s}\\)"
+    ],
+    "correctAnswer": 1,
+    "explanation": "\\( t_S = \\dfrac{v_0\\sin\\alpha}{g} = \\dfrac{20 \\cdot 0{,}5}{10} = 1{,}00\\ \\text{s} \\)."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "Une voiture roule en ligne droite en accélérant. Que peux-tu dire de son accélération normale \\(a_n\\) ?<br><em>Ένα αυτοκίνητο κινείται σε ευθεία γραμμή επιταχύνοντας. Τι ισχύει για την κάθετη επιτάχυνσή του;</em>",
+    "options": [
+      "\\(a_n\\) est maximale",
+      "\\(a_n = 0\\), car la direction de la vitesse ne change pas",
+      "\\(a_n\\) est égale à \\(a_\\tau\\)",
+      "\\(a_n\\) dépend de la masse de la voiture"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Σε ευθύγραμμη κίνηση η διεύθυνση της ταχύτητας δεν αλλάζει, άρα \\(a_n = 0\\). Όλη η επιτάχυνση είναι εφαπτομενική."
+  }
+]
