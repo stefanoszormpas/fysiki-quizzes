@@ -3,6 +3,11 @@ name: Cache Buster
 on:
   push:
     branches: [ main ]
+    paths-ignore:
+      - '**.html'
+
+permissions:
+  contents: write
 
 jobs:
   bust-cache:
@@ -10,14 +15,15 @@ jobs:
 
     steps:
     - name: Checkout repository
-      uses: actions/checkout@v3
+      uses: actions/checkout@v4
 
     - name: Add cache buster version strings
       run: |
         TIMESTAMP=$(date +%s)
-        find . -name "*.html" -exec sed -i "s/assets\/style.css/assets\/style.css?v=${TIMESTAMP}/g" {} +
-        find . -name "*.html" -exec sed -i "s/assets\/quiz.js/assets\/quiz.js?v=${TIMESTAMP}/g" {} +
-        find . -name "*.html" -exec sed -i "s/assets\/results.js/assets\/results.js?v=${TIMESTAMP}/g" {} +
+        echo "TIMESTAMP=${TIMESTAMP}" >> "$GITHUB_ENV"
+        for f in style.css quiz.js results.js; do
+          find . -name "*.html" -exec sed -i -E "s#assets/${f//./\\.}(\?v=[0-9]+)?#assets/${f}?v=${TIMESTAMP}#g" {} +
+        done
 
     - name: Commit changes
       run: |
