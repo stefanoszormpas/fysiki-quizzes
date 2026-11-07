@@ -62,7 +62,7 @@
       "\\(\\vec{a}\\) est toujours perpendiculaire à \\(\\vec{v}_0\\)"
     ],
     "correctAnswer": 2,
-    "explanation": "Η μόνη δύναμη είναι το βάρος \\(\\vec{P}=m\\vec{g}\\). Από τον 2ο νόμο του Newton: \\(\\vec{a}=\\vec{g}\\), ανεξάρτητα από τη μάζα m."
+    "explanation": "Η μόνη δύναμη είναι το βάρος \\(\\vec{w}=m\\vec{g}\\). Από τον 2ο νόμο του Newton: \\(\\vec{a}=\\vec{g}\\), ανεξάρτητα από τη μάζα m."
   },
   {
     "type": "multiple-choice",

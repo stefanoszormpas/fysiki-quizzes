@@ -93,7 +93,7 @@
       "\\(10^{3}\\) fois plus grande <span style='color:#6b7280'>(10³ φορές μεγαλύτερη)</span>"
     ],
     "correctAnswer": 2,
-    "explanation": "\\(F_m=2e\\,vB=2\\cdot1{,}6\\times10^{-19}\\cdot2{,}0\\times10^{6}\\cdot0{,}20\\approx1{,}3\\times10^{-13}\\ \\text{N}\\) ; \\(P=mg\\approx6{,}6\\times10^{-26}\\ \\text{N}\\). Rapport \\(\\approx2\\times10^{12}\\) : on néglige le poids des particules. · το βάρος αμελητέο."
+    "explanation": "\\(F_m=2e\\,vB=2\\cdot1{,}6\\times10^{-19}\\cdot2{,}0\\times10^{6}\\cdot0{,}20\\approx1{,}3\\times10^{-13}\\ \\text{N}\\) ; \\(w=mg\\approx6{,}6\\times10^{-26}\\ \\text{N}\\). Rapport \\(\\approx2\\times10^{12}\\) : on néglige le poids des particules. · το βάρος αμελητέο."
   },
   {
     "type": "multiple-choice",
